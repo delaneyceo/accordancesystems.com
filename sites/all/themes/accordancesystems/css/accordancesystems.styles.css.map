@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": ";;AAAA,UAAW;EACT,SAAS,EAAE,IAAI;;;ACDjB,IAAK;EACH,SAAS,EAAE,KAAK",
+"sources": ["../sass/base/_media.scss","../sass/base/_page.scss"],
+"names": [],
+"file": "accordancesystems.styles.css"
+}
