@@ -1,0 +1,68 @@
+diff --git a/sfsmallscreen.js b/sfsmallscreen.js
+index dfe69e3..729297f 100644
+--- a/sfsmallscreen.js
++++ b/sfsmallscreen.js
+@@ -287,14 +287,20 @@
+         var breakpoint = (options.breakpointUnit == 'em') ? (options.breakpoint * parseFloat($('body').css('font-size'))) : options.breakpoint,
+         windowWidth = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth,
+         timer;
+-        if ((typeof Modernizr != 'undefined' && Modernizr.mq('(max-width:' + (breakpoint - 1) + 'px)')) || (typeof Modernizr === 'undefined' && windowWidth < breakpoint)){
++        if ((typeof Modernizr === 'undefined' || typeof Modernizr.mq !== 'function') && windowWidth < breakpoint){
++          convert(menu);
++        }
++        else if (typeof Modernizr !== 'undefined' && typeof Modernizr.mq === 'function' && Modernizr.mq('(max-width:' + (breakpoint - 1) + 'px)')) {
+           convert(menu);
+         }
+         $(window).resize(function(){
+           clearTimeout(timer);
+           timer = setTimeout(function(){
+             var windowWidth = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
+-            if ((typeof Modernizr != 'undefined' && Modernizr.mq('(max-width:' + (breakpoint - 1) + 'px)')) || (typeof Modernizr === 'undefined' && windowWidth < breakpoint)){
++            if ((typeof Modernizr === 'undefined' || typeof Modernizr.mq !== 'function') && windowWidth < breakpoint){
++              convert(menu);
++            }
++            else if (typeof Modernizr !== 'undefined' && typeof Modernizr.mq === 'function' && Modernizr.mq('(max-width:' + (breakpoint - 1) + 'px)')) {
+               convert(menu);
+             }
+             else {
+@@ -317,4 +323,4 @@
+     }
+     return this;
+   }
+-})(jQuery);
+\ No newline at end of file
++})(jQuery);
+diff --git a/sftouchscreen.js b/sftouchscreen.js
+index c886b1c..5fb46ae 100644
+--- a/sftouchscreen.js
++++ b/sftouchscreen.js
+@@ -89,14 +89,20 @@
+         var breakpoint = (options.breakpointUnit == 'em') ? (options.breakpoint * parseFloat($('body').css('font-size'))) : options.breakpoint,
+         windowWidth = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth,
+         timer;
+-        if ((typeof Modernizr != 'undefined' && Modernizr.mq('(max-width:' + (breakpoint - 1) + 'px)')) || (typeof Modernizr === 'undefined' && windowWidth < breakpoint)){
++        if ((typeof Modernizr === 'undefined' || typeof Modernizr.mq !== 'function') && windowWidth < breakpoint){
++          activate(menu);
++        }
++        else if (typeof Modernizr !== 'undefined' && typeof Modernizr.mq === 'function' && Modernizr.mq('(max-width:' + (breakpoint - 1) + 'px)')) {
+           activate(menu);
+         }
+         $(window).resize(function(){
+           clearTimeout(timer);
+           timer = setTimeout(function(){
+             var windowWidth = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
+-            if ((typeof Modernizr != 'undefined' && Modernizr.mq('(max-width:' + (breakpoint - 1) + 'px)')) || (typeof Modernizr === 'undefined' && windowWidth < breakpoint)){
++            if ((typeof Modernizr === 'undefined' || typeof Modernizr.mq !== 'function') && windowWidth < breakpoint){
++              activate(menu);
++            }
++            else if (typeof Modernizr !== 'undefined' && typeof Modernizr.mq === 'function' && Modernizr.mq('(max-width:' + (breakpoint - 1) + 'px)')) {
+               activate(menu);
+             }
+           }, 50);
+@@ -116,4 +122,4 @@
+     }
+     return this;
+   }
+-})(jQuery);
+\ No newline at end of file
++})(jQuery);

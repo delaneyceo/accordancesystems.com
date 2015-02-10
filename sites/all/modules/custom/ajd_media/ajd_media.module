@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the ajd_media feature.
+ */
+
+include_once 'ajd_media.features.inc';
