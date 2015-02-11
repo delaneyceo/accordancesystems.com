@@ -17,6 +17,8 @@ stylesheets[all][] = css/accordancesystems.no-query.css
 ; Scripts
 ; ========================================
 scripts[] = js/accordancesystems.behaviors.js
+scripts[] = js/jquery.collapse.js
+scripts[] = js/accordancesystems.collapse.js
 
 ; ========================================
 ; Regions
