@@ -1,0 +1,24 @@
+/*******************************************************************************
+ * farrari.layout.scss
+ *
+ * Styling of the "farrari" layout
+ * grids with Singularity.
+ ******************************************************************************/
+@import "compass";
+@import "breakpoint";
+@import "singularitygs";
+@import "../../variables/breakpoints";
+
+// Set Singularity grid variables.
+@include add-grid(12);
+@include add-gutter(1/2);
+
+.panel-display--farrari {
+  @include pie-clearfix;
+
+  .panel-pane:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.farrari-region {}

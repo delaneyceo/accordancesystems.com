@@ -16,7 +16,8 @@
 // directly. Variables-, function- or mixin providing partials should never
 // output any styles themselves: Importing them multiple times to resolve
 // dependencies shouldn't be a problem.
+@import "libraries/animate/animate";
 @import "variables/**/*";
-@import "abstractions/**/*";
+@import "utilities/**/*";
 @import "base/**/*";
 @import "components/**/*";

@@ -1,0 +1,61 @@
+/*******************************************************************************
+ * le-tigre.layout.scss
+ *
+ * Styling of the "Le Tigre" layout
+ * grids with Singularity.
+ ******************************************************************************/
+@import "compass";
+@import "breakpoint";
+@import "singularitygs";
+@import "../../variables/breakpoints";
+
+$bp-float-sidebar: 800px;
+$main: 750px;
+$sidebar: $page-max-width - $main;
+
+.l-panel-region {
+  padding: 2em 1em;
+}
+
+// Page reactions
+@include breakpoint($bp-float-sidebar) {
+  .panel-display--le-tigre {
+    @include display-flex;
+    @include justify-content(center);
+  }
+
+  .le-tigre-region--first,
+  .panels-dnd .le-tigre-region--first {
+    @include flex(600px 1 1);
+  }
+
+  .le-tigre-region--second,
+  .panels-dnd .le-tigre-region--second {
+    @include flex(250px 1 0);
+  }
+}
+
+@include breakpoint($page-max-width) {
+  .panel-display--le-tigre {
+    @include justify-content(center);
+
+    &:before,
+    &:after {
+      content: "";
+      display: block;
+      @include flex-grow(1);
+    }
+  }
+
+  .le-tigre-region--first,
+  .panels-dnd .le-tigre-region--first {
+    @include flex($main 0 0);
+    padding-right: 2em;
+  }
+
+  .le-tigre-region--second,
+  .panels-dnd .le-tigre-region--second {
+    @include flex($sidebar 0 0);
+    padding-left: 2em;
+  }
+}

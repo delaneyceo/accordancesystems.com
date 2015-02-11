@@ -1,0 +1,15 @@
+.field--type-text-with-summary {
+  div {
+    margin: 0 0 1em;
+  }
+}
+
+hr {
+  height: 4px;
+  margin: 2em 0;
+  border: none;
+}
+
+.btn {
+  @include btn;
+}

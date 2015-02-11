@@ -1,0 +1,19 @@
+/*******************************************************************************
+ * magnum.layout.scss
+ *
+ * Styling of the "Magnum" layout
+ * grids with Singularity.
+ ******************************************************************************/
+/* line 16, ../../../sass/layouts/magnum/magnum.layout.scss */
+.panel-display--magnum {
+  *zoom: 1; }
+  /* line 38, ../../../../../../../../../../../Users/ace/.rvm/gems/ruby-1.9.3-p484@omega.accordancesystems/gems/compass-core-1.0.3/stylesheets/compass/utilities/general/_clearfix.scss */
+  .panel-display--magnum:after {
+    content: "";
+    display: table;
+    clear: both; }
+  /* line 19, ../../../sass/layouts/magnum/magnum.layout.scss */
+  .panel-display--magnum .panel-pane:last-child {
+    margin-bottom: 0; }
+
+/*# sourceMappingURL=magnum.layout.css.map */

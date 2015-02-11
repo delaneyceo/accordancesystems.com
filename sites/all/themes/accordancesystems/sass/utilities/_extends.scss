@@ -1,0 +1,10 @@
+%collapse-height-animation {
+  .js & {
+    height: 0px;
+    padding: 0px;
+    overflow: hidden;
+    display: block!important;
+    @include transform(translateZ(0));
+    @include transition(all .3s ease-in-out);
+  }
+}

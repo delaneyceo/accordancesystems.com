@@ -1,0 +1,19 @@
+/*******************************************************************************
+ * farrari.layout.scss
+ *
+ * Styling of the "farrari" layout
+ * grids with Singularity.
+ ******************************************************************************/
+/* line 16, ../../../sass/layouts/ferrari/ferrari.layout.scss */
+.panel-display--farrari {
+  *zoom: 1; }
+  /* line 38, ../../../../../../../../../../../Users/ace/.rvm/gems/ruby-1.9.3-p484@omega.accordancesystems/gems/compass-core-1.0.3/stylesheets/compass/utilities/general/_clearfix.scss */
+  .panel-display--farrari:after {
+    content: "";
+    display: table;
+    clear: both; }
+  /* line 19, ../../../sass/layouts/ferrari/ferrari.layout.scss */
+  .panel-display--farrari .panel-pane:last-child {
+    margin-bottom: 0; }
+
+/*# sourceMappingURL=ferrari.layout.css.map */

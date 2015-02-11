@@ -1,3 +1,17 @@
 html {
   font-size: 62.5%;
 }
+
+body {
+  font-family: $base-font-stack;
+  font-size: 1.6em;
+  color: $base-font-color;
+  @include font-smoothing;
+}
+
+.l-container {
+  max-width: $page-max-width;
+  margin: 0 auto;
+  padding-left: $less-than-max-width-padding;
+  padding-right: $less-than-max-width-padding;
+}

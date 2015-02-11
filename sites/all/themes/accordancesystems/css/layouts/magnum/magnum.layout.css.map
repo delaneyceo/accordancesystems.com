@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": ";;;;;;;AAeA,sBAAuB;ECcnB,KAAK,EAAE,CAAC;;ECQV,4BAAQ;IACN,OAAO,EAAE,EAAE;IACX,OAAO,EAAE,KAAK;IACd,KAAK,EAAE,IAAI;;EFtBb,6CAAuB;IACrB,aAAa,EAAE,CAAC",
+"sources": ["../../../sass/layouts/magnum/magnum.layout.scss","../../../../../../../../../../../Users/ace/.rvm/gems/ruby-1.9.3-p484@omega.accordancesystems/gems/compass-core-1.0.3/stylesheets/compass/utilities/general/_hacks.scss","../../../../../../../../../../../Users/ace/.rvm/gems/ruby-1.9.3-p484@omega.accordancesystems/gems/compass-core-1.0.3/stylesheets/compass/utilities/general/_clearfix.scss"],
+"names": [],
+"file": "magnum.layout.css"
+}

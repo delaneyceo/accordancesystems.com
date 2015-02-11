@@ -1,0 +1,56 @@
+/*******************************************************************************
+ * blue_steel.layout.scss
+ *
+ * Styling of the "Le Tigre" layout
+ * grids with Singularity.
+ ******************************************************************************/
+/* line 16, ../../../sass/layouts/blue_steel/blue_steel.layout.scss */
+.l-panel-region {
+  padding: 2em 1em; }
+
+@media (min-width: 800px) {
+  /* line 22, ../../../sass/layouts/blue_steel/blue_steel.layout.scss */
+  .panel-display--blue-steel {
+    display: -webkit-flex;
+    display: flex;
+    -webkit-justify-content: center;
+    justify-content: center; }
+
+  /* line 27, ../../../sass/layouts/blue_steel/blue_steel.layout.scss */
+  .blue-steel-region--first,
+  .panels-dnd .blue-steel-region--first {
+    -webkit-flex: 250px 1 1;
+    flex: 250px 1 1; }
+
+  /* line 32, ../../../sass/layouts/blue_steel/blue_steel.layout.scss */
+  .blue-steel-region--second,
+  .panels-dnd .blue-steel-region--second {
+    -webkit-flex: 600px 1 0;
+    flex: 600px 1 0; } }
+@media (min-width: 1140px) {
+  /* line 39, ../../../sass/layouts/blue_steel/blue_steel.layout.scss */
+  .panel-display--blue-steel {
+    -webkit-justify-content: center;
+    justify-content: center; }
+    /* line 42, ../../../sass/layouts/blue_steel/blue_steel.layout.scss */
+    .panel-display--blue-steel:before, .panel-display--blue-steel:after {
+      content: "";
+      display: block;
+      -webkit-flex-grow: 1;
+      flex-grow: 1; }
+
+  /* line 50, ../../../sass/layouts/blue_steel/blue_steel.layout.scss */
+  .blue-steel-region--first,
+  .panels-dnd .blue-steel-region--first {
+    -webkit-flex: 390px 0 0;
+    flex: 390px 0 0;
+    padding-right: 2em; }
+
+  /* line 56, ../../../sass/layouts/blue_steel/blue_steel.layout.scss */
+  .blue-steel-region--second,
+  .panels-dnd .blue-steel-region--second {
+    -webkit-flex: 750px 0 0;
+    flex: 750px 0 0;
+    padding-left: 2em; } }
+
+/*# sourceMappingURL=blue_steel.layout.css.map */

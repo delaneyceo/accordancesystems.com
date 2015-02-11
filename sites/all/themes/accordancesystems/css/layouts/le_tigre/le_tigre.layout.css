@@ -1,0 +1,56 @@
+/*******************************************************************************
+ * le-tigre.layout.scss
+ *
+ * Styling of the "Le Tigre" layout
+ * grids with Singularity.
+ ******************************************************************************/
+/* line 16, ../../../sass/layouts/le_tigre/le_tigre.layout.scss */
+.l-panel-region {
+  padding: 2em 1em; }
+
+@media (min-width: 800px) {
+  /* line 22, ../../../sass/layouts/le_tigre/le_tigre.layout.scss */
+  .panel-display--le-tigre {
+    display: -webkit-flex;
+    display: flex;
+    -webkit-justify-content: center;
+    justify-content: center; }
+
+  /* line 27, ../../../sass/layouts/le_tigre/le_tigre.layout.scss */
+  .le-tigre-region--first,
+  .panels-dnd .le-tigre-region--first {
+    -webkit-flex: 600px 1 1;
+    flex: 600px 1 1; }
+
+  /* line 32, ../../../sass/layouts/le_tigre/le_tigre.layout.scss */
+  .le-tigre-region--second,
+  .panels-dnd .le-tigre-region--second {
+    -webkit-flex: 250px 1 0;
+    flex: 250px 1 0; } }
+@media (min-width: 1140px) {
+  /* line 39, ../../../sass/layouts/le_tigre/le_tigre.layout.scss */
+  .panel-display--le-tigre {
+    -webkit-justify-content: center;
+    justify-content: center; }
+    /* line 42, ../../../sass/layouts/le_tigre/le_tigre.layout.scss */
+    .panel-display--le-tigre:before, .panel-display--le-tigre:after {
+      content: "";
+      display: block;
+      -webkit-flex-grow: 1;
+      flex-grow: 1; }
+
+  /* line 50, ../../../sass/layouts/le_tigre/le_tigre.layout.scss */
+  .le-tigre-region--first,
+  .panels-dnd .le-tigre-region--first {
+    -webkit-flex: 750px 0 0;
+    flex: 750px 0 0;
+    padding-right: 2em; }
+
+  /* line 56, ../../../sass/layouts/le_tigre/le_tigre.layout.scss */
+  .le-tigre-region--second,
+  .panels-dnd .le-tigre-region--second {
+    -webkit-flex: 390px 0 0;
+    flex: 390px 0 0;
+    padding-left: 2em; } }
+
+/*# sourceMappingURL=le_tigre.layout.css.map */

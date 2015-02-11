@@ -1,0 +1,61 @@
+/*******************************************************************************
+ * blue_steel.layout.scss
+ *
+ * Styling of the "Le Tigre" layout
+ * grids with Singularity.
+ ******************************************************************************/
+@import "compass";
+@import "breakpoint";
+@import "singularitygs";
+@import "../../variables/breakpoints";
+
+$bp-float-sidebar: 800px;
+$main: 750px;
+$sidebar: $page-max-width - $main;
+
+.l-panel-region {
+  padding: 2em 1em;
+}
+
+// Page reactions
+@include breakpoint($bp-float-sidebar) {
+  .panel-display--blue-steel {
+    @include display-flex;
+    @include justify-content(center);
+  }
+
+  .blue-steel-region--first,
+  .panels-dnd .blue-steel-region--first {
+    @include flex(250px 1 1);
+  }
+
+  .blue-steel-region--second,
+  .panels-dnd .blue-steel-region--second {
+    @include flex(600px 1 0);
+  }
+}
+
+@include breakpoint($page-max-width) {
+  .panel-display--blue-steel {
+    @include justify-content(center);
+
+    &:before,
+    &:after {
+      content: "";
+      display: block;
+      @include flex-grow(1);
+    }
+  }
+
+  .blue-steel-region--first,
+  .panels-dnd .blue-steel-region--first {
+    @include flex($sidebar 0 0);
+    padding-right: 2em;
+  }
+
+  .blue-steel-region--second,
+  .panels-dnd .blue-steel-region--second {
+    @include flex($main 0 0);
+    padding-left: 2em;
+  }
+}
