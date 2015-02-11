@@ -109,7 +109,7 @@ hide($content['links']);
 
   <?php if ($title && !$page): ?>
       <?php if ($title): ?>
-        <h2 class="oneit-trigger">
+        <h2 class="accordancesystems-trigger">
          <?php print $title; ?>
         </h2>
       <?php endif; ?>
