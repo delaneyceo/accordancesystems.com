@@ -1,0 +1,33 @@
+.node--dealer--dealer-listing {
+  .field--name-field-dealer-address {
+    @include field-icon($fa-var-map-marker);
+  }
+
+  .field--name-field-dealer-phone {
+    @include field-icon($fa-var-mobile-phone, 2.2, 2px);
+  }
+
+  .field--name-field-dealer-email {
+    @include field-icon($fa-var-envelope-o, 1.4);
+  }
+
+  .field--name-field-dealer-url {
+    a {
+      @include btn;
+    }
+  }
+
+  .field--name-field-dealer-logo {
+    line-height: 0;
+    margin-top: 2em;
+    @include filter(grayscale(1));
+    @include opacity(.5);
+
+    img {
+      display: block;
+      margin: 0 auto;
+      max-height: 80px;
+      width: auto;
+    }
+  }
+}

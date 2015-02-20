@@ -125,6 +125,10 @@
     transform: scale3d(0.3, 0.3, 0.3); }
   50% {
     opacity: 1; } }
+/* line 1, ../sass/base/_fields.scss */
+.field {
+  margin-bottom: 1em; }
+
 /* line 1, ../sass/base/_forms.scss */
 input {
   max-width: 100%; }
@@ -257,18 +261,20 @@ hr {
   *vertical-align: auto;
   *zoom: 1;
   *display: inline;
-  background-color: #ccc;
+  background-color: #262633;
   color: #fff;
-  font-weight: 900;
+  font-weight: 700;
   padding: .4em .8em .5em;
   -moz-border-radius: 4px;
   -webkit-border-radius: 4px;
   border-radius: 4px;
-  border: 1px solid #c7c7c7; }
-  /* line 143, ../sass/utilities/_mixins.scss */
+  border: 1px solid #22222d;
+  font-size: 15px;
+  font-size: 1.5rem; }
+  /* line 144, ../sass/utilities/_mixins.scss */
   .btn:hover, .btn:focus, .btn:active {
     background-color: #fff;
-    color: #ccc;
+    color: #262633;
     -moz-transform: scale(1.1);
     -ms-transform: scale(1.1);
     -webkit-transform: scale(1.1);
@@ -298,13 +304,17 @@ hr {
       clear: both; }
   /* line 16, ../sass/components/global_regions/_header.scss */
   .l-header .l-navbar {
-    background-color: #262633; }
-    /* line 19, ../sass/components/global_regions/_header.scss */
+    background-color: #262633;
+    -moz-box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.25);
+    -webkit-box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.25);
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.25);
+    border-bottom: 1px solid #3c3c50; }
+    /* line 21, ../sass/components/global_regions/_header.scss */
     .l-header .l-navbar .l-branding {
       vertical-align: middle;
       padding-top: 1em;
       padding-bottom: 1em; }
-    /* line 32, ../sass/components/global_regions/_header.scss */
+    /* line 34, ../sass/components/global_regions/_header.scss */
     .l-header .l-navbar .site-logo {
       display: inline-block;
       vertical-align: middle;
@@ -314,7 +324,7 @@ hr {
       max-width: 50px;
       line-height: 0;
       margin-right: .3em; }
-    /* line 39, ../sass/components/global_regions/_header.scss */
+    /* line 41, ../sass/components/global_regions/_header.scss */
     .l-header .l-navbar .site-name {
       display: inline-block;
       vertical-align: middle;
@@ -323,7 +333,7 @@ hr {
       *display: inline;
       letter-spacing: -2px;
       margin: 0; }
-      /* line 44, ../sass/components/global_regions/_header.scss */
+      /* line 46, ../sass/components/global_regions/_header.scss */
       .l-header .l-navbar .site-name span {
         display: inline-block;
         vertical-align: middle;
@@ -331,17 +341,17 @@ hr {
         *zoom: 1;
         *display: inline;
         margin-right: .1em; }
-      /* line 49, ../sass/components/global_regions/_header.scss */
+      /* line 51, ../sass/components/global_regions/_header.scss */
       .l-header .l-navbar .site-name .site-name-first {
         font-weight: 900; }
-      /* line 53, ../sass/components/global_regions/_header.scss */
+      /* line 55, ../sass/components/global_regions/_header.scss */
       .l-header .l-navbar .site-name .site-name-second {
         font-weight: 400; }
-  /* line 65, ../sass/components/global_regions/_header.scss */
+  /* line 67, ../sass/components/global_regions/_header.scss */
   .l-header .l-guide {
     padding-top: 2em;
     padding-bottom: 2em; }
-    /* line 69, ../sass/components/global_regions/_header.scss */
+    /* line 71, ../sass/components/global_regions/_header.scss */
     .l-header .l-guide .page-title {
       margin: 0; }
 
@@ -735,8 +745,8 @@ hr {
   justify-content: center; }
 /* line 28, ../sass/components/pages/_dealers.scss */
 .page-dealers .view-display-id-dealers_pane .grouped-row .views-row {
-  -webkit-flex: 0 0 400px;
-  flex: 0 0 400px;
+  -webkit-flex: 0 0 450px;
+  flex: 0 0 450px;
   background-color: #FDFCFC;
   margin: 1em;
   padding: 2em; }
@@ -753,5 +763,134 @@ hr {
   .page-solutions .view-display-id-solutions_pane .views-row-odd {
     background: url('../images/rgbapng/e5d7d726-5.png?1424409829');
     background: rgba(229, 215, 215, 0.15); }
+
+/* line 170, ../sass/utilities/_mixins.scss */
+.node--dealer--dealer-listing .field--name-field-dealer-address .field__items {
+  display: inline-block;
+  vertical-align: middle;
+  *vertical-align: auto;
+  *zoom: 1;
+  *display: inline;
+  vertical-align: top; }
+/* line 175, ../sass/utilities/_mixins.scss */
+.node--dealer--dealer-listing .field--name-field-dealer-address:before {
+  font-family: FontAwesome;
+  font-weight: normal;
+  font-style: normal;
+  text-decoration: inherit;
+  -webkit-font-smoothing: antialiased;
+  *margin-right: .3em;
+  content: "";
+  display: inline-block;
+  vertical-align: middle;
+  *vertical-align: auto;
+  *zoom: 1;
+  *display: inline;
+  vertical-align: top;
+  min-width: 25px;
+  text-align: center;
+  position: relative;
+  top: 5px; }
+/* line 170, ../sass/utilities/_mixins.scss */
+.node--dealer--dealer-listing .field--name-field-dealer-phone .field__items {
+  display: inline-block;
+  vertical-align: middle;
+  *vertical-align: auto;
+  *zoom: 1;
+  *display: inline;
+  vertical-align: top; }
+/* line 175, ../sass/utilities/_mixins.scss */
+.node--dealer--dealer-listing .field--name-field-dealer-phone:before {
+  font-family: FontAwesome;
+  font-weight: normal;
+  font-style: normal;
+  text-decoration: inherit;
+  -webkit-font-smoothing: antialiased;
+  *margin-right: .3em;
+  content: "";
+  display: inline-block;
+  vertical-align: middle;
+  *vertical-align: auto;
+  *zoom: 1;
+  *display: inline;
+  vertical-align: top;
+  min-width: 25px;
+  text-align: center;
+  position: relative;
+  top: 2px;
+  font-size: 22px;
+  font-size: 2.2rem; }
+/* line 170, ../sass/utilities/_mixins.scss */
+.node--dealer--dealer-listing .field--name-field-dealer-email .field__items {
+  display: inline-block;
+  vertical-align: middle;
+  *vertical-align: auto;
+  *zoom: 1;
+  *display: inline;
+  vertical-align: top; }
+/* line 175, ../sass/utilities/_mixins.scss */
+.node--dealer--dealer-listing .field--name-field-dealer-email:before {
+  font-family: FontAwesome;
+  font-weight: normal;
+  font-style: normal;
+  text-decoration: inherit;
+  -webkit-font-smoothing: antialiased;
+  *margin-right: .3em;
+  content: "";
+  display: inline-block;
+  vertical-align: middle;
+  *vertical-align: auto;
+  *zoom: 1;
+  *display: inline;
+  vertical-align: top;
+  min-width: 25px;
+  text-align: center;
+  position: relative;
+  top: 5px;
+  font-size: 14px;
+  font-size: 1.4rem; }
+/* line 15, ../sass/components/view_modes/_node--dealer--dealer-listing.scss */
+.node--dealer--dealer-listing .field--name-field-dealer-url a {
+  display: inline-block;
+  vertical-align: middle;
+  *vertical-align: auto;
+  *zoom: 1;
+  *display: inline;
+  background-color: #262633;
+  color: #fff;
+  font-weight: 700;
+  padding: .4em .8em .5em;
+  -moz-border-radius: 4px;
+  -webkit-border-radius: 4px;
+  border-radius: 4px;
+  border: 1px solid #22222d;
+  font-size: 15px;
+  font-size: 1.5rem; }
+  /* line 144, ../sass/utilities/_mixins.scss */
+  .node--dealer--dealer-listing .field--name-field-dealer-url a:hover, .node--dealer--dealer-listing .field--name-field-dealer-url a:focus, .node--dealer--dealer-listing .field--name-field-dealer-url a:active {
+    background-color: #fff;
+    color: #262633;
+    -moz-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+    -moz-box-shadow: 0px 0px 7px rgba(0, 0, 0, 0.1);
+    -webkit-box-shadow: 0px 0px 7px rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 0px 7px rgba(0, 0, 0, 0.1);
+    border: 1px solid #f2f2f2; }
+/* line 20, ../sass/components/view_modes/_node--dealer--dealer-listing.scss */
+.node--dealer--dealer-listing .field--name-field-dealer-logo {
+  line-height: 0;
+  margin-top: 2em;
+  -webkit-filter: grayscale(1);
+  filter: grayscale(1);
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=50);
+  opacity: 0.5; }
+  /* line 26, ../sass/components/view_modes/_node--dealer--dealer-listing.scss */
+  .node--dealer--dealer-listing .field--name-field-dealer-logo img {
+    display: block;
+    margin: 0 auto;
+    max-height: 80px;
+    width: auto; }
 
 /*# sourceMappingURL=accordancesystems.no-query.css.map */
