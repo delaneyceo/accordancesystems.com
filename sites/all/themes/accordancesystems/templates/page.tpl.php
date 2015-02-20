@@ -70,7 +70,7 @@
  * @see omega_preprocess_page()
  */
 ?>
-<div class="l-page">
+<div <?php print $attributes ?>>
   <header class="l-header" role="banner">
     <div class="l-navbar">
       <div class="l-container">
@@ -110,7 +110,11 @@
     </div>
   </header>
 
-  <div class="l-main"><div class="l-container">
+  <div class="l-main">
+    <?php if ($variables['content_container'] == true): ?>
+      <div class="l-container">
+    <?php endif; ?>
+
     <div class="l-content" role="main">
       <?php print render($page['highlighted']); ?>
 
@@ -128,7 +132,12 @@
 
     <?php print render($page['sidebar_first']); ?>
     <?php print render($page['sidebar_second']); ?>
-  </div></div>
+
+    <?php if ($variables['content_container'] == true): ?>
+      </div>
+    <?php endif; ?>
+
+  </div>
 
   <footer class="l-footer" role="contentinfo">
     <?php print render($page['footer']); ?>
