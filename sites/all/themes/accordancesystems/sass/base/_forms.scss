@@ -1,0 +1,17 @@
+input {
+  max-width: 100%;
+}
+
+.form-item {
+  .form-text,
+  .form-textarea {
+    padding: .5em;
+    @include appearance(none);
+    @include border-radius(4px);
+    border: 1px solid #e1e1e1;
+  }
+
+  .form-textarea {
+    @include border-radius(4px 4px 0 0);
+  }
+}
