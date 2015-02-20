@@ -136,7 +136,7 @@ html {
 /* line 5, ../sass/base/_page.scss */
 body {
   font-family: "Source Sans Pro", sans-serif;
-  font-size: 1.6em;
+  font-size: 1.8em;
   color: #453D36;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale; }
@@ -156,8 +156,8 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
 
 /* line 9, ../sass/base/_typography.scss */
 h1, .h1 {
-  font-size: 32px;
-  font-size: 3.2rem; }
+  font-size: 29px;
+  font-size: 2.9rem; }
 
 /* line 10, ../sass/base/_typography.scss */
 h2, .h2 {
@@ -248,6 +248,87 @@ hr {
     box-shadow: 0px 0px 7px rgba(0, 0, 0, 0.1);
     border: 1px solid #f2f2f2; }
 
+/* line 1, ../sass/components/global_regions/_header.scss */
+.l-header {
+  background-color: #156DF9;
+  background-image: url("../images/patterns/pattern1.png");
+  color: #fff;
+  position: relative; }
+  /* line 7, ../sass/components/global_regions/_header.scss */
+  .l-header a {
+    color: #fff; }
+  /* line 11, ../sass/components/global_regions/_header.scss */
+  .l-header .l-container {
+    *zoom: 1; }
+    /* line 38, ../../../../../../../../../Users/ace/.rvm/gems/ruby-1.9.3-p484@omega.accordancesystems/gems/compass-core-1.0.3/stylesheets/compass/utilities/general/_clearfix.scss */
+    .l-header .l-container:after {
+      content: "";
+      display: table;
+      clear: both; }
+  /* line 15, ../sass/components/global_regions/_header.scss */
+  .l-header .l-navbar {
+    background-color: #262633; }
+    /* line 18, ../sass/components/global_regions/_header.scss */
+    .l-header .l-navbar .l-branding {
+      vertical-align: middle;
+      padding-top: 1em;
+      padding-bottom: 1em; }
+      @media (min-width: 980px) {
+        /* line 18, ../sass/components/global_regions/_header.scss */
+        .l-header .l-navbar .l-branding {
+          float: left;
+          position: relative;
+          top: 11px;
+          padding: 0; } }
+    /* line 31, ../sass/components/global_regions/_header.scss */
+    .l-header .l-navbar .site-logo {
+      display: inline-block;
+      vertical-align: middle;
+      *vertical-align: auto;
+      *zoom: 1;
+      *display: inline;
+      max-width: 50px;
+      line-height: 0;
+      margin-right: .3em; }
+    /* line 38, ../sass/components/global_regions/_header.scss */
+    .l-header .l-navbar .site-name {
+      display: inline-block;
+      vertical-align: middle;
+      *vertical-align: auto;
+      *zoom: 1;
+      *display: inline;
+      letter-spacing: -2px;
+      margin: 0; }
+      /* line 43, ../sass/components/global_regions/_header.scss */
+      .l-header .l-navbar .site-name span {
+        display: inline-block;
+        vertical-align: middle;
+        *vertical-align: auto;
+        *zoom: 1;
+        *display: inline;
+        margin-right: .1em; }
+      /* line 48, ../sass/components/global_regions/_header.scss */
+      .l-header .l-navbar .site-name .site-name-first {
+        font-weight: 900; }
+      /* line 52, ../sass/components/global_regions/_header.scss */
+      .l-header .l-navbar .site-name .site-name-second {
+        font-weight: 400; }
+    @media (min-width: 980px) {
+      /* line 57, ../sass/components/global_regions/_header.scss */
+      .l-header .l-navbar .l-region--navigation {
+        float: right; } }
+  /* line 64, ../sass/components/global_regions/_header.scss */
+  .l-header .l-guide {
+    padding-top: 2em;
+    padding-bottom: 2em; }
+    /* line 68, ../sass/components/global_regions/_header.scss */
+    .l-header .l-guide .page-title {
+      margin: 0; }
+
+/* line 1, ../sass/components/global_regions/_main.scss */
+.l-main {
+  padding: 2em 0; }
+
 /* line 1, ../sass/components/navigation/_breadcrumb.scss */
 .breadcrumb {
   margin: 0;
@@ -282,52 +363,52 @@ hr {
     /* line 29, ../sass/components/navigation/_superfish.scss */
     #block-superfish-1 .sf-style-none.sf-navbar {
       width: 100%;
-      background: #ccc; }
+      background: transparent; }
     /* line 33, ../sass/components/navigation/_superfish.scss */
     #block-superfish-1 .sf-style-none ul {
       padding-left: 0; }
       /* line 36, ../sass/components/navigation/_superfish.scss */
       #block-superfish-1 .sf-style-none ul.sf-megamenu li.sf-megamenu-wrapper {
-        background: #141414; }
+        background: #0c0c10; }
         /* line 38, ../sass/components/navigation/_superfish.scss */
         #block-superfish-1 .sf-style-none ul.sf-megamenu li.sf-megamenu-wrapper li {
           background: transparent; }
     /* line 44, ../sass/components/navigation/_superfish.scss */
     #block-superfish-1 .sf-style-none a {
-      color: #453D36;
+      color: #a0a0b8;
       padding: 0.75em 1em; }
       /* line 47, ../sass/components/navigation/_superfish.scss */
       #block-superfish-1 .sf-style-none a.sf-with-ul {
         padding-right: 2.25em; }
       /* line 50, ../sass/components/navigation/_superfish.scss */
       #block-superfish-1 .sf-style-none a:focus {
-        background: #252525;
+        background: #3c3c50;
         outline: 0;
         color: #fff; }
       /* line 55, ../sass/components/navigation/_superfish.scss */
       #block-superfish-1 .sf-style-none a:hover {
-        background: #252525;
+        background: #3c3c50;
         outline: 0;
         color: #fff; }
       /* line 60, ../sass/components/navigation/_superfish.scss */
       #block-superfish-1 .sf-style-none a:active {
-        background: #252525;
+        background: #3c3c50;
         outline: 0;
         color: #fff; }
     /* line 67, ../sass/components/navigation/_superfish.scss */
     #block-superfish-1 .sf-style-none span.nolink {
-      color: #453D36;
+      color: #a0a0b8;
       padding: 0.75em 1em; }
       /* line 70, ../sass/components/navigation/_superfish.scss */
       #block-superfish-1 .sf-style-none span.nolink.sf-with-ul {
         padding-right: 2.25em; }
       /* line 73, ../sass/components/navigation/_superfish.scss */
       #block-superfish-1 .sf-style-none span.nolink:hover {
-        background: #141414;
+        background: #0c0c10;
         outline: 0; }
     /* line 78, ../sass/components/navigation/_superfish.scss */
     #block-superfish-1 .sf-style-none span.sf-description {
-      color: #453D36;
+      color: #a0a0b8;
       display: block;
       font-size: 0.833em;
       line-height: 1.5;
@@ -346,26 +427,26 @@ hr {
       padding-right: 1em; }
     /* line 102, ../sass/components/navigation/_superfish.scss */
     #block-superfish-1 .sf-style-none li {
-      background: #ccc; }
+      background: transparent; }
       /* line 104, ../sass/components/navigation/_superfish.scss */
       #block-superfish-1 .sf-style-none li li {
-        background: #333; }
+        background: #262633; }
         /* line 106, ../sass/components/navigation/_superfish.scss */
         #block-superfish-1 .sf-style-none li li li {
-          background: #1f1f1f; }
+          background: #15151c; }
           /* line 108, ../sass/components/navigation/_superfish.scss */
           #block-superfish-1 .sf-style-none li li li li {
-            background: #141414; }
+            background: #0c0c10; }
       /* line 113, ../sass/components/navigation/_superfish.scss */
       #block-superfish-1 .sf-style-none li:hover, #block-superfish-1 .sf-style-none li.sfHover {
-        background: #454545;
+        background: #3c3c50;
         outline: 0; }
         /* line 117, ../sass/components/navigation/_superfish.scss */
         #block-superfish-1 .sf-style-none li:hover a, #block-superfish-1 .sf-style-none li.sfHover a {
           color: #fff; }
         /* line 120, ../sass/components/navigation/_superfish.scss */
         #block-superfish-1 .sf-style-none li:hover > ul, #block-superfish-1 .sf-style-none li.sfHover > ul {
-          top: 44px; }
+          top: 79px; }
           /* line 122, ../sass/components/navigation/_superfish.scss */
           #block-superfish-1 .sf-style-none li:hover > ul ul, #block-superfish-1 .sf-style-none li.sfHover > ul ul {
             top: 0; }
@@ -403,8 +484,8 @@ hr {
       top: 1px; }
   /* line 155, ../sass/components/navigation/_superfish.scss */
   #block-superfish-1 div.sf-accordion-toggle.sf-style-none a {
-    background: #ccc;
-    color: #453D36;
+    background: transparent;
+    color: #a0a0b8;
     padding: 1em; }
     /* line 159, ../sass/components/navigation/_superfish.scss */
     #block-superfish-1 div.sf-accordion-toggle.sf-style-none a:before {
@@ -417,7 +498,7 @@ hr {
       content: ""; }
     /* line 162, ../sass/components/navigation/_superfish.scss */
     #block-superfish-1 div.sf-accordion-toggle.sf-style-none a.sf-expanded {
-      background-color: #141414;
+      background-color: #0c0c10;
       font-weight: bold; }
   /* line 167, ../sass/components/navigation/_superfish.scss */
   #block-superfish-1 div.sf-accordion-toggle span {
@@ -464,7 +545,7 @@ hr {
     float: right; }
   /* line 226, ../sass/components/navigation/_superfish.scss */
   #block-superfish-1 .sf-menu.sf-style-none.sf-accordion li.sf-expanded {
-    background-color: #141414; }
+    background-color: #0c0c10; }
     /* line 229, ../sass/components/navigation/_superfish.scss */
     #block-superfish-1 .sf-menu.sf-style-none.sf-accordion li.sf-expanded > a {
       font-weight: bold; }
@@ -522,14 +603,15 @@ hr {
     font-weight: bold; }
 
 /* line 1, ../sass/components/navigation/_superfish_local_overrides.scss */
+#block-superfish-1.contextual-links-region {
+  position: initial; }
+
+/* line 5, ../sass/components/navigation/_superfish_local_overrides.scss */
 #block-superfish-1 {
-  font-size: 13px;
-  font-size: 1.3rem;
-  font-weight: 900;
-  margin: 2em auto;
+  font-weight: 600;
   text-shadow: none;
   text-align: center; }
-  /* line 8, ../sass/components/navigation/_superfish_local_overrides.scss */
+  /* line 10, ../sass/components/navigation/_superfish_local_overrides.scss */
   #block-superfish-1 .block__title {
     clip: auto;
     height: auto;
@@ -537,48 +619,51 @@ hr {
     position: absolute;
     top: -9999px;
     left: -9999px; }
-  /* line 12, ../sass/components/navigation/_superfish_local_overrides.scss */
+  /* line 14, ../sass/components/navigation/_superfish_local_overrides.scss */
   #block-superfish-1 li,
   #block-superfish-1 a {
     -moz-transition: background-color, 0.5s;
     -o-transition: background-color, 0.5s;
     -webkit-transition: background-color, 0.5s;
     transition: background-color, 0.5s; }
-  /* line 17, ../sass/components/navigation/_superfish_local_overrides.scss */
+  /* line 19, ../sass/components/navigation/_superfish_local_overrides.scss */
   #block-superfish-1 ul {
     line-height: 1; }
-  /* line 21, ../sass/components/navigation/_superfish_local_overrides.scss */
+  /* line 23, ../sass/components/navigation/_superfish_local_overrides.scss */
   #block-superfish-1 .sf-style-none {
-    float: none;
     display: inline-block;
     vertical-align: middle;
     *vertical-align: auto;
     *zoom: 1;
-    *display: inline;
-    *zoom: 1; }
-    /* line 38, ../../../../../../../../../Users/ace/.rvm/gems/ruby-1.9.3-p484@omega.accordancesystems/gems/compass-core-1.0.3/stylesheets/compass/utilities/general/_clearfix.scss */
-    #block-superfish-1 .sf-style-none:after {
-      content: "";
-      display: table;
-      clear: both; }
-  /* line 28, ../sass/components/navigation/_superfish_local_overrides.scss */
-  #block-superfish-1 li.sf-depth-1 {
-    margin: .3em; }
-    /* line 31, ../sass/components/navigation/_superfish_local_overrides.scss */
-    #block-superfish-1 li.sf-depth-1.sfHover a,
-    #block-superfish-1 li.sf-depth-1 a:hover,
-    #block-superfish-1 li.sf-depth-1 a:focus,
-    #block-superfish-1 li.sf-depth-1 a:active {
-      border-top: 0; }
-  /* line 39, ../sass/components/navigation/_superfish_local_overrides.scss */
+    *display: inline; }
+    @media (min-width: 980px) {
+      /* line 23, ../sass/components/navigation/_superfish_local_overrides.scss */
+      #block-superfish-1 .sf-style-none {
+        *zoom: 1; }
+        /* line 38, ../../../../../../../../../Users/ace/.rvm/gems/ruby-1.9.3-p484@omega.accordancesystems/gems/compass-core-1.0.3/stylesheets/compass/utilities/general/_clearfix.scss */
+        #block-superfish-1 .sf-style-none:after {
+          content: "";
+          display: table;
+          clear: both; } }
+  @media (min-width: 980px) {
+    /* line 41, ../sass/components/navigation/_superfish_local_overrides.scss */
+    #block-superfish-1 li.sf-depth-1.active-trail > a {
+      border-bottom: 4px solid #991c1f; } }
+  /* line 48, ../sass/components/navigation/_superfish_local_overrides.scss */
   #block-superfish-1 a.sf-depth-1 {
-    text-transform: uppercase;
-    color: #333;
-    padding: 1em 2em; }
-    /* line 44, ../sass/components/navigation/_superfish_local_overrides.scss */
+    border-top: 4px solid transparent;
+    border-bottom: 4px solid transparent; }
+    @media (min-width: 980px) {
+      /* line 48, ../sass/components/navigation/_superfish_local_overrides.scss */
+      #block-superfish-1 a.sf-depth-1 {
+        padding: 1.5em 1em; } }
+    /* line 56, ../sass/components/navigation/_superfish_local_overrides.scss */
     #block-superfish-1 a.sf-depth-1.sfHover, #block-superfish-1 a.sf-depth-1:hover, #block-superfish-1 a.sf-depth-1:focus, #block-superfish-1 a.sf-depth-1:active {
-      border-bottom-width: 4px !important; }
-  /* line 53, ../sass/components/navigation/_superfish_local_overrides.scss */
+      border-top-color: #991c1f; }
+    /* line 63, ../sass/components/navigation/_superfish_local_overrides.scss */
+    #block-superfish-1 a.sf-depth-1 .sf-sub-indicator {
+      top: 1.5em; }
+  /* line 69, ../sass/components/navigation/_superfish_local_overrides.scss */
   #block-superfish-1 #superfish-1-toggle {
     display: inline-block;
     vertical-align: middle;
@@ -586,11 +671,13 @@ hr {
     *zoom: 1;
     *display: inline;
     text-align: center;
-    color: #222; }
-  /* line 58, ../sass/components/navigation/_superfish_local_overrides.scss */
+    position: absolute;
+    top: .9em;
+    right: 1em; }
+  /* line 76, ../sass/components/navigation/_superfish_local_overrides.scss */
   #block-superfish-1 #superfish-1-toggle.sf-expanded {
     color: #fff; }
-  /* line 62, ../sass/components/navigation/_superfish_local_overrides.scss */
+  /* line 80, ../sass/components/navigation/_superfish_local_overrides.scss */
   #block-superfish-1 .sf-expanded > .sf-accordion-button:before {
     font-family: FontAwesome;
     font-weight: normal;
@@ -599,15 +686,15 @@ hr {
     -webkit-font-smoothing: antialiased;
     *margin-right: .3em;
     content: ""; }
-  /* line 65, ../sass/components/navigation/_superfish_local_overrides.scss */
+  /* line 83, ../sass/components/navigation/_superfish_local_overrides.scss */
   #block-superfish-1 .sf-accordion-button {
     line-height: 999px;
     overflow: hidden;
-    height: 37px;
+    height: 100%;
     width: 37px;
     text-align: center;
     padding: 0 !important; }
-    /* line 74, ../sass/components/navigation/_superfish_local_overrides.scss */
+    /* line 92, ../sass/components/navigation/_superfish_local_overrides.scss */
     #block-superfish-1 .sf-accordion-button:before {
       line-height: normal;
       display: block !important;
@@ -622,8 +709,8 @@ hr {
       font-size: 1.7rem;
       width: 100%;
       height: 100%;
-      line-height: 35px !important; }
-  /* line 85, ../sass/components/navigation/_superfish_local_overrides.scss */
+      line-height: 52px !important; }
+  /* line 103, ../sass/components/navigation/_superfish_local_overrides.scss */
   #block-superfish-1 .sf-with-ul {
     padding-left: 40px; }
 

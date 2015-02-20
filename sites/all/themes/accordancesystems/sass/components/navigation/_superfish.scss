@@ -1,15 +1,15 @@
 
 // You can add these variables to your _base.scss
-$superfish-1-color: $base-font-color;
-$superfish-1-background-color-level-first: #ccc;
-$superfish-1-background-color-level-second: #333;
-$superfish-1-background-color-level-third: darken(#333, 8);
-$superfish-1-background-color-level-fourth: darken(#333, 12);
-$superfish-1-background-color-hover: #252525;
-$superfish-1-background-color-active: lighten(#333, 7);
+$superfish-1-color: lighten($color-darkslategray, 50%);
+$superfish-1-background-color-level-first: transparent;
+$superfish-1-background-color-level-second: $color-darkslategray;
+$superfish-1-background-color-level-third: darken($color-darkslategray, 8);
+$superfish-1-background-color-level-fourth: darken($color-darkslategray, 12);
+$superfish-1-background-color-hover: $tint-darkslategray;
+$superfish-1-background-color-active: $tint-darkslategray;
 $superfish-hover-text-color: #fff;
 $superfish-1-text-color-active: #fff;
-$hover-top: 44px; // Set the position of the top dropdown
+$hover-top: 79px; // Set the position of the top dropdown
 
 // Font Awesome variables
 $fa-icon: true; // Use fa icons instead of default

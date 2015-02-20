@@ -1,2 +1,73 @@
-.l-header {}
+.l-header {
+  background-color: $color-skyblue;
+  background-image: url('../images/patterns/pattern1.png');
+  color: #fff;
+  position: relative;
+
+  a {
+    color: #fff;
+  }
+
+  .l-container {
+    @include pie-clearfix;
+  }
+
+  .l-navbar {
+    background-color: $color-darkslategray;
+
+    .l-branding {
+      vertical-align: middle;
+      padding-top: 1em;
+      padding-bottom: 1em;
+
+      @include breakpoint($bp-sf-is-expanded) {
+        float: left;
+        position: relative;
+        top: 11px;
+        padding: 0;
+      }
+    }
+
+    .site-logo {
+      @include inline-block;
+      max-width: 50px;
+      line-height: 0;
+      margin-right: .3em;
+    }
+
+    .site-name {
+      @include inline-block;
+      letter-spacing: -2px;
+      margin: 0;
+
+      span {
+        @include inline-block;
+        margin-right: .1em;
+      }
+
+      .site-name-first {
+        font-weight: $fw-black;
+      }
+
+      .site-name-second {
+        font-weight: $fw-regular;
+      }
+    }
+
+    .l-region--navigation {
+      @include breakpoint($bp-sf-is-expanded) {
+        float: right;
+      }
+    }
+  }
+
+  .l-guide {
+    padding-top: 2em;
+    padding-bottom: 2em;
+
+    .page-title {
+      margin: 0;
+    }
+  }
+}
 
