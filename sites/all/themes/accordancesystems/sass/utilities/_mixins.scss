@@ -131,7 +131,7 @@
 }
 
 // Button
-@mixin btn($bg-color: $color-darkslategray, $color: #fff) {
+@mixin btn($bg-color: $color-skyblue, $color: #fff) {
   @include inline-block;
   background-color: $bg-color;
   color: $color;
