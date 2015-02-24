@@ -2,4 +2,19 @@
   .pane-node-content {
     background: #f5f5f5;
   }
+
+  .field--name-field-controller-features-ref {
+    .field__item {
+      padding-top: 3em;
+      padding-bottom: 3em;
+    }
+
+    .field__item.even {
+      background: #eee;
+    }
+
+    .taxonomy-term--product-controller-features {
+      @extend .l-container;
+    }
+  }
 }

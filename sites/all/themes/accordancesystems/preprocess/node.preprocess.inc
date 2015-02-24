@@ -1,4 +1,5 @@
 <?php
+include_once drupal_get_path('module', 'ctools') . "/includes/cleanstring.inc";
 
 /**
  * Implements hook_preprocess_node().
@@ -19,6 +20,61 @@ function accordancesystems_preprocess_node(&$variables) {
     case 'araid_controller_display':
       if ($variables['elements']['#view_mode'] == 'featured_slide') {
         $variables['print_node_anchor'] = FALSE;
+      }
+      if ($variables['elements']['#view_mode'] == 'product_controller_tabs') {
+        $i = 0;
+
+        // Gather field based items.
+        if (!empty($variables['content']['field_controller_features_ref'])) {
+          $variables['product_controller_links'][$i]['title'] = 'Overview';
+          $variables['product_controller_links'][$i]['type'] = 'tab';
+          $variables['product_controller_links'][$i]['tab_content'] = render($variables['content']['field_controller_features_ref']);
+          $i = $i + 1;
+        }
+        // Gather field based items.
+        if (!empty($variables['content']['field_controller_photo'])) {
+          $variables['product_controller_links'][$i]['title'] = 'Photos';
+          $variables['product_controller_links'][$i]['type'] = 'tab';
+          $variables['product_controller_links'][$i]['tab_content'] = render($variables['content']['field_controller_photo']);
+          $i = $i + 1;
+        }
+
+        // Gather link items.
+        $variables['product_controller_links'][$i]['title'] = 'Testimonials';
+        $variables['product_controller_links'][$i]['type'] = 'link';
+        $variables['product_controller_links'][$i]['url'] = 'http://google.com';
+        $i = $i + 1;
+
+        foreach ($variables['product_controller_links'] as $delta => &$item) {
+          $clean_name = ctools_cleanstring($item['title'], array('lower case'=>TRUE));
+
+          $item['attributes']['list_attributes']['class'][] = 'list-item';
+          $item['attributes']['content_attributes']['class'][] = 'tab-content';
+
+          if ($item['type'] == 'tab') {
+            // Add li attributes.
+            $item['attributes']['list_attributes']['role'] = 'presentation';
+            // Add anchor attributes.
+            $item['attributes']['anchor_attributes']['href'] = '#' . $clean_name;
+            $item['attributes']['anchor_attributes']['aria-controls'] = $clean_name;
+            $item['attributes']['anchor_attributes']['role'] = 'tab';
+            $item['attributes']['anchor_attributes']['data-toggle'] = 'tab';
+            // Add content attributes.
+            $item['attributes']['content_attributes']['role'] = 'tabpanel';
+            $item['attributes']['content_attributes']['class'][] = 'tab-pane';
+            $item['attributes']['content_attributes']['id'] = $clean_name;
+          }
+
+          if ($item['type'] == 'link') {
+            $item['attributes']['anchor_attributes']['href'] = $item['url'];
+            $item['tab_content'] = NULL;
+          }
+
+          // Render attributes
+          $item['attributes']['rendered_li'] = drupal_attributes($item['attributes']['list_attributes']);
+          $item['attributes']['rendered_a'] = drupal_attributes($item['attributes']['anchor_attributes']);
+          $item['attributes']['rendered_content'] = drupal_attributes($item['attributes']['content_attributes']);
+        }
       }
       break;
   }

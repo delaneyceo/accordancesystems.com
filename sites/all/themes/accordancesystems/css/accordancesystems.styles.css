@@ -125,6 +125,14 @@
     transform: scale3d(0.3, 0.3, 0.3); }
   50% {
     opacity: 1; } }
+/* line 1, ../sass/base/_bootstrap_tabs.scss */
+.tab-pane {
+  display: none; }
+
+/* line 5, ../sass/base/_bootstrap_tabs.scss */
+.tab-pane.active {
+  display: block; }
+
 /* line 1, ../sass/base/_fields.scss */
 .field {
   margin-bottom: 1em; }
@@ -169,7 +177,7 @@ body {
   -moz-osx-font-smoothing: grayscale; }
 
 /* line 12, ../sass/base/_page.scss */
-.l-container, .page-dealers .view-display-id-dealers_pane .grouped-row .title-wrapper-inner, .page-solutions .view-display-id-solutions_pane .taxonomy-term--solutions--full {
+.l-container, .node-araid-controller-display .field--name-field-controller-features-ref .taxonomy-term--product-controller-features, .page-dealers .view-display-id-dealers_pane .grouped-row .title-wrapper-inner, .page-solutions .view-display-id-solutions_pane .taxonomy-term--solutions--full {
   max-width: 1140px;
   margin: 0 auto;
   padding-left: 1em;
@@ -298,10 +306,10 @@ hr {
   .l-header a {
     color: #fff; }
   /* line 12, ../sass/components/global_regions/_header.scss */
-  .l-header .l-container, .l-header .page-dealers .view-display-id-dealers_pane .grouped-row .title-wrapper-inner, .page-dealers .view-display-id-dealers_pane .grouped-row .l-header .title-wrapper-inner, .l-header .page-solutions .view-display-id-solutions_pane .taxonomy-term--solutions--full, .page-solutions .view-display-id-solutions_pane .l-header .taxonomy-term--solutions--full {
+  .l-header .l-container, .l-header .node-araid-controller-display .field--name-field-controller-features-ref .taxonomy-term--product-controller-features, .node-araid-controller-display .field--name-field-controller-features-ref .l-header .taxonomy-term--product-controller-features, .l-header .page-dealers .view-display-id-dealers_pane .grouped-row .title-wrapper-inner, .page-dealers .view-display-id-dealers_pane .grouped-row .l-header .title-wrapper-inner, .l-header .page-solutions .view-display-id-solutions_pane .taxonomy-term--solutions--full, .page-solutions .view-display-id-solutions_pane .l-header .taxonomy-term--solutions--full {
     *zoom: 1; }
     /* line 38, ../../../../../../../../../Users/ace/.rvm/gems/ruby-1.9.3-p484@omega.accordancesystems/gems/compass-core-1.0.3/stylesheets/compass/utilities/general/_clearfix.scss */
-    .l-header .l-container:after, .l-header .page-dealers .view-display-id-dealers_pane .grouped-row .title-wrapper-inner:after, .page-dealers .view-display-id-dealers_pane .grouped-row .l-header .title-wrapper-inner:after, .l-header .page-solutions .view-display-id-solutions_pane .taxonomy-term--solutions--full:after, .page-solutions .view-display-id-solutions_pane .l-header .taxonomy-term--solutions--full:after {
+    .l-header .l-container:after, .l-header .node-araid-controller-display .field--name-field-controller-features-ref .taxonomy-term--product-controller-features:after, .node-araid-controller-display .field--name-field-controller-features-ref .l-header .taxonomy-term--product-controller-features:after, .l-header .page-dealers .view-display-id-dealers_pane .grouped-row .title-wrapper-inner:after, .page-dealers .view-display-id-dealers_pane .grouped-row .l-header .title-wrapper-inner:after, .l-header .page-solutions .view-display-id-solutions_pane .taxonomy-term--solutions--full:after, .page-solutions .view-display-id-solutions_pane .l-header .taxonomy-term--solutions--full:after {
       content: "";
       display: table;
       clear: both; }
@@ -757,6 +765,13 @@ hr {
 /* line 2, ../sass/components/nodes/_node-araid-controller-display.scss */
 .node-araid-controller-display .pane-node-content {
   background: #f5f5f5; }
+/* line 7, ../sass/components/nodes/_node-araid-controller-display.scss */
+.node-araid-controller-display .field--name-field-controller-features-ref .field__item {
+  padding-top: 3em;
+  padding-bottom: 3em; }
+/* line 12, ../sass/components/nodes/_node-araid-controller-display.scss */
+.node-araid-controller-display .field--name-field-controller-features-ref .field__item.even {
+  background: #eee; }
 
 /* line 5, ../sass/components/pages/_dealers.scss */
 .page-dealers .view-display-id-dealers_pane .grouped-row h3 {
