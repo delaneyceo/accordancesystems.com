@@ -94,7 +94,6 @@
           <?php print render($page['branding']); ?>
         </div>
 
-        <?php print render($page['header']); ?>
         <?php print render($page['navigation']); ?>
       </div>
     </div>
@@ -106,6 +105,9 @@
           <h1 class="page-title"><?php print $title; ?></h1>
         <?php endif; ?>
         <?php print render($title_suffix); ?>
+
+        <?php print render($page['header']); ?>
+        <?php print render($tabs); ?>
       </div>
     </div>
   </header>
@@ -121,7 +123,7 @@
       <a id="main-content"></a>
 
       <?php print $messages; ?>
-      <?php print render($tabs); ?>
+
       <?php print render($page['help']); ?>
       <?php if ($action_links): ?>
         <ul class="action-links"><?php print render($action_links); ?></ul>

@@ -1,0 +1,31 @@
+.node--araid-controller-display--featured-slide {
+  padding: 3em 0;
+
+  .field {
+    @include fadeInDown($duration: 1s);
+  }
+
+  @for $i from 1 through 10 {
+    .field:nth-child(#{$i}) {
+      -webkit-animation-delay:(#{$i*.3s});
+      animation-delay:(#{$i*.3s});
+    }
+  }
+
+  .field--name-field-controller-tagline {
+    font-style: italic;
+    @include font-size(2.2);
+  }
+
+  .node__content {
+    overflow: hidden;
+  }
+
+  @include breakpoint(800px) {
+    .content-image {
+      max-width: 60%;
+      float: right;
+      padding-left: 4em;
+    }
+  }
+}

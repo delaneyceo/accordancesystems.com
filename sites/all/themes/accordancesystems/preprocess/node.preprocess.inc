@@ -16,5 +16,10 @@ function accordancesystems_preprocess_node(&$variables) {
         }
       }
       break;
+    case 'araid_controller_display':
+      if ($variables['elements']['#view_mode'] == 'featured_slide') {
+        $variables['print_node_anchor'] = FALSE;
+      }
+      break;
   }
 }
