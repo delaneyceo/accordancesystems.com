@@ -1,0 +1,36 @@
+.block--commerce-checkout-progress-indication {
+  .commerce-checkout-progress {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    margin-bottom: 2em;
+    position: relative;
+
+    &:before {
+      content: "";
+      height: 1px;
+      width: 100%;
+      position: absolute;
+      top: 50%;
+      left: 0;
+      background: #eee;
+    }
+
+    li {
+      @include inline-block;
+      list-style: none;
+      margin: 0 1em;
+      padding: 0;
+      padding: 1em;
+      border: 1px dotted #ccc;
+      background: #fff;
+      position: relative;
+    }
+
+    .active {
+      background: $color-skyblue;
+      color: #fff;
+      border: 1px solid darken($color-skyblue, 3);
+    }
+  }
+}

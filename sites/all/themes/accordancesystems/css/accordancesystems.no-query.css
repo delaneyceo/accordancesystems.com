@@ -160,6 +160,54 @@ input {
   -webkit-border-radius: 4px;
   border-radius: 4px 4px 0 0; }
 
+/* line 19, ../sass/base/_forms.scss */
+fieldset {
+  padding: 0;
+  margin-bottom: 2em;
+  border: none;
+  border-top: 1px solid #991c1f; }
+  /* line 25, ../sass/base/_forms.scss */
+  fieldset legend {
+    padding: 1em;
+    background: #fff;
+    font-weight: 700;
+    border: 1px solid #991c1f; }
+  /* line 32, ../sass/base/_forms.scss */
+  fieldset .fieldset-wrapper {
+    padding: 1em; }
+
+/* line 37, ../sass/base/_forms.scss */
+.form-submit {
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  display: inline-block;
+  vertical-align: middle;
+  *vertical-align: auto;
+  *zoom: 1;
+  *display: inline;
+  background-color: #156DF9;
+  color: #fff;
+  font-weight: 700;
+  padding: .4em .8em .5em;
+  -moz-border-radius: 4px;
+  -webkit-border-radius: 4px;
+  border-radius: 4px;
+  border: 1px solid #0b67f9;
+  font-size: 15px;
+  font-size: 1.5rem; }
+  /* line 144, ../sass/utilities/_mixins.scss */
+  .form-submit:hover, .form-submit:focus, .form-submit:active {
+    background-color: #fff;
+    color: #156DF9;
+    -moz-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+    -moz-box-shadow: 0px 0px 7px rgba(0, 0, 0, 0.1);
+    -webkit-box-shadow: 0px 0px 7px rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 0px 7px rgba(0, 0, 0, 0.1);
+    border: 1px solid #f2f2f2; }
+
 /* line 1, ../sass/base/_media.scss */
 img, media {
   max-width: 100%; }
@@ -182,6 +230,24 @@ body {
   margin: 0 auto;
   padding-left: 1em;
   padding-right: 1em; }
+
+/* line 3, ../sass/base/_tables.scss */
+th,
+td {
+  padding: 1em;
+  vertical-align: middle; }
+
+/* line 9, ../sass/base/_tables.scss */
+th {
+  background: #eee; }
+
+/* line 13, ../sass/base/_tables.scss */
+tr.odd {
+  background: #fff; }
+
+/* line 17, ../sass/base/_tables.scss */
+tr.even {
+  background: #f5f5f5; }
 
 /* line 3, ../sass/base/_typography.scss */
 h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
@@ -245,6 +311,42 @@ a {
   /* line 43, ../sass/base/_typography.scss */
   a:hover, a:focus, a:active {
     color: #666666; }
+
+/* line 2, ../sass/components/blocks/_block--commerce-checkout-progress-indication.scss */
+.block--commerce-checkout-progress-indication .commerce-checkout-progress {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  margin-bottom: 2em;
+  position: relative; }
+  /* line 9, ../sass/components/blocks/_block--commerce-checkout-progress-indication.scss */
+  .block--commerce-checkout-progress-indication .commerce-checkout-progress:before {
+    content: "";
+    height: 1px;
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    background: #eee; }
+  /* line 19, ../sass/components/blocks/_block--commerce-checkout-progress-indication.scss */
+  .block--commerce-checkout-progress-indication .commerce-checkout-progress li {
+    display: inline-block;
+    vertical-align: middle;
+    *vertical-align: auto;
+    *zoom: 1;
+    *display: inline;
+    list-style: none;
+    margin: 0 1em;
+    padding: 0;
+    padding: 1em;
+    border: 1px dotted #ccc;
+    background: #fff;
+    position: relative; }
+  /* line 30, ../sass/components/blocks/_block--commerce-checkout-progress-indication.scss */
+  .block--commerce-checkout-progress-indication .commerce-checkout-progress .active {
+    background: #156DF9;
+    color: #fff;
+    border: 1px solid #0664f8; }
 
 /* line 1, ../sass/components/ckeditor/_ckeditor_overrides.scss */
 .cke_editable_themed {
@@ -382,6 +484,11 @@ hr {
     /* line 86, ../sass/components/global_regions/_header.scss */
     .l-header .l-guide .page-title {
       margin: 0; }
+
+/* line 2, ../sass/components/global_regions/_main.scss */
+.l-main > .l-container, .node-araid-controller-display .tab-content .field--name-field-controller-features-ref .l-main > .taxonomy-term--product-controller-features, .page-dealers .view-display-id-dealers_pane .grouped-row .l-main > .title-wrapper-inner, .page-solutions .view-display-id-solutions_pane .l-main > .taxonomy-term--solutions--full {
+  padding-top: 3em;
+  padding-bottom: 3em; }
 
 /* line 1, ../sass/components/navigation/_breadcrumb.scss */
 .breadcrumb {
@@ -825,18 +932,32 @@ hr {
       .node-araid-controller-display .tabpanel .nav-tabs .list-item.active a {
         background-color: #f4f2f2;
         border-bottom-color: #991c1f; }
-    /* line 54, ../sass/components/nodes/_node-araid-controller-display.scss */
+        /* line 52, ../sass/components/nodes/_node-araid-controller-display.scss */
+        .node-araid-controller-display .tabpanel .nav-tabs .list-item.active a.dropline {
+          position: relative; }
+          /* line 55, ../sass/components/nodes/_node-araid-controller-display.scss */
+          .node-araid-controller-display .tabpanel .nav-tabs .list-item.active a.dropline:after {
+            content: "";
+            width: 1px;
+            position: absolute;
+            bottom: -55px;
+            height: 55px;
+            background: #991c1f;
+            line-height: 0;
+            left: 50%; }
+    /* line 71, ../sass/components/nodes/_node-araid-controller-display.scss */
     .node-araid-controller-display .tabpanel .nav-tabs i {
       margin-right: .3em; }
-/* line 60, ../sass/components/nodes/_node-araid-controller-display.scss */
+/* line 77, ../sass/components/nodes/_node-araid-controller-display.scss */
 .node-araid-controller-display .tab-content.l-container, .node-araid-controller-display .tab-content .field--name-field-controller-features-ref .tab-content.taxonomy-term--product-controller-features, .node-araid-controller-display .page-dealers .view-display-id-dealers_pane .grouped-row .tab-content.title-wrapper-inner, .page-dealers .view-display-id-dealers_pane .grouped-row .node-araid-controller-display .tab-content.title-wrapper-inner, .node-araid-controller-display .page-solutions .view-display-id-solutions_pane .tab-content.taxonomy-term--solutions--full, .page-solutions .view-display-id-solutions_pane .node-araid-controller-display .tab-content.taxonomy-term--solutions--full {
-  padding-top: 3em;
-  padding-bottom: 3em; }
-/* line 67, ../sass/components/nodes/_node-araid-controller-display.scss */
+  padding: 2em;
+  margin-top: 3em;
+  border-top: 1px solid #991c1f; }
+/* line 85, ../sass/components/nodes/_node-araid-controller-display.scss */
 .node-araid-controller-display .tab-content .field--name-field-controller-features-ref .field__item {
   padding-top: 3em;
   padding-bottom: 3em; }
-/* line 72, ../sass/components/nodes/_node-araid-controller-display.scss */
+/* line 90, ../sass/components/nodes/_node-araid-controller-display.scss */
 .node-araid-controller-display .tab-content .field--name-field-controller-features-ref .field__item.even {
   background: #fff; }
 
@@ -1103,6 +1224,19 @@ hr {
     max-height: 80px;
     width: auto; }
 
+/* line 2, ../sass/components/views_displays/_view-commerce-cart-summary.scss */
+.view-commerce-cart-summary table {
+  width: 100%; }
+
+/* line 2, ../sass/components/views_displays/_view-commerce.scss */
+.commerce-line-item-actions input {
+  margin-left: 1em; }
+
+/* line 8, ../sass/components/views_displays/_view-commerce.scss */
+.checkout-buttons input,
+.checkout-buttons span {
+  margin-right: 1em; }
+
 /* line 3, ../sass/components/views_displays/_view-id-commerce_cart_block.scss */
 .block--commerce-cart-cart .block__title {
   clip: auto;
@@ -1152,5 +1286,9 @@ hr {
 .block--commerce-cart-cart .line-item-summary {
   text-align: left;
   margin: 0; }
+
+/* line 2, ../sass/components/views_displays/_view-id-commerce_cart_form.scss */
+.view-id-commerce_cart_form table {
+  width: 100%; }
 
 /*# sourceMappingURL=accordancesystems.no-query.css.map */

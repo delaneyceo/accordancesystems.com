@@ -15,3 +15,26 @@ input {
     @include border-radius(4px 4px 0 0);
   }
 }
+
+fieldset {
+  padding: 0;
+  margin-bottom: 2em;
+  border: none;
+  border-top: 1px solid $color-bloodred;
+
+  legend {
+    padding: 1em;
+    background: #fff;
+    font-weight: $fw-bold;
+    border: 1px solid $color-bloodred;
+  }
+
+  .fieldset-wrapper {
+    padding: 1em;
+  }
+}
+
+.form-submit {
+  @include appearance(none);
+  @include btn;
+}

@@ -1,1 +1,6 @@
-.l-main {}
+.l-main {
+  > .l-container {
+    padding-top: $row-padding;
+    padding-bottom: $row-padding;
+  }
+}

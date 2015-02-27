@@ -48,7 +48,24 @@ $color-tabpanel-bg: darken(#EFECEC, 3);
         &.active a {
           background-color: lighten($color-tabpanel-bg, 5);
           border-bottom-color: $color-bloodred;
+
+          &.dropline {
+            position: relative;
+
+            &:after {
+              $height: 55px;
+              content: "";
+              width: 1px;
+              position: absolute;
+              bottom: -$height;
+              height: $height;
+              background: $color-bloodred;
+              line-height: 0;
+              left: 50%;
+            }
+          }
         }
+
       }
 
       i {
@@ -58,8 +75,9 @@ $color-tabpanel-bg: darken(#EFECEC, 3);
   }
 
   .tab-content.l-container {
-    padding-top: $row-padding;
-    padding-bottom: $row-padding;
+    padding: 2em;
+    margin-top: 3em;
+    border-top: 1px solid $color-bloodred;
   }
 
   .tab-content {

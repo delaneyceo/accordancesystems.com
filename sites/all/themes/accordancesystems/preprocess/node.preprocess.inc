@@ -92,6 +92,7 @@ function accordancesystems_preprocess_node(&$variables) {
             // Add container wrapper if needed.
             if (isset($item['tab_content_needs_container'])) {
               $item['attributes']['content_attributes']['class'][] = 'l-container';
+              $item['attributes']['anchor_attributes']['class'][] = 'dropline';
             }
           }
 
