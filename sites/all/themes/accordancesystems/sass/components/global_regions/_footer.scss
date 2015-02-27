@@ -1,1 +1,11 @@
-.l-footer {}
+.l-footer {
+  background-color: $color-darkslategray;
+  color: #fff;
+
+  padding-top: $row-padding;
+  padding-bottom: $row-padding;
+
+  a {
+    color: #fff;
+  }
+}

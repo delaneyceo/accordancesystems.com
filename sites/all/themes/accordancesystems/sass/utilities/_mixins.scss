@@ -133,13 +133,14 @@
 // Button
 @mixin btn($bg-color: $color-skyblue, $color: #fff) {
   @include inline-block;
-  background-color: $bg-color;
+  background-color: rgba($bg-color, 0.75);
   color: $color;
   font-weight: $fw-bold;
   padding: .4em .8em .5em;
-  @include border-radius(4px);
-  border: 1px solid darken($bg-color, 2%);
+  border: 2px solid $bg-color;
   @include font-size(1.5);
+  @include text-shadow(1px 1px 0px $bg-color);
+  @include transition(all, .3s);
 
   &:hover,
   &:focus,
@@ -149,6 +150,7 @@
     @include transform(scale(1.1));
     @include box-shadow(0px 0px 7px rgba(0,0,0,.1));
     border: 1px solid darken($color, 5%);
+    @include text-shadow(0px 0px 0px #fff);
   }
 }
 

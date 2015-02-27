@@ -21,6 +21,10 @@ function accordancesystems_preprocess_node(&$variables) {
       if ($variables['elements']['#view_mode'] == 'featured_slide') {
         $variables['print_node_anchor'] = FALSE;
       }
+
+      // Change the name of the read more link.
+      $variables['content']['links']['node']['#links']['node-readmore']['title'] = 'Learn more';
+
       if ($variables['elements']['#view_mode'] == 'product_controller_tabs') {
         $i = 0;
 
@@ -108,6 +112,10 @@ function accordancesystems_preprocess_node(&$variables) {
           $item['attributes']['rendered_content'] = drupal_attributes($item['attributes']['content_attributes']);
         }
       }
+      break;
+    case 'araid_accessory_display':
+      // Change the name of the read more link.
+      $variables['content']['links']['node']['#links']['node-readmore']['title'] = 'Learn more';
       break;
   }
 }

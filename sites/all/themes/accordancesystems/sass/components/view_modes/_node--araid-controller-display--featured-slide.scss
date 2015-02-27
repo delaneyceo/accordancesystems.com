@@ -1,5 +1,6 @@
 .node--araid-controller-display--featured-slide {
   padding: 3em 0;
+  @include pie-clearfix;
 
   .field {
     @include fadeInDown($duration: 1s);
@@ -23,7 +24,7 @@
 
   @include breakpoint(800px) {
     .content-image {
-      max-width: 60%;
+      max-width: 50%;
       float: right;
       padding-left: 4em;
     }

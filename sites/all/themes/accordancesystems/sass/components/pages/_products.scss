@@ -1,0 +1,20 @@
+.page-products {
+  .view-display-id-controller_teaser,
+  .view-display-id-accessory_teaser {
+    .content-wrapper-inner {
+      @include display-flex;
+      @include flex-wrap(wrap);
+    }
+
+    .views-row {
+      @include flex(1 1 50%);
+      padding: $row-padding;
+      border: 1px solid $color-offsetwhite;
+
+      &:nth-child(4n),
+      &:first-child {
+        background-color: $color-offsetwhite;
+      }
+    }
+  }
+}

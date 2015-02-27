@@ -55,4 +55,8 @@ function accordancesystems_preprocess_page(&$variables) {
 
   // Pass container flag to page tempalte.
   $variables['content_container'] = $needs_container;
+
+  // Get the current year to print in the footer
+  $current_year = gmdate('Y', time());
+  $variables['page']['footer']['current_year'] = $current_year;
 }

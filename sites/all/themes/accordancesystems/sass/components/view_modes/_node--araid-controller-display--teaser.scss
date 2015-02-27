@@ -1,0 +1,15 @@
+.node--araid-controller-display--teaser {
+  .field--name-field-product,
+  .node__links {
+    @include inline-block;
+    margin: 0;
+    margin-right: .7em;
+  }
+
+  .node-readmore {
+    a {
+      @include btn;
+      line-height: normal;
+    }
+  }
+}
