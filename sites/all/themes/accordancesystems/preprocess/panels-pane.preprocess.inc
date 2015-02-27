@@ -16,9 +16,8 @@ function accordancesystems_preprocess_panels_pane(&$variables) {
       $variables['attributes_array']['class'][] = $variables['pane']->style['settings']['preset_color'];
     }
   }
-
-  if(isset($variables['pane']->style['style'])) {
-
+  if($variables['content']['#entity_type'] == 'node') {
+    $variables['classes_array'][] = 'view-mode-' . $variables['content']['#view_mode'];
   }
 
   return $variables;
