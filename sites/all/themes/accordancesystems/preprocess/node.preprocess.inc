@@ -31,7 +31,6 @@ function accordancesystems_preprocess_node(&$variables) {
           $variables['product_controller_links'][$i]['tab_content'] = render($variables['content']['field_controller_features_ref']);
           $i = $i + 1;
         }
-        // Gather field based items.
         if (!empty($variables['content']['field_controller_photo'])) {
           $variables['product_controller_links'][$i]['title'] = 'Photos';
           $variables['product_controller_links'][$i]['type'] = 'tab';
@@ -39,11 +38,20 @@ function accordancesystems_preprocess_node(&$variables) {
           $i = $i + 1;
         }
 
-        // Gather link items.
-        $variables['product_controller_links'][$i]['title'] = 'Testimonials';
-        $variables['product_controller_links'][$i]['type'] = 'link';
-        $variables['product_controller_links'][$i]['url'] = 'http://google.com';
-        $i = $i + 1;
+        // Gather views items.
+        $has_browser_compatibility = views_get_view_result('browser_compatibility', 'browser_compatibility_by_controller_nid', $variables['node']->nid);
+        if (!empty($has_browser_compatibility)) {
+          $variables['product_controller_links'][$i]['title'] = 'Compatibility';
+          $variables['product_controller_links'][$i]['type'] = 'tab';
+          $variables['product_controller_links'][$i]['tab_content'] = views_embed_view('browser_compatibility', 'browser_compatibility_by_controller_nid', $variables['node']->nid);;
+          $i = $i + 1;
+         }
+
+        // Example external link item.
+        // $variables['product_controller_links'][$i]['title'] = 'Testimonials';
+        // $variables['product_controller_links'][$i]['type'] = 'link';
+        // $variables['product_controller_links'][$i]['url'] = 'http://google.com';
+        // $i = $i + 1;
 
         foreach ($variables['product_controller_links'] as $delta => &$item) {
           $clean_name = ctools_cleanstring($item['title'], array('lower case'=>TRUE));
@@ -85,3 +93,4 @@ function accordancesystems_preprocess_node(&$variables) {
       break;
   }
 }
+
