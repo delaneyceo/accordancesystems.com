@@ -34,6 +34,7 @@ function accordancesystems_preprocess_node(&$variables) {
         if (!empty($variables['content']['field_controller_photo'])) {
           $variables['product_controller_links'][$i]['title'] = 'Photos';
           $variables['product_controller_links'][$i]['type'] = 'tab';
+          $variables['product_controller_links'][$i]['tab_content_needs_container'] = TRUE;
           $variables['product_controller_links'][$i]['tab_content'] = render($variables['content']['field_controller_photo']);
           $i = $i + 1;
         }
@@ -43,6 +44,7 @@ function accordancesystems_preprocess_node(&$variables) {
         if (!empty($has_browser_compatibility)) {
           $variables['product_controller_links'][$i]['title'] = 'Compatibility';
           $variables['product_controller_links'][$i]['type'] = 'tab';
+          $variables['product_controller_links'][$i]['tab_content_needs_container'] = TRUE;
           $variables['product_controller_links'][$i]['tab_content'] = views_embed_view('browser_compatibility', 'browser_compatibility_by_controller_nid', $variables['node']->nid);;
           $i = $i + 1;
          }
@@ -60,11 +62,13 @@ function accordancesystems_preprocess_node(&$variables) {
           $item['attributes']['list_attributes']['class'][] = 'list-item';
           $item['attributes']['content_attributes']['class'][] = 'tab-content';
 
+          // Add classes if this is the first tab item.
           if ($delta == 0) {
             $item['attributes']['list_attributes']['class'][] = 'active';
             $item['attributes']['content_attributes']['class'][] = 'active';
           }
 
+          // Add config for tab items.
           if ($item['type'] == 'tab') {
             // Add li attributes.
             $item['attributes']['list_attributes']['role'] = 'presentation';
@@ -77,8 +81,13 @@ function accordancesystems_preprocess_node(&$variables) {
             $item['attributes']['content_attributes']['role'] = 'tabpanel';
             $item['attributes']['content_attributes']['class'][] = 'tab-pane';
             $item['attributes']['content_attributes']['id'] = $clean_name;
+            // Add container wrapper if needed.
+            if (isset($item['tab_content_needs_container'])) {
+              $item['attributes']['content_attributes']['class'][] = 'l-container';
+            }
           }
 
+          // Add config for link items.
           if ($item['type'] == 'link') {
             $item['attributes']['anchor_attributes']['href'] = $item['url'];
             $item['tab_content'] = NULL;

@@ -79,7 +79,7 @@
  */
 ?>
 <article<?php print $attributes; ?>>
-  <div role="tabpanel">
+  <div class="tabpanel" role="tabpanel">
     <div class="l-container">
       <ul class="nav nav-tabs" role="tablist">
         <?php
