@@ -1,0 +1,25 @@
+.tabs--primary {
+  clear: both;
+  position: relative;
+  top: $l-guide-padding;
+  margin-bottom: 0;
+
+  li {
+    margin-right: .3em;
+  }
+
+  a {
+    background: #333;
+
+    &:hover,
+    &:focus,
+    &:active {
+      background: lighten(#333, 6);
+    }
+
+    &.active {
+      background: #eee;
+      color: #333;
+    }
+  }
+}

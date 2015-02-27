@@ -65,8 +65,8 @@
   }
 
   .l-guide {
-    padding-top: 2em;
-    padding-bottom: 2em;
+    padding-top: $l-guide-padding;
+    padding-bottom: $l-guide-padding;
 
     .l-container {
       position: relative;

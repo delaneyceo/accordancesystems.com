@@ -1,4 +1,4 @@
-$color-tabpanel-bg: #333;
+$color-tabpanel-bg: darken(#EFECEC, 3);
 
 .node-araid-controller-display {
   .pane-node-content {
@@ -6,14 +6,15 @@ $color-tabpanel-bg: #333;
   }
 
   .pane-node-content.view-mode-featured_slide {
-    background-color: $color-light-skyblue;
+    background-color: $color-offsetwhite;
+    @include background-image(linear-gradient(#EFECEC, white));
   }
 
   .tabpanel {
     background: $color-tabpanel-bg;
 
     a {
-      color: #fff;
+      color: $color-darkslategray;
     }
 
    .nav-tabs {
@@ -31,7 +32,8 @@ $color-tabpanel-bg: #333;
         a {
           padding: .8em 1em;
           display: block;
-          border-bottom: 4px solid transparent;
+          border-bottom: 2px solid transparent;
+          border-top: 2px solid transparent;
           background-color: transparent;
           @include transition(all, .5s);
 
@@ -45,7 +47,7 @@ $color-tabpanel-bg: #333;
 
         &.active a {
           background-color: lighten($color-tabpanel-bg, 5);
-          border-bottom-color: $color-skyblue;
+          border-bottom-color: $color-bloodred;
         }
       }
 
@@ -68,7 +70,7 @@ $color-tabpanel-bg: #333;
       }
 
       .field__item.even {
-        background: #eee;
+        background: #fff;
       }
 
       .taxonomy-term--product-controller-features {
