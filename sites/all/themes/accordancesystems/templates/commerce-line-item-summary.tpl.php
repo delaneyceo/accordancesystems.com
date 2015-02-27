@@ -30,7 +30,6 @@ if ($quantity_raw) {
 <div class="line-item-summary">
   <?php if ($view->name == 'commerce_cart_block'): ?>
     <a href="/cart">
-      <i class="fa fa-shopping-cart"></i>
       <span class="element-invisible">View Your Cart:</span>
       <span class="items">
         <?php print $quantity_raw . ' ' . $label; ?> - Total: <?php print $total; ?>

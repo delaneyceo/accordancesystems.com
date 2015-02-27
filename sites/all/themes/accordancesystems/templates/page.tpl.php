@@ -99,12 +99,14 @@
     </div>
     <div class="l-guide">
       <div class="l-container">
-        <?php print $breadcrumb; ?>
-        <?php print render($title_prefix); ?>
-        <?php if ($title): ?>
-          <h1 class="page-title"><?php print $title; ?></h1>
-        <?php endif; ?>
-        <?php print render($title_suffix); ?>
+        <div class="breadcrumb-title">
+          <?php print $breadcrumb; ?>
+          <?php print render($title_prefix); ?>
+          <?php if ($title): ?>
+            <h1 class="page-title"><?php print $title; ?></h1>
+          <?php endif; ?>
+          <?php print render($title_suffix); ?>
+        </div>
 
         <?php print render($page['header']); ?>
         <?php print render($tabs); ?>
