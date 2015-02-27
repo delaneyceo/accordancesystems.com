@@ -1,0 +1,10 @@
+.block--commerce-cart-cart {
+
+  .block__title {
+    @include element-invisible;
+  }
+
+  .cart-empty-block {
+    display: none;
+  }
+}

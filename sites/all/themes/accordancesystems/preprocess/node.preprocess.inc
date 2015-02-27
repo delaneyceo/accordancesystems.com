@@ -38,6 +38,14 @@ function accordancesystems_preprocess_node(&$variables) {
           $variables['product_controller_links'][$i]['tab_content'] = render($variables['content']['field_controller_photo']);
           $i = $i + 1;
         }
+        if (!empty($variables['content']['field_controller_manual']) || !empty($variables['content']['field_controller_firmware'])) {
+          $variables['product_controller_links'][$i]['title'] = '<i class="fa fa-download"></i> Download Center';
+          $variables['product_controller_links'][$i]['type'] = 'tab';
+          $variables['product_controller_links'][$i]['tab_content_needs_container'] = TRUE;
+          $variables['product_controller_links'][$i]['tab_content'] = render($variables['content']['field_controller_manual']);
+          $variables['product_controller_links'][$i]['tab_content'] = $variables['product_controller_links'][$i]['tab_content'] . render($variables['content']['field_controller_firmware']);
+          $i = $i + 1;
+        }
 
         // Gather views items.
         $has_browser_compatibility = views_get_view_result('browser_compatibility', 'browser_compatibility_by_controller_nid', $variables['node']->nid);

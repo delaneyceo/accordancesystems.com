@@ -1093,4 +1093,16 @@ hr {
     max-height: 80px;
     width: auto; }
 
+/* line 3, ../sass/components/views_displays/_view-id-commerce_cart_block.scss */
+.block--commerce-cart-cart .block__title {
+  clip: auto;
+  height: auto;
+  overflow: auto;
+  position: absolute;
+  top: -9999px;
+  left: -9999px; }
+/* line 7, ../sass/components/views_displays/_view-id-commerce_cart_block.scss */
+.block--commerce-cart-cart .cart-empty-block {
+  display: none; }
+
 /*# sourceMappingURL=accordancesystems.styles.css.map */
