@@ -749,8 +749,11 @@ hr {
   /* line 19, ../sass/components/nodes/_node-araid-controller-display.scss */
   .node-araid-controller-display .tabpanel .nav-tabs {
     margin: 0;
-    padding: 0; }
-    /* line 23, ../sass/components/nodes/_node-araid-controller-display.scss */
+    padding: 0;
+    font-size: 14px;
+    font-size: 1.4rem;
+    font-weight: 600; }
+    /* line 25, ../sass/components/nodes/_node-araid-controller-display.scss */
     .node-araid-controller-display .tabpanel .nav-tabs .list-item {
       display: inline-block;
       vertical-align: middle;
@@ -760,7 +763,7 @@ hr {
       list-style: none;
       margin: 0;
       padding: 0; }
-      /* line 29, ../sass/components/nodes/_node-araid-controller-display.scss */
+      /* line 31, ../sass/components/nodes/_node-araid-controller-display.scss */
       .node-araid-controller-display .tabpanel .nav-tabs .list-item a {
         padding: .8em 1em;
         display: block;
@@ -770,23 +773,26 @@ hr {
         -o-transition: all, 0.5s;
         -webkit-transition: all, 0.5s;
         transition: all, 0.5s; }
-        /* line 36, ../sass/components/nodes/_node-araid-controller-display.scss */
+        /* line 38, ../sass/components/nodes/_node-araid-controller-display.scss */
         .node-araid-controller-display .tabpanel .nav-tabs .list-item a:hover, .node-araid-controller-display .tabpanel .nav-tabs .list-item a:focus, .node-araid-controller-display .tabpanel .nav-tabs .list-item a:active {
           background-color: #3b3b3b;
           border-bottom-color: #4d4d4d; }
-      /* line 44, ../sass/components/nodes/_node-araid-controller-display.scss */
+      /* line 46, ../sass/components/nodes/_node-araid-controller-display.scss */
       .node-araid-controller-display .tabpanel .nav-tabs .list-item.active a {
         background-color: #404040;
         border-bottom-color: #156DF9; }
-/* line 52, ../sass/components/nodes/_node-araid-controller-display.scss */
+    /* line 52, ../sass/components/nodes/_node-araid-controller-display.scss */
+    .node-araid-controller-display .tabpanel .nav-tabs i {
+      margin-right: .3em; }
+/* line 58, ../sass/components/nodes/_node-araid-controller-display.scss */
 .node-araid-controller-display .tab-content.l-container, .node-araid-controller-display .tab-content .field--name-field-controller-features-ref .tab-content.taxonomy-term--product-controller-features, .node-araid-controller-display .page-dealers .view-display-id-dealers_pane .grouped-row .tab-content.title-wrapper-inner, .page-dealers .view-display-id-dealers_pane .grouped-row .node-araid-controller-display .tab-content.title-wrapper-inner, .node-araid-controller-display .page-solutions .view-display-id-solutions_pane .tab-content.taxonomy-term--solutions--full, .page-solutions .view-display-id-solutions_pane .node-araid-controller-display .tab-content.taxonomy-term--solutions--full {
   padding-top: 3em;
   padding-bottom: 3em; }
-/* line 59, ../sass/components/nodes/_node-araid-controller-display.scss */
+/* line 65, ../sass/components/nodes/_node-araid-controller-display.scss */
 .node-araid-controller-display .tab-content .field--name-field-controller-features-ref .field__item {
   padding-top: 3em;
   padding-bottom: 3em; }
-/* line 64, ../sass/components/nodes/_node-araid-controller-display.scss */
+/* line 70, ../sass/components/nodes/_node-araid-controller-display.scss */
 .node-araid-controller-display .tab-content .field--name-field-controller-features-ref .field__item.even {
   background: #eee; }
 

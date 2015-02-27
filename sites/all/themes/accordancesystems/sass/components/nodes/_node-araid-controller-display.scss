@@ -19,6 +19,8 @@ $color-tabpanel-bg: #333;
    .nav-tabs {
       margin: 0;
       padding: 0;
+      @include font-size(1.4);
+      font-weight: $fw-semibold;
 
       .list-item {
         @include inline-block;
@@ -45,6 +47,10 @@ $color-tabpanel-bg: #333;
           background-color: lighten($color-tabpanel-bg, 5);
           border-bottom-color: $color-skyblue;
         }
+      }
+
+      i {
+        margin-right: .3em;
       }
     }
   }
