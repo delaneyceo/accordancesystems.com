@@ -10,6 +10,7 @@ core = 7.x
 ; ========================================
 stylesheets[all][] = css/accordancesystems.normalize.css
 stylesheets[all][] = css/accordancesystems.hacks.css
+stylesheets[all][] = css/libraries/fontawesome/font-awesome.css
 stylesheets[all][] = css/accordancesystems.styles.css
 stylesheets[all][] = css/accordancesystems.no-query.css
 
