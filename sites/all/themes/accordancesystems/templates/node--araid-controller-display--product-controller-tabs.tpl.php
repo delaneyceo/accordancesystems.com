@@ -91,15 +91,13 @@
     </div>
       <!-- Tab panes -->
     <div class="tab-content">
-        <div class="l-container">
-        <?php
-          foreach ($variables['product_controller_links'] as $delta => $item) {
-            if (isset($item['tab_content'])) {
-              print '<div ' . $item['attributes']['rendered_content'] . '>' . $item['tab_content'] . '</div>';
-            }
+      <?php
+        foreach ($variables['product_controller_links'] as $delta => $item) {
+          if (isset($item['tab_content'])) {
+            print '<div ' . $item['attributes']['rendered_content'] . '>' . $item['tab_content'] . '</div>';
           }
-        ?>
-      </div>
+        }
+      ?>
     </div>
   </div>
 </article>

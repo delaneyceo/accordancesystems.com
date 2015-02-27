@@ -48,8 +48,14 @@ function accordancesystems_preprocess_node(&$variables) {
         foreach ($variables['product_controller_links'] as $delta => &$item) {
           $clean_name = ctools_cleanstring($item['title'], array('lower case'=>TRUE));
 
+          // Add default attributes.
           $item['attributes']['list_attributes']['class'][] = 'list-item';
           $item['attributes']['content_attributes']['class'][] = 'tab-content';
+
+          if ($delta == 0) {
+            $item['attributes']['list_attributes']['class'][] = 'active';
+            $item['attributes']['content_attributes']['class'][] = 'active';
+          }
 
           if ($item['type'] == 'tab') {
             // Add li attributes.
