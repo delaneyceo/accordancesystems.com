@@ -69,6 +69,7 @@
  * @see template_process()
  * @see omega_preprocess_page()
  */
+dpm($variables);
 ?>
 <div <?php print $attributes ?>>
   <header class="l-header" role="banner">
