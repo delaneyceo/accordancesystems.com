@@ -58,5 +58,5 @@ function accordancesystems_preprocess_page(&$variables) {
 
   // Get the current year to print in the footer
   $current_year = gmdate('Y', time());
-  $variables['page']['footer']['current_year'] = $current_year;
+  $variables['page']['current_year'] = $current_year;
 }

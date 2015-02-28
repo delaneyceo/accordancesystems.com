@@ -147,7 +147,7 @@ dpm($variables);
   <footer class="l-footer" role="contentinfo">
     <div class="l-container">
       <?php print render($page['footer']); ?>
-      <?php print '<strong>&copy; ' . $variables['page']['footer']['current_year'] . ' <em>AccordanceSystems.com</em></strong>'; ?>
+      <?php print '<strong>&copy; ' . $variables['page']['current_year'] . ' <em>AccordanceSystems.com</em></strong>'; ?>
     </div>
   </footer>
 </div>
