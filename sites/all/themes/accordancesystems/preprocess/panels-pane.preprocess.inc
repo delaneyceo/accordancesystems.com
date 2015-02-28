@@ -19,7 +19,7 @@ function accordancesystems_preprocess_panels_pane(&$variables) {
 
   // Add a class to the panel pane for the view mode if we are rendering a node.
   if(isset($variables['content']['#entity_type']) && $variables['content']['#entity_type'] == 'node') {
-    $variables['classes_array'][] = 'view-mode-' . $variables['content']['#view_mode'];
+    // $variables['classes_array'][] = 'view-mode-' . $variables['content']['#view_mode'];
   }
 
   return $variables;
