@@ -146,7 +146,6 @@
   <footer class="l-footer" role="contentinfo">
     <div class="l-container">
 
-      <?php print '<strong>&copy; ' . $page['footer']['current_year'] . ' <em>AccordanceSystems.com</em></strong>'; ?>
     </div>
   </footer>
 </div>
