@@ -95,5 +95,9 @@ $color-tabpanel-bg: $shade-offsetwhite;
         @extend .l-container;
       }
     }
+
+    &.active {
+      @include fadeInUp($duration: 1s);
+    }
   }
 }
