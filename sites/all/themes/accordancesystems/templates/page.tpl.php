@@ -145,7 +145,7 @@
 
   <footer class="l-footer" role="contentinfo">
     <div class="l-container">
-
+      <?php print render($page['footer']); ?>
     </div>
   </footer>
 </div>
