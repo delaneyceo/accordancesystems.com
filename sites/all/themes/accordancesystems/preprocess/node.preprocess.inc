@@ -136,10 +136,13 @@ function accordancesystems_preprocess_node(&$variables) {
     case 'frequently_asked_question':
       if ($variables['elements']['#view_mode'] == 'collapsible') {
         $variables['content_attributes_array']['class'][] = 'collapse';
+        $variables['content_attributes_array']['class'][] = 'collapsible';
         $variables['content_attributes_array']['id'][] = 'node-' . $variables['nid'];
         $collapsible_trigger_attributes['data-toggle'] = 'collapse';
         $collapsible_trigger_attributes['href'] = '#node-' . $variables['nid'];
         $collapsible_trigger_attributes['aria-expanded'] = 'false';
+        $collapsible_trigger_attributes['class'][] = 'collapse-trigger';
+        $collapsible_trigger_attributes['class'][] = 'collapsed';
         $variables['collapsible_trigger_attributes_markup'] = drupal_attributes($collapsible_trigger_attributes);
 
       }

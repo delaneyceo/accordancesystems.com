@@ -83,11 +83,11 @@
     <header>
       <?php print render($title_prefix); ?>
       <?php if (!$page): ?>
-        <h2<?php print $title_attributes; ?>>
+        <strong<?php print $title_attributes; ?>>
           <a <?php print $collapsible_trigger_attributes_markup; ?>>
           <?php print $title; ?>
         </a>
-      </h2>
+      </strong>
       <?php endif; ?>
       <?php print render($title_suffix); ?>
     </header>

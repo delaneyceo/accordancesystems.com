@@ -12,3 +12,27 @@
   display: block;
   height: auto;
 }
+
+.js .collapse-trigger {
+  display: block;
+  padding: 1em;
+  background: $shade-offsetwhite;
+
+  &:before {
+    @include icon($fa-var-minus);
+    @include font-size(1.2);
+    margin-right: 1em;
+    position: relative;
+    top: -2px;
+  }
+
+  &.collapsed:before {
+    @include icon($fa-var-plus);
+  }
+}
+
+.js .collapsible {
+  padding: 2em;
+  border: 1px solid $shade-offsetwhite;
+}
+

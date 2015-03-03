@@ -151,6 +151,40 @@
   display: block;
   height: auto; }
 
+/* line 16, ../sass/base/_bs_collapse.scss */
+.js .collapse-trigger {
+  display: block;
+  padding: 1em;
+  background: #e8e4e4; }
+  /* line 21, ../sass/base/_bs_collapse.scss */
+  .js .collapse-trigger:before {
+    font-family: FontAwesome;
+    font-weight: normal;
+    font-style: normal;
+    text-decoration: inherit;
+    -webkit-font-smoothing: antialiased;
+    *margin-right: .3em;
+    content: "";
+    font-size: 12px;
+    font-size: 1.2rem;
+    margin-right: 1em;
+    position: relative;
+    top: -2px; }
+  /* line 29, ../sass/base/_bs_collapse.scss */
+  .js .collapse-trigger.collapsed:before {
+    font-family: FontAwesome;
+    font-weight: normal;
+    font-style: normal;
+    text-decoration: inherit;
+    -webkit-font-smoothing: antialiased;
+    *margin-right: .3em;
+    content: ""; }
+
+/* line 34, ../sass/base/_bs_collapse.scss */
+.js .collapsible {
+  padding: 2em;
+  border: 1px solid #e8e4e4; }
+
 /* line 1, ../sass/base/_fields.scss */
 .field {
   margin-bottom: 1em; }
