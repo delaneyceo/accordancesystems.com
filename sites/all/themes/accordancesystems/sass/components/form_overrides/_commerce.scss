@@ -1,0 +1,6 @@
+.checkout-buttons {
+  .checkout-cancel,
+  .checkout-back {
+    @include btn($type: secondary);
+  }
+}

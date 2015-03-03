@@ -14,6 +14,12 @@
   li,
   a {
     @include transition(background-color, .5s);
+
+    &:hover,
+    &:active,
+    &:focus {
+      cursor: pointer;
+    }
   }
 
   ul {

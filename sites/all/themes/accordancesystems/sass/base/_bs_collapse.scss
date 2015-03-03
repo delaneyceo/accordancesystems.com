@@ -1,0 +1,14 @@
+.js .collapse {
+  display: none;
+  overflow: hidden;
+  height: 0;
+}
+
+.js .collapsing {
+  @include transition(all, .3s);
+}
+
+.js .collapse.in {
+  display: block;
+  height: auto;
+}

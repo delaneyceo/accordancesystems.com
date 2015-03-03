@@ -57,9 +57,25 @@ function accordancesystems_preprocess_node(&$variables) {
           $variables['product_controller_links'][$i]['title'] = '<i class="fa fa-hdd-o"></i> Compatibility';
           $variables['product_controller_links'][$i]['type'] = 'tab';
           $variables['product_controller_links'][$i]['tab_content_needs_container'] = TRUE;
-          $variables['product_controller_links'][$i]['tab_content'] = views_embed_view('browser_compatibility', 'browser_compatibility_by_controller_nid', $variables['node']->nid);;
+          $variables['product_controller_links'][$i]['tab_content'] = views_embed_view('browser_compatibility', 'browser_compatibility_by_controller_nid', $variables['node']->nid);
           $i = $i + 1;
          }
+        $has_faq = views_get_view_result('frequently_asked_questions', 'faq_by_product_nid', $variables['node']->nid);
+        if (!empty($has_faq)) {
+          $variables['product_controller_links'][$i]['title'] = '<i class="fa fa-question-circle"></i> FAQs';
+          $variables['product_controller_links'][$i]['type'] = 'tab';
+          $variables['product_controller_links'][$i]['tab_content_needs_container'] = TRUE;
+          $variables['product_controller_links'][$i]['tab_content'] = views_embed_view('frequently_asked_questions', 'faq_by_product_nid', $variables['node']->nid);
+          $i = $i + 1;
+        }
+        $has_testimonials = views_get_view_result('testimonials', 'testinominals_by_product_nid', $variables['node']->nid);
+        if (!empty($has_testimonials)) {
+          $variables['product_controller_links'][$i]['title'] = '<i class="fa fa-comments-o"></i> Reviews';
+          $variables['product_controller_links'][$i]['type'] = 'tab';
+          $variables['product_controller_links'][$i]['tab_content_needs_container'] = TRUE;
+          $variables['product_controller_links'][$i]['tab_content'] = views_embed_view('testimonials', 'testinominals_by_product_nid', $variables['node']->nid);
+          $i = $i + 1;
+        }
 
         // Example external link item.
         // $variables['product_controller_links'][$i]['title'] = 'Testimonials';
@@ -116,6 +132,17 @@ function accordancesystems_preprocess_node(&$variables) {
     case 'araid_accessory_display':
       // Change the name of the read more link.
       $variables['content']['links']['node']['#links']['node-readmore']['title'] = 'Learn more';
+      break;
+    case 'frequently_asked_question':
+      if ($variables['elements']['#view_mode'] == 'collapsible') {
+        $variables['content_attributes_array']['class'][] = 'collapse';
+        $variables['content_attributes_array']['id'][] = 'node-' . $variables['nid'];
+        $collapsible_trigger_attributes['data-toggle'] = 'collapse';
+        $collapsible_trigger_attributes['href'] = '#node-' . $variables['nid'];
+        $collapsible_trigger_attributes['aria-expanded'] = 'false';
+        $variables['collapsible_trigger_attributes_markup'] = drupal_attributes($collapsible_trigger_attributes);
+
+      }
       break;
   }
 }
