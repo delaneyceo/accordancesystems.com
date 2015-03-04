@@ -16,7 +16,20 @@
 .js .collapse-trigger {
   display: block;
   padding: 1em;
-  background: $shade-offsetwhite;
+  background: $color-skyblue;
+  color: lighten($color-skyblue, 40);
+
+
+  &.collapsed {
+    background: $shade-offsetwhite;
+    color: #444;
+  }
+
+  &:hover,
+  &:active {
+    background: $color-skyblue;
+    color: lighten($color-skyblue, 40);
+  }
 
   &:before {
     @include icon($fa-var-minus);
@@ -32,7 +45,11 @@
 }
 
 .js .collapsible {
-  padding: 2em;
   border: 1px solid $shade-offsetwhite;
+  background: $color-offsetwhite;
+
+  > div {
+    padding: 2em;
+  }
 }
 

@@ -41,7 +41,7 @@ $color-tabpanel-bg: $shade-offsetwhite;
           &:focus,
           &:active {
             background-color: lighten($color-tabpanel-bg, 3);
-            border-bottom-color: lighten($color-tabpanel-bg, 10);
+            border-bottom-color: darken($color-tabpanel-bg, 10);
           }
         }
 
