@@ -223,11 +223,34 @@
   .field:last-child {
     margin-bottom: 0; }
 
-/* line 1, ../sass/base/_forms.scss */
+/* line 2, ../sass/base/_forms.scss */
+html.js .form-autocomplete {
+  background-image: none; }
+/* line 5, ../sass/base/_forms.scss */
+html.js .throbbing {
+  background-image: url("../images/ajax-loader.gif");
+  background-position: 95% 50%; }
+
+/* line 10, ../sass/base/_forms.scss */
+.ajax-progress .throbber {
+  background: transparent url("../images/ajax-loader.gif") no-repeat 0px 0px;
+  display: inline-block;
+  vertical-align: middle;
+  *vertical-align: auto;
+  *zoom: 1;
+  *display: inline;
+  vertical-align: bottom;
+  height: 12px;
+  /* tweak this according to your gif */
+  width: 15px;
+  /* tweak this according to your gif */
+  margin-left: 10px; }
+
+/* line 19, ../sass/base/_forms.scss */
 input {
   max-width: 100%; }
 
-/* line 6, ../sass/base/_forms.scss */
+/* line 24, ../sass/base/_forms.scss */
 .form-item .form-text,
 .form-item .form-textarea {
   padding: .5em;
@@ -237,29 +260,29 @@ input {
   -webkit-border-radius: 4px;
   border-radius: 4px;
   border: 1px solid #e1e1e1; }
-/* line 14, ../sass/base/_forms.scss */
+/* line 32, ../sass/base/_forms.scss */
 .form-item .form-textarea {
   -moz-border-radius: 4px 4px 0 0;
   -webkit-border-radius: 4px;
   border-radius: 4px 4px 0 0; }
 
-/* line 19, ../sass/base/_forms.scss */
+/* line 37, ../sass/base/_forms.scss */
 fieldset {
   padding: 0;
   margin-bottom: 2em;
   border: none;
   border-top: 1px solid #991c1f; }
-  /* line 25, ../sass/base/_forms.scss */
+  /* line 43, ../sass/base/_forms.scss */
   fieldset legend {
     padding: 1em;
     background: #fff;
     font-weight: 700;
     border: 1px solid #991c1f; }
-  /* line 32, ../sass/base/_forms.scss */
+  /* line 50, ../sass/base/_forms.scss */
   fieldset .fieldset-wrapper {
     padding: 1em; }
 
-/* line 37, ../sass/base/_forms.scss */
+/* line 55, ../sass/base/_forms.scss */
 .form-submit {
   -moz-appearance: none;
   -webkit-appearance: none;
@@ -557,6 +580,15 @@ hr {
   padding-bottom: 3em; }
   /* line 8, ../sass/components/global_regions/_footer.scss */
   .l-footer a {
+    color: #fff; }
+  /* line 12, ../sass/components/global_regions/_footer.scss */
+  .l-footer .block__title {
+    color: #fff; }
+  /* line 16, ../sass/components/global_regions/_footer.scss */
+  .l-footer input {
+    color: #453D36; }
+  /* line 20, ../sass/components/global_regions/_footer.scss */
+  .l-footer .form-submit {
     color: #fff; }
 
 /* line 1, ../sass/components/global_regions/_header.scss */
