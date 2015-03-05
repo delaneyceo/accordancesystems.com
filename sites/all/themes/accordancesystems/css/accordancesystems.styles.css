@@ -1656,8 +1656,9 @@ hr {
   .node--person--teaser .field--name-field-person-photo {
     line-height: 0;
     text-align: center;
-    margin-bottom: 1em; }
-    /* line 18, ../sass/components/view_modes/_node--person--teaser.scss */
+    max-width: 300px;
+    margin: 0 auto 1em; }
+    /* line 19, ../sass/components/view_modes/_node--person--teaser.scss */
     .node--person--teaser .field--name-field-person-photo img {
       -moz-border-radius: 50%;
       -webkit-border-radius: 50%;
