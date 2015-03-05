@@ -97,21 +97,29 @@
         <?php print render($page['navigation']); ?>
       </div>
     </div>
-    <div class="l-guide">
-      <div class="l-container">
-        <div class="breadcrumb-title">
-          <?php print $breadcrumb; ?>
-          <?php print render($title_prefix); ?>
-          <?php if ($title): ?>
-            <h1 class="page-title"><?php print $title; ?></h1>
-          <?php endif; ?>
-          <?php print render($title_suffix); ?>
-        </div>
 
-        <?php print render($page['header']); ?>
-        <?php print render($tabs); ?>
+    <?php if ($breadcrumb || $title || $page['header'] || $messages || $tabs): ?>
+      <div class="l-guide">
+        <div class="l-container">
+          <?php if ($breadcrumb || $title || $page['header']): ?>
+            <div class="l-guide-header">
+              <div class="breadcrumb-title">
+                <?php print $breadcrumb; ?>
+                <?php print render($title_prefix); ?>
+                <?php if ($title): ?>
+                  <h1 class="page-title"><?php print $title; ?></h1>
+                <?php endif; ?>
+                <?php print render($title_suffix); ?>
+              </div>
+              <?php print render($page['header']); ?>
+            </div>
+          <?php endif; ?>
+
+          <?php print $messages; ?>
+          <?php print render($tabs); ?>
+        </div>
       </div>
-    </div>
+    <?php endif; ?>
   </header>
 
   <div class="l-main">
@@ -123,9 +131,6 @@
       <?php print render($page['highlighted']); ?>
 
       <a id="main-content"></a>
-
-      <?php print $messages; ?>
-
       <?php print render($page['help']); ?>
       <?php if ($action_links): ?>
         <ul class="action-links"><?php print render($action_links); ?></ul>

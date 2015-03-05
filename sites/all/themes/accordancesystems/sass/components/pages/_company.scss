@@ -1,0 +1,11 @@
+.page-node-5 {
+  .pane-people-people-mgmt-eq {
+    background: $color-offsetwhite;
+  }
+
+  .view-display-id-people_mgmt_eq {
+    .content-wrapper-inner {
+      @include display-flex;
+    }
+  }
+}

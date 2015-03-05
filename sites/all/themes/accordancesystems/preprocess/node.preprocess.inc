@@ -133,6 +133,11 @@ function accordancesystems_preprocess_node(&$variables) {
       // Change the name of the read more link.
       $variables['content']['links']['node']['#links']['node-readmore']['title'] = 'Learn more';
       break;
+    case 'person':
+      if ($variables['elements']['#view_mode'] == 'teaser') {
+        $variables['print_node_anchor'] = FALSE;
+      }
+      break;
     case 'frequently_asked_question':
       if ($variables['elements']['#view_mode'] == 'collapsible') {
         $variables['content_attributes_array']['class'][] = 'collapse';

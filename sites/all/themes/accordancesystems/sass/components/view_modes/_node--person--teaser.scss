@@ -1,0 +1,27 @@
+.node--person--teaser {
+  padding: 2em;
+
+  .node__title{
+    margin-bottom: 0;
+  }
+
+  .field--name-field-person-job-title {
+    font-style: italic;
+    @include font-size(2);
+  }
+
+  .field--name-field-person-photo {
+    line-height: 0;
+    text-align: center;
+
+    img {
+      @include border-radius(50%);
+      overflow: hidden;
+      border: 4px solid $color-bloodred;
+    }
+  }
+
+  .node__links {
+    display: none;
+  }
+}

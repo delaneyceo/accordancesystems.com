@@ -73,6 +73,11 @@
       @include pie-clearfix;
     }
 
+    .l-guide-header,
+    .l-region--header {
+      @include pie-clearfix;
+    }
+
     .breadcrumb-title {
       float: left;
     }
@@ -85,6 +90,11 @@
 
     .page-title {
       margin: 0;
+    }
+
+    .messages {
+      clear: both;
+      margin-top: 2em;
     }
   }
 }

@@ -635,16 +635,30 @@ hr {
         display: table;
         clear: both; }
     /* line 76, ../sass/components/global_regions/_header.scss */
+    .l-header .l-guide .l-guide-header,
+    .l-header .l-guide .l-region--header {
+      *zoom: 1; }
+      /* line 38, ../../../../../../../../../Users/ace/.rvm/gems/ruby-1.9.3-p484@omega.accordancesystems/gems/compass-core-1.0.3/stylesheets/compass/utilities/general/_clearfix.scss */
+      .l-header .l-guide .l-guide-header:after,
+      .l-header .l-guide .l-region--header:after {
+        content: "";
+        display: table;
+        clear: both; }
+    /* line 81, ../sass/components/global_regions/_header.scss */
     .l-header .l-guide .breadcrumb-title {
       float: left; }
-    /* line 80, ../sass/components/global_regions/_header.scss */
+    /* line 85, ../sass/components/global_regions/_header.scss */
     .l-header .l-guide .block--commerce-cart-cart {
       float: right;
       position: relative;
       top: 4px; }
-    /* line 86, ../sass/components/global_regions/_header.scss */
+    /* line 91, ../sass/components/global_regions/_header.scss */
     .l-header .l-guide .page-title {
       margin: 0; }
+    /* line 95, ../sass/components/global_regions/_header.scss */
+    .l-header .l-guide .messages {
+      clear: both;
+      margin-top: 2em; }
 
 /* line 1, ../sass/components/global_regions/_main.scss */
 .l-main {
@@ -1102,35 +1116,20 @@ hr {
       .node-araid-controller-display .tabpanel .nav-tabs .list-item.active a {
         background-color: #f4f2f2;
         border-bottom-color: #991c1f; }
-        /* line 52, ../sass/components/nodes/_node-araid-controller-display.scss */
-        .node-araid-controller-display .tabpanel .nav-tabs .list-item.active a.dropline {
-          position: relative; }
-          /* line 55, ../sass/components/nodes/_node-araid-controller-display.scss */
-          .node-araid-controller-display .tabpanel .nav-tabs .list-item.active a.dropline:after {
-            content: "";
-            width: 1px;
-            position: absolute;
-            bottom: -55px;
-            height: 55px;
-            background: #991c1f;
-            line-height: 0;
-            left: 50%; }
-    /* line 71, ../sass/components/nodes/_node-araid-controller-display.scss */
+    /* line 73, ../sass/components/nodes/_node-araid-controller-display.scss */
     .node-araid-controller-display .tabpanel .nav-tabs i {
       margin-right: .3em; }
-/* line 77, ../sass/components/nodes/_node-araid-controller-display.scss */
+/* line 79, ../sass/components/nodes/_node-araid-controller-display.scss */
 .node-araid-controller-display .tab-content.l-container, .node-araid-controller-display .tab-content .field--name-field-controller-features-ref .tab-content.taxonomy-term--product-controller-features, .node-araid-controller-display .page-solutions .view-display-id-solutions_pane .tab-content.taxonomy-term--solutions--full, .page-solutions .view-display-id-solutions_pane .node-araid-controller-display .tab-content.taxonomy-term--solutions--full {
-  padding: 2em;
-  margin-top: 3em;
-  border-top: 1px solid #991c1f; }
-/* line 85, ../sass/components/nodes/_node-araid-controller-display.scss */
+  padding: 2em; }
+/* line 90, ../sass/components/nodes/_node-araid-controller-display.scss */
 .node-araid-controller-display .tab-content .field--name-field-controller-features-ref .field__item {
   padding-top: 3em;
   padding-bottom: 3em; }
-/* line 90, ../sass/components/nodes/_node-araid-controller-display.scss */
+/* line 95, ../sass/components/nodes/_node-araid-controller-display.scss */
 .node-araid-controller-display .tab-content .field--name-field-controller-features-ref .field__item.even {
   background: #fff; }
-/* line 99, ../sass/components/nodes/_node-araid-controller-display.scss */
+/* line 104, ../sass/components/nodes/_node-araid-controller-display.scss */
 .node-araid-controller-display .tab-content.active {
   -webkit-animation-name: fadeInUp;
   -moz-animation-name: fadeInUp;
@@ -1142,11 +1141,11 @@ hr {
   -ms-animation-iteration-count: 1s;
   -o-animation-iteration-count: 1s;
   animation-iteration-count: 1s;
-  -webkit-animation-duration: 1s;
-  -moz-animation-duration: 1s;
-  -ms-animation-duration: 1s;
-  -o-animation-duration: 1s;
-  animation-duration: 1s;
+  -webkit-animation-duration: 0.8s;
+  -moz-animation-duration: 0.8s;
+  -ms-animation-duration: 0.8s;
+  -o-animation-duration: 0.8s;
+  animation-duration: 0.8s;
   -webkit-animation-delay: 0s;
   -moz-animation-delay: 0s;
   -ms-animation-delay: 0s;
@@ -1167,7 +1166,7 @@ hr {
   -ms-backface-visibility: hidden;
   -o-backface-visibility: hidden;
   backface-visibility: hidden; }
-/* line 105, ../sass/components/nodes/_node-araid-controller-display.scss */
+/* line 110, ../sass/components/nodes/_node-araid-controller-display.scss */
 .node-araid-controller-display .field--name-field-controller-photo .field__item {
   line-height: 0;
   display: inline-block;
@@ -1177,6 +1176,14 @@ hr {
   *display: inline;
   margin-right: .3em;
   border: 1px solid #e8e4e4; }
+
+/* line 2, ../sass/components/pages/_company.scss */
+.page-node-5 .pane-people-people-mgmt-eq {
+  background: #FBFCFE; }
+/* line 7, ../sass/components/pages/_company.scss */
+.page-node-5 .view-display-id-people_mgmt_eq .content-wrapper-inner {
+  display: -webkit-flex;
+  display: flex; }
 
 /* line 2, ../sass/components/pages/_dealers.scss */
 .page-dealers .panel-magnum {
@@ -1580,6 +1587,32 @@ hr {
 .node--frequently-asked-question--collapsible {
   margin-bottom: 1em;
   overflow: hidden; }
+
+/* line 1, ../sass/components/view_modes/_node--person--teaser.scss */
+.node--person--teaser {
+  padding: 2em; }
+  /* line 4, ../sass/components/view_modes/_node--person--teaser.scss */
+  .node--person--teaser .node__title {
+    margin-bottom: 0; }
+  /* line 8, ../sass/components/view_modes/_node--person--teaser.scss */
+  .node--person--teaser .field--name-field-person-job-title {
+    font-style: italic;
+    font-size: 20px;
+    font-size: 2rem; }
+  /* line 13, ../sass/components/view_modes/_node--person--teaser.scss */
+  .node--person--teaser .field--name-field-person-photo {
+    line-height: 0;
+    text-align: center; }
+    /* line 17, ../sass/components/view_modes/_node--person--teaser.scss */
+    .node--person--teaser .field--name-field-person-photo img {
+      -moz-border-radius: 50%;
+      -webkit-border-radius: 50%;
+      border-radius: 50%;
+      overflow: hidden;
+      border: 4px solid #991c1f; }
+  /* line 24, ../sass/components/view_modes/_node--person--teaser.scss */
+  .node--person--teaser .node__links {
+    display: none; }
 
 /* line 4, ../sass/components/view_modes/_node--testimonial--teaser.scss */
 .node--testimonial--teaser .field--name-body {
