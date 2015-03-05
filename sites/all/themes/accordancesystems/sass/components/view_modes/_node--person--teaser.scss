@@ -13,6 +13,7 @@
   .field--name-field-person-photo {
     line-height: 0;
     text-align: center;
+    margin-bottom: 1em;
 
     img {
       @include border-radius(50%);
