@@ -1611,9 +1611,6 @@ hr {
       border-radius: 50%;
       overflow: hidden;
       border: 4px solid #991c1f; }
-  /* line 25, ../sass/components/view_modes/_node--person--teaser.scss */
-  .node--person--teaser .node__links {
-    display: none; }
 
 /* line 4, ../sass/components/view_modes/_node--testimonial--teaser.scss */
 .node--testimonial--teaser .field--name-body {
