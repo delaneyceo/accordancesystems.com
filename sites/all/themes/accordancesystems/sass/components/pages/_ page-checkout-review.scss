@@ -1,0 +1,27 @@
+.page-checkout-review {
+
+  .checkout-help {
+    margin-bottom: 1em;
+    font-weight: $fw-bold;
+    @include font-size(2);
+  }
+
+  table {
+    width: 100%;
+
+    .pane-title {
+      background-color: #414141;
+      color: #fff;
+    }
+
+    .view-display-id-default {
+      .view-footer {
+        margin-top: 1em;
+      }
+    }
+  }
+
+  .checkout_review {
+    margin-bottom: $row-padding;
+  }
+}

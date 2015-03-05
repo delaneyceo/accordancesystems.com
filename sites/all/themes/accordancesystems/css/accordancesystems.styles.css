@@ -1305,6 +1305,26 @@ hr {
   margin-right: .3em;
   border: 1px solid #e8e4e4; }
 
+/* line 3, ../sass/components/pages/_ page-checkout-review.scss */
+.page-checkout-review .checkout-help {
+  margin-bottom: 1em;
+  font-weight: 700;
+  font-size: 20px;
+  font-size: 2rem; }
+/* line 9, ../sass/components/pages/_ page-checkout-review.scss */
+.page-checkout-review table {
+  width: 100%; }
+  /* line 12, ../sass/components/pages/_ page-checkout-review.scss */
+  .page-checkout-review table .pane-title {
+    background-color: #414141;
+    color: #fff; }
+  /* line 18, ../sass/components/pages/_ page-checkout-review.scss */
+  .page-checkout-review table .view-display-id-default .view-footer {
+    margin-top: 1em; }
+/* line 24, ../sass/components/pages/_ page-checkout-review.scss */
+.page-checkout-review .checkout_review {
+  margin-bottom: 3em; }
+
 /* line 3, ../sass/components/pages/_company.scss */
 .page-node-5 .pane-node-body {
   padding-top: 3em;
