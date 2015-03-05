@@ -35,6 +35,9 @@ function accordancesystems_breadcrumb(&$variables) {
   }
 }
 
+/**
+ * Implements theme_css_alter().
+ */
 function accordancesystems_css_alter(&$css) {
   // Dynamically remove css for temporary splash page.
   if (drupal_is_front_page()) {
@@ -42,3 +45,4 @@ function accordancesystems_css_alter(&$css) {
     unset($css[drupal_get_path('theme', 'accordancesystems') . '/css/accordancesystems.styles.css']);
   }
 }
+

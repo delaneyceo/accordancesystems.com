@@ -125,6 +125,12 @@
     transform: scale3d(0.3, 0.3, 0.3); }
   50% {
     opacity: 1; } }
+/* line 12, ../sass/utilities/_extends.scss */
+.node--testimonial--teaser, .view-display-id-browser_compatibility_by_controller_nid .grouped-row {
+  margin-bottom: 1.5em;
+  padding-bottom: 1.5em;
+  border-bottom: 1px solid #e8e4e4; }
+
 /* line 1, ../sass/base/_bootstrap_tabs.scss */
 .tab-pane {
   display: none; }
@@ -196,6 +202,19 @@
   /* line 51, ../sass/base/_bs_collapse.scss */
   .js .collapsible > div {
     padding: 2em; }
+
+/* line 1, ../sass/base/_classes.scss */
+.active {
+  color: #453D36; }
+
+/* line 5, ../sass/base/_classes.scss */
+.element-invisible {
+  clip: auto;
+  height: auto;
+  overflow: auto;
+  position: absolute;
+  top: -9999px;
+  left: -9999px; }
 
 /* line 1, ../sass/base/_fields.scss */
 .field {
@@ -1176,6 +1195,16 @@ hr {
   -ms-backface-visibility: hidden;
   -o-backface-visibility: hidden;
   backface-visibility: hidden; }
+/* line 105, ../sass/components/nodes/_node-araid-controller-display.scss */
+.node-araid-controller-display .field--name-field-controller-photo .field__item {
+  line-height: 0;
+  display: inline-block;
+  vertical-align: middle;
+  *vertical-align: auto;
+  *zoom: 1;
+  *display: inline;
+  margin-right: .3em;
+  border: 1px solid #e8e4e4; }
 
 /* line 2, ../sass/components/pages/_dealers.scss */
 .page-dealers .panel-magnum {
@@ -1586,6 +1615,36 @@ hr {
   margin-bottom: 1em;
   overflow: hidden; }
 
+/* line 4, ../sass/components/view_modes/_node--testimonial--teaser.scss */
+.node--testimonial--teaser .field--name-body {
+  font-size: 22px;
+  font-size: 2.2rem;
+  font-weight: 300; }
+/* line 9, ../sass/components/view_modes/_node--testimonial--teaser.scss */
+.node--testimonial--teaser .field--name-field-testimonial-name {
+  text-align: right;
+  font-style: italic;
+  font-size: 20px;
+  font-size: 2rem;
+  margin-bottom: 0; }
+  /* line 15, ../sass/components/view_modes/_node--testimonial--teaser.scss */
+  .node--testimonial--teaser .field--name-field-testimonial-name:before {
+    content: "\2014";
+    margin-right: .2em; }
+  /* line 20, ../sass/components/view_modes/_node--testimonial--teaser.scss */
+  .node--testimonial--teaser .field--name-field-testimonial-name > div {
+    display: inline-block;
+    vertical-align: middle;
+    *vertical-align: auto;
+    *zoom: 1;
+    *display: inline; }
+/* line 25, ../sass/components/view_modes/_node--testimonial--teaser.scss */
+.node--testimonial--teaser .field--name-field-testimonial-company {
+  text-align: right;
+  font-size: 16px;
+  font-size: 1.6rem;
+  font-weight: 600; }
+
 /* line 2, ../sass/components/views_displays/_view-commerce-cart-summary.scss */
 .view-commerce-cart-summary table {
   width: 100%; }
@@ -1598,6 +1657,32 @@ hr {
 .checkout-buttons input,
 .checkout-buttons span {
   margin-right: 1em; }
+
+/* line 3, ../sass/components/views_displays/_view-display-id-browser_compatibility_by_controller_nid.scss */
+.view-display-id-browser_compatibility_by_controller_nid h3 {
+  margin-bottom: .3em; }
+/* line 11, ../sass/components/views_displays/_view-display-id-browser_compatibility_by_controller_nid.scss */
+.view-display-id-browser_compatibility_by_controller_nid .views-row {
+  display: inline-block;
+  vertical-align: middle;
+  *vertical-align: auto;
+  *zoom: 1;
+  *display: inline; }
+  /* line 14, ../sass/components/views_displays/_view-display-id-browser_compatibility_by_controller_nid.scss */
+  .view-display-id-browser_compatibility_by_controller_nid .views-row:after {
+    content: ",";
+    margin-right: .3em;
+    margin-left: -.2em; }
+  /* line 20, ../sass/components/views_displays/_view-display-id-browser_compatibility_by_controller_nid.scss */
+  .view-display-id-browser_compatibility_by_controller_nid .views-row:last-child:after {
+    display: none; }
+  /* line 24, ../sass/components/views_displays/_view-display-id-browser_compatibility_by_controller_nid.scss */
+  .view-display-id-browser_compatibility_by_controller_nid .views-row > div {
+    display: inline-block;
+    vertical-align: middle;
+    *vertical-align: auto;
+    *zoom: 1;
+    *display: inline; }
 
 /* line 3, ../sass/components/views_displays/_view-id-commerce_cart_block.scss */
 .block--commerce-cart-cart .block__title {

@@ -1,0 +1,28 @@
+.view-display-id-browser_compatibility_by_controller_nid {
+
+  h3 {
+    margin-bottom: .3em;
+  }
+
+  .grouped-row {
+    @extend %basic-divider-solid-wide;
+  }
+
+  .views-row {
+    @include inline-block;
+
+    &:after {
+      content: ",";
+      margin-right: .3em;
+      margin-left: -.2em;
+    }
+
+    &:last-child:after {
+      display: none;
+    }
+
+    > div {
+      @include inline-block;
+    }
+  }
+}

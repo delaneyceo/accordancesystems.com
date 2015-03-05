@@ -1,0 +1,30 @@
+.node--testimonial--teaser {
+  @extend %basic-divider-solid-wide;
+
+  .field--name-body {
+    @include font-size(2.2);
+    font-weight: $fw-light;
+  }
+
+  .field--name-field-testimonial-name {
+    text-align: right;
+    font-style: italic;
+    @include font-size(2);
+    margin-bottom: 0;
+
+    &:before {
+      content: "\2014";
+      margin-right: .2em;
+    }
+
+    > div {
+      @include inline-block;
+    }
+  }
+
+  .field--name-field-testimonial-company {
+    text-align: right;
+    @include font-size(1.6);
+    font-weight: $fw-semibold;
+  }
+}

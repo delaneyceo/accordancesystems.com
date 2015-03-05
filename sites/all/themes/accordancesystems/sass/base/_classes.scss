@@ -1,0 +1,7 @@
+.active {
+  color: $base-font-color;
+}
+
+.element-invisible {
+  @include element-invisible;
+}

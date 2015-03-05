@@ -8,3 +8,9 @@
     @include transition(all .3s ease-in-out);
   }
 }
+
+%basic-divider-solid-wide {
+  margin-bottom: 1.5em;
+  padding-bottom: 1.5em;
+  border-bottom: 1px solid $shade-offsetwhite;
+}

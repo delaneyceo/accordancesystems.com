@@ -100,4 +100,13 @@ $color-tabpanel-bg: $shade-offsetwhite;
       @include fadeInUp($duration: 1s);
     }
   }
+
+  .field--name-field-controller-photo {
+    .field__item {
+      line-height: 0;
+      @include inline-block;
+      margin-right: .3em;
+      border: 1px solid $shade-offsetwhite;
+    }
+  }
 }
