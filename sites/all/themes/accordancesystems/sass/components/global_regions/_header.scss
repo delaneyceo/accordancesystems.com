@@ -54,6 +54,11 @@
 
       .site-name-second {
         font-weight: $fw-regular;
+        display: none;
+
+        @include breakpoint(400px) {
+          display: block;
+        }
       }
     }
 

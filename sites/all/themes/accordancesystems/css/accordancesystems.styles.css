@@ -627,16 +627,21 @@ hr {
         font-weight: 900; }
       /* line 55, ../sass/components/global_regions/_header.scss */
       .l-header .l-navbar .site-name .site-name-second {
-        font-weight: 400; }
+        font-weight: 400;
+        display: none; }
+        @media (min-width: 400px) {
+          /* line 55, ../sass/components/global_regions/_header.scss */
+          .l-header .l-navbar .site-name .site-name-second {
+            display: block; } }
     @media (min-width: 980px) {
-      /* line 60, ../sass/components/global_regions/_header.scss */
+      /* line 65, ../sass/components/global_regions/_header.scss */
       .l-header .l-navbar .l-region--navigation {
         float: right; } }
-  /* line 67, ../sass/components/global_regions/_header.scss */
+  /* line 72, ../sass/components/global_regions/_header.scss */
   .l-header .l-guide {
     padding-top: 2em;
     padding-bottom: 2em; }
-    /* line 71, ../sass/components/global_regions/_header.scss */
+    /* line 76, ../sass/components/global_regions/_header.scss */
     .l-header .l-guide .l-container, .l-header .l-guide .node-araid-controller-display .tab-content .field--name-field-controller-features-ref .taxonomy-term--product-controller-features, .node-araid-controller-display .tab-content .field--name-field-controller-features-ref .l-header .l-guide .taxonomy-term--product-controller-features, .l-header .l-guide .page-solutions .view-display-id-solutions_pane .taxonomy-term--solutions--full, .page-solutions .view-display-id-solutions_pane .l-header .l-guide .taxonomy-term--solutions--full {
       position: relative;
       *zoom: 1; }
@@ -645,7 +650,7 @@ hr {
         content: "";
         display: table;
         clear: both; }
-    /* line 76, ../sass/components/global_regions/_header.scss */
+    /* line 81, ../sass/components/global_regions/_header.scss */
     .l-header .l-guide .l-guide-header,
     .l-header .l-guide .l-region--header {
       *zoom: 1; }
@@ -655,18 +660,18 @@ hr {
         content: "";
         display: table;
         clear: both; }
-    /* line 81, ../sass/components/global_regions/_header.scss */
+    /* line 86, ../sass/components/global_regions/_header.scss */
     .l-header .l-guide .breadcrumb-title {
       float: left; }
-    /* line 85, ../sass/components/global_regions/_header.scss */
+    /* line 90, ../sass/components/global_regions/_header.scss */
     .l-header .l-guide .block--commerce-cart-cart {
       float: right;
       position: relative;
       top: 4px; }
-    /* line 91, ../sass/components/global_regions/_header.scss */
+    /* line 96, ../sass/components/global_regions/_header.scss */
     .l-header .l-guide .page-title {
       margin: 0; }
-    /* line 95, ../sass/components/global_regions/_header.scss */
+    /* line 100, ../sass/components/global_regions/_header.scss */
     .l-header .l-guide .messages {
       clear: both;
       margin-top: 2em; }
@@ -1224,13 +1229,18 @@ hr {
   margin-right: .3em;
   border: 1px solid #e8e4e4; }
 
-/* line 2, ../sass/components/pages/_company.scss */
+/* line 3, ../sass/components/pages/_company.scss */
+.page-node-5 .pane-node-body {
+  padding-top: 3em;
+  padding-bottom: 3em; }
+/* line 8, ../sass/components/pages/_company.scss */
 .page-node-5 .pane-people-people-mgmt-eq {
   background: #FBFCFE; }
-/* line 7, ../sass/components/pages/_company.scss */
-.page-node-5 .view-display-id-people_mgmt_eq .content-wrapper-inner {
-  display: -webkit-flex;
-  display: flex; }
+@media (min-width: 900px) {
+  /* line 13, ../sass/components/pages/_company.scss */
+  .page-node-5 .view-display-id-people_mgmt_eq .content-wrapper-inner {
+    display: -webkit-flex;
+    display: flex; } }
 
 /* line 2, ../sass/components/pages/_dealers.scss */
 .page-dealers .panel-magnum {
@@ -1239,19 +1249,20 @@ hr {
 /* line 8, ../sass/components/pages/_dealers.scss */
 .page-dealers .view-display-id-dealers_pane .grouped-row {
   margin-bottom: 2em; }
-  /* line 11, ../sass/components/pages/_dealers.scss */
-  .page-dealers .view-display-id-dealers_pane .grouped-row .content-wrapper-inner {
-    display: -webkit-flex;
-    display: flex;
-    -webkit-flex-wrap: wrap;
-    flex-wrap: wrap; }
-  /* line 16, ../sass/components/pages/_dealers.scss */
+  @media (min-width: 900px) {
+    /* line 11, ../sass/components/pages/_dealers.scss */
+    .page-dealers .view-display-id-dealers_pane .grouped-row .content-wrapper-inner {
+      display: -webkit-flex;
+      display: flex;
+      -webkit-flex-wrap: wrap;
+      flex-wrap: wrap; } }
+  /* line 18, ../sass/components/pages/_dealers.scss */
   .page-dealers .view-display-id-dealers_pane .grouped-row .views-row {
     -webkit-flex: 1 1 50%;
     flex: 1 1 50%;
     padding: 3em;
     border: 1px solid #FBFCFE; }
-    /* line 21, ../sass/components/pages/_dealers.scss */
+    /* line 23, ../sass/components/pages/_dealers.scss */
     .page-dealers .view-display-id-dealers_pane .grouped-row .views-row:nth-child(4n), .page-dealers .view-display-id-dealers_pane .grouped-row .views-row:first-child {
       background-color: #FBFCFE; }
 
@@ -1273,21 +1284,22 @@ hr {
 .page-products .panel-magnum {
   padding-top: 2em;
   padding-bottom: 2em; }
-/* line 9, ../sass/components/pages/_products.scss */
-.page-products .view-display-id-controller_teaser .content-wrapper-inner,
-.page-products .view-display-id-accessory_teaser .content-wrapper-inner {
-  display: -webkit-flex;
-  display: flex;
-  -webkit-flex-wrap: wrap;
-  flex-wrap: wrap; }
-/* line 14, ../sass/components/pages/_products.scss */
+@media (min-width: 900px) {
+  /* line 9, ../sass/components/pages/_products.scss */
+  .page-products .view-display-id-controller_teaser .content-wrapper-inner,
+  .page-products .view-display-id-accessory_teaser .content-wrapper-inner {
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-wrap: wrap;
+    flex-wrap: wrap; } }
+/* line 16, ../sass/components/pages/_products.scss */
 .page-products .view-display-id-controller_teaser .views-row,
 .page-products .view-display-id-accessory_teaser .views-row {
   -webkit-flex: 1 1 50%;
   flex: 1 1 50%;
   padding: 3em;
   border: 1px solid #FBFCFE; }
-  /* line 19, ../sass/components/pages/_products.scss */
+  /* line 21, ../sass/components/pages/_products.scss */
   .page-products .view-display-id-controller_teaser .views-row:nth-child(4n), .page-products .view-display-id-controller_teaser .views-row:first-child,
   .page-products .view-display-id-accessory_teaser .views-row:nth-child(4n),
   .page-products .view-display-id-accessory_teaser .views-row:first-child {

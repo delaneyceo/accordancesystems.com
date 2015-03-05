@@ -7,8 +7,10 @@
   .view-display-id-controller_teaser,
   .view-display-id-accessory_teaser {
     .content-wrapper-inner {
-      @include display-flex;
-      @include flex-wrap(wrap);
+      @include breakpoint($bp-grids-of-two) {
+        @include display-flex;
+        @include flex-wrap(wrap);
+      }
     }
 
     .views-row {

@@ -1,11 +1,19 @@
 .page-node-5 {
+
+  .pane-node-body {
+    padding-top: $row-padding;
+    padding-bottom: $row-padding;
+  }
+
   .pane-people-people-mgmt-eq {
     background: $color-offsetwhite;
   }
 
   .view-display-id-people_mgmt_eq {
     .content-wrapper-inner {
-      @include display-flex;
+      @include breakpoint($bp-grids-of-two) {
+        @include display-flex;
+      }
     }
   }
 }
