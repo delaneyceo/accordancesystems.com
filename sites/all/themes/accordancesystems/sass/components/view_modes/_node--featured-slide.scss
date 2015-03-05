@@ -1,4 +1,5 @@
-.node--araid-controller-display--featured-slide {
+.node--araid-controller-display--featured-slide,
+.node--araid-accessory-display--featured-slide {
   padding: 3em 0;
   @include pie-clearfix;
 
@@ -13,7 +14,8 @@
     }
   }
 
-  .field--name-field-controller-tagline {
+  .field--name-field-controller-tagline,
+  .field--name-field-accessory-tagline {
     font-style: italic;
     @include font-size(2.2);
   }

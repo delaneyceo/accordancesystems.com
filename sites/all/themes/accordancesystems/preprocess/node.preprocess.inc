@@ -130,8 +130,77 @@ function accordancesystems_preprocess_node(&$variables) {
       }
       break;
     case 'araid_accessory_display':
+      if ($variables['elements']['#view_mode'] == 'featured_slide') {
+        $variables['print_node_anchor'] = FALSE;
+      }
+
       // Change the name of the read more link.
       $variables['content']['links']['node']['#links']['node-readmore']['title'] = 'Learn more';
+
+      if ($variables['elements']['#view_mode'] == 'product_controller_tabs') {
+        $i = 0;
+
+        // Gather field based items.
+        if (!empty($variables['content']['body'])) {
+          $variables['product_accessory_links'][$i]['title'] = '<i class="fa fa-tasks"></i> Overview';
+          $variables['product_accessory_links'][$i]['type'] = 'tab';
+          $variables['product_accessory_links'][$i]['tab_content_needs_container'] = TRUE;
+          $variables['product_accessory_links'][$i]['tab_content'] = render($variables['content']['body']);
+          $i = $i + 1;
+        }
+        if (!empty($variables['content']['field_accessory_photo'])) {
+          $variables['product_accessory_links'][$i]['title'] = '<i class="fa fa-picture-o"></i> Photos';
+          $variables['product_accessory_links'][$i]['type'] = 'tab';
+          $variables['product_accessory_links'][$i]['tab_content_needs_container'] = TRUE;
+          $variables['product_accessory_links'][$i]['tab_content'] = render($variables['content']['field_accessory_photo']);
+          $i = $i + 1;
+        }
+
+        foreach ($variables['product_accessory_links'] as $delta => &$item) {
+          $clean_name = ctools_cleanstring($item['title'], array('lower case'=>TRUE));
+
+          // Add default attributes.
+          $item['attributes']['list_attributes']['class'][] = 'list-item';
+          $item['attributes']['content_attributes']['class'][] = 'tab-content';
+
+          // Add classes if this is the first tab item.
+          if ($delta == 0) {
+            $item['attributes']['list_attributes']['class'][] = 'active';
+            $item['attributes']['content_attributes']['class'][] = 'active';
+          }
+
+          // Add config for tab items.
+          if ($item['type'] == 'tab') {
+            // Add li attributes.
+            $item['attributes']['list_attributes']['role'] = 'presentation';
+            // Add anchor attributes.
+            $item['attributes']['anchor_attributes']['href'] = '#' . $clean_name;
+            $item['attributes']['anchor_attributes']['aria-controls'] = $clean_name;
+            $item['attributes']['anchor_attributes']['role'] = 'tab';
+            $item['attributes']['anchor_attributes']['data-toggle'] = 'tab';
+            // Add content attributes.
+            $item['attributes']['content_attributes']['role'] = 'tabpanel';
+            $item['attributes']['content_attributes']['class'][] = 'tab-pane';
+            $item['attributes']['content_attributes']['id'] = $clean_name;
+            // Add container wrapper if needed.
+            if (isset($item['tab_content_needs_container'])) {
+              $item['attributes']['content_attributes']['class'][] = 'l-container';
+              $item['attributes']['anchor_attributes']['class'][] = 'dropline';
+            }
+          }
+
+          // Add config for link items.
+          if ($item['type'] == 'link') {
+            $item['attributes']['anchor_attributes']['href'] = $item['url'];
+            $item['tab_content'] = NULL;
+          }
+
+          // Render attributes
+          $item['attributes']['rendered_li'] = drupal_attributes($item['attributes']['list_attributes']);
+          $item['attributes']['rendered_a'] = drupal_attributes($item['attributes']['anchor_attributes']);
+          $item['attributes']['rendered_content'] = drupal_attributes($item['attributes']['content_attributes']);
+        }
+      }
       break;
     case 'person':
       if ($variables['elements']['#view_mode'] == 'teaser') {

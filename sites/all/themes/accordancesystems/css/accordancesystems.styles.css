@@ -315,7 +315,8 @@ body {
   background-color: #262633; }
 
 /* line 13, ../sass/base/_page.scss */
-.l-container, .node-araid-controller-display .tab-content .field--name-field-controller-features-ref .taxonomy-term--product-controller-features, .page-solutions .view-display-id-solutions_pane .taxonomy-term--solutions--full {
+.l-container, .node-araid-controller-display .tab-content .field--name-field-controller-features-ref .taxonomy-term--product-controller-features,
+.node-araid-accessory-display .tab-content .field--name-field-controller-features-ref .taxonomy-term--product-controller-features, .page-solutions .view-display-id-solutions_pane .taxonomy-term--solutions--full {
   max-width: 1140px;
   margin: 0 auto;
   padding-left: 1em;
@@ -569,10 +570,14 @@ hr {
   .l-header a {
     color: #fff; }
   /* line 12, ../sass/components/global_regions/_header.scss */
-  .l-header .l-container, .l-header .node-araid-controller-display .tab-content .field--name-field-controller-features-ref .taxonomy-term--product-controller-features, .node-araid-controller-display .tab-content .field--name-field-controller-features-ref .l-header .taxonomy-term--product-controller-features, .l-header .page-solutions .view-display-id-solutions_pane .taxonomy-term--solutions--full, .page-solutions .view-display-id-solutions_pane .l-header .taxonomy-term--solutions--full {
+  .l-header .l-container, .l-header .node-araid-controller-display .tab-content .field--name-field-controller-features-ref .taxonomy-term--product-controller-features, .node-araid-controller-display .tab-content .field--name-field-controller-features-ref .l-header .taxonomy-term--product-controller-features,
+  .l-header .node-araid-accessory-display .tab-content .field--name-field-controller-features-ref .taxonomy-term--product-controller-features,
+  .node-araid-accessory-display .tab-content .field--name-field-controller-features-ref .l-header .taxonomy-term--product-controller-features, .l-header .page-solutions .view-display-id-solutions_pane .taxonomy-term--solutions--full, .page-solutions .view-display-id-solutions_pane .l-header .taxonomy-term--solutions--full {
     *zoom: 1; }
     /* line 38, ../../../../../../../../../Users/ace/.rvm/gems/ruby-1.9.3-p484@omega.accordancesystems/gems/compass-core-1.0.3/stylesheets/compass/utilities/general/_clearfix.scss */
-    .l-header .l-container:after, .l-header .node-araid-controller-display .tab-content .field--name-field-controller-features-ref .taxonomy-term--product-controller-features:after, .node-araid-controller-display .tab-content .field--name-field-controller-features-ref .l-header .taxonomy-term--product-controller-features:after, .l-header .page-solutions .view-display-id-solutions_pane .taxonomy-term--solutions--full:after, .page-solutions .view-display-id-solutions_pane .l-header .taxonomy-term--solutions--full:after {
+    .l-header .l-container:after, .l-header .node-araid-controller-display .tab-content .field--name-field-controller-features-ref .taxonomy-term--product-controller-features:after, .node-araid-controller-display .tab-content .field--name-field-controller-features-ref .l-header .taxonomy-term--product-controller-features:after,
+    .l-header .node-araid-accessory-display .tab-content .field--name-field-controller-features-ref .taxonomy-term--product-controller-features:after,
+    .node-araid-accessory-display .tab-content .field--name-field-controller-features-ref .l-header .taxonomy-term--product-controller-features:after, .l-header .page-solutions .view-display-id-solutions_pane .taxonomy-term--solutions--full:after, .page-solutions .view-display-id-solutions_pane .l-header .taxonomy-term--solutions--full:after {
       content: "";
       display: table;
       clear: both; }
@@ -632,7 +637,11 @@ hr {
         @media (min-width: 400px) {
           /* line 55, ../sass/components/global_regions/_header.scss */
           .l-header .l-navbar .site-name .site-name-second {
-            display: block; } }
+            display: inline-block;
+            vertical-align: middle;
+            *vertical-align: auto;
+            *zoom: 1;
+            *display: inline; } }
     @media (min-width: 980px) {
       /* line 65, ../sass/components/global_regions/_header.scss */
       .l-header .l-navbar .l-region--navigation {
@@ -642,11 +651,15 @@ hr {
     padding-top: 2em;
     padding-bottom: 2em; }
     /* line 76, ../sass/components/global_regions/_header.scss */
-    .l-header .l-guide .l-container, .l-header .l-guide .node-araid-controller-display .tab-content .field--name-field-controller-features-ref .taxonomy-term--product-controller-features, .node-araid-controller-display .tab-content .field--name-field-controller-features-ref .l-header .l-guide .taxonomy-term--product-controller-features, .l-header .l-guide .page-solutions .view-display-id-solutions_pane .taxonomy-term--solutions--full, .page-solutions .view-display-id-solutions_pane .l-header .l-guide .taxonomy-term--solutions--full {
+    .l-header .l-guide .l-container, .l-header .l-guide .node-araid-controller-display .tab-content .field--name-field-controller-features-ref .taxonomy-term--product-controller-features, .node-araid-controller-display .tab-content .field--name-field-controller-features-ref .l-header .l-guide .taxonomy-term--product-controller-features,
+    .l-header .l-guide .node-araid-accessory-display .tab-content .field--name-field-controller-features-ref .taxonomy-term--product-controller-features,
+    .node-araid-accessory-display .tab-content .field--name-field-controller-features-ref .l-header .l-guide .taxonomy-term--product-controller-features, .l-header .l-guide .page-solutions .view-display-id-solutions_pane .taxonomy-term--solutions--full, .page-solutions .view-display-id-solutions_pane .l-header .l-guide .taxonomy-term--solutions--full {
       position: relative;
       *zoom: 1; }
       /* line 38, ../../../../../../../../../Users/ace/.rvm/gems/ruby-1.9.3-p484@omega.accordancesystems/gems/compass-core-1.0.3/stylesheets/compass/utilities/general/_clearfix.scss */
-      .l-header .l-guide .l-container:after, .l-header .l-guide .node-araid-controller-display .tab-content .field--name-field-controller-features-ref .taxonomy-term--product-controller-features:after, .node-araid-controller-display .tab-content .field--name-field-controller-features-ref .l-header .l-guide .taxonomy-term--product-controller-features:after, .l-header .l-guide .page-solutions .view-display-id-solutions_pane .taxonomy-term--solutions--full:after, .page-solutions .view-display-id-solutions_pane .l-header .l-guide .taxonomy-term--solutions--full:after {
+      .l-header .l-guide .l-container:after, .l-header .l-guide .node-araid-controller-display .tab-content .field--name-field-controller-features-ref .taxonomy-term--product-controller-features:after, .node-araid-controller-display .tab-content .field--name-field-controller-features-ref .l-header .l-guide .taxonomy-term--product-controller-features:after,
+      .l-header .l-guide .node-araid-accessory-display .tab-content .field--name-field-controller-features-ref .taxonomy-term--product-controller-features:after,
+      .node-araid-accessory-display .tab-content .field--name-field-controller-features-ref .l-header .l-guide .taxonomy-term--product-controller-features:after, .l-header .l-guide .page-solutions .view-display-id-solutions_pane .taxonomy-term--solutions--full:after, .page-solutions .view-display-id-solutions_pane .l-header .l-guide .taxonomy-term--solutions--full:after {
         content: "";
         display: table;
         clear: both; }
@@ -680,7 +693,8 @@ hr {
 .l-main {
   background-color: #fff; }
   /* line 4, ../sass/components/global_regions/_main.scss */
-  .l-main > .l-container, .node-araid-controller-display .tab-content .field--name-field-controller-features-ref .l-main > .taxonomy-term--product-controller-features, .page-solutions .view-display-id-solutions_pane .l-main > .taxonomy-term--solutions--full {
+  .l-main > .l-container, .node-araid-controller-display .tab-content .field--name-field-controller-features-ref .l-main > .taxonomy-term--product-controller-features,
+  .node-araid-accessory-display .tab-content .field--name-field-controller-features-ref .l-main > .taxonomy-term--product-controller-features, .page-solutions .view-display-id-solutions_pane .l-main > .taxonomy-term--solutions--full {
     padding-top: 3em;
     padding-bottom: 3em; }
 
@@ -1095,11 +1109,13 @@ hr {
       background: #eee;
       color: #333; }
 
-/* line 4, ../sass/components/nodes/_node-araid-controller-display.scss */
-.node-araid-controller-display .pane-node-content {
+/* line 5, ../sass/components/nodes/_node-araid-controller-display.scss */
+.node-araid-controller-display .pane-node-content,
+.node-araid-accessory-display .pane-node-content {
   background: #f5f5f5; }
-/* line 8, ../sass/components/nodes/_node-araid-controller-display.scss */
-.node-araid-controller-display .pane-node-content.view-mode-featured_slide {
+/* line 9, ../sass/components/nodes/_node-araid-controller-display.scss */
+.node-araid-controller-display .pane-node-content.view-mode-featured_slide,
+.node-araid-accessory-display .pane-node-content.view-mode-featured_slide {
   background-color: #FBFCFE;
   background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJvYmplY3RCb3VuZGluZ0JveCIgeDE9IjAuNSIgeTE9IjAuMCIgeDI9IjAuNSIgeTI9IjEuMCI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2VmZWNlYyIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iI2ZmZmZmZiIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JhZCkiIC8+PC9zdmc+IA==');
   background-size: 100%;
@@ -1107,21 +1123,25 @@ hr {
   background-image: -moz-linear-gradient(#efecec, #ffffff);
   background-image: -webkit-linear-gradient(#efecec, #ffffff);
   background-image: linear-gradient(#efecec, #ffffff); }
-/* line 13, ../sass/components/nodes/_node-araid-controller-display.scss */
-.node-araid-controller-display .tabpanel {
+/* line 14, ../sass/components/nodes/_node-araid-controller-display.scss */
+.node-araid-controller-display .tabpanel,
+.node-araid-accessory-display .tabpanel {
   background: #e8e4e4; }
-  /* line 16, ../sass/components/nodes/_node-araid-controller-display.scss */
-  .node-araid-controller-display .tabpanel a {
+  /* line 17, ../sass/components/nodes/_node-araid-controller-display.scss */
+  .node-araid-controller-display .tabpanel a,
+  .node-araid-accessory-display .tabpanel a {
     color: #262633; }
-  /* line 20, ../sass/components/nodes/_node-araid-controller-display.scss */
-  .node-araid-controller-display .tabpanel .nav-tabs {
+  /* line 21, ../sass/components/nodes/_node-araid-controller-display.scss */
+  .node-araid-controller-display .tabpanel .nav-tabs,
+  .node-araid-accessory-display .tabpanel .nav-tabs {
     margin: 0;
     padding: 0;
     font-size: 14px;
     font-size: 1.4rem;
     font-weight: 600; }
-    /* line 26, ../sass/components/nodes/_node-araid-controller-display.scss */
-    .node-araid-controller-display .tabpanel .nav-tabs .list-item {
+    /* line 27, ../sass/components/nodes/_node-araid-controller-display.scss */
+    .node-araid-controller-display .tabpanel .nav-tabs .list-item,
+    .node-araid-accessory-display .tabpanel .nav-tabs .list-item {
       display: inline-block;
       vertical-align: middle;
       *vertical-align: auto;
@@ -1130,8 +1150,9 @@ hr {
       list-style: none;
       margin: 0;
       padding: 0; }
-      /* line 32, ../sass/components/nodes/_node-araid-controller-display.scss */
-      .node-araid-controller-display .tabpanel .nav-tabs .list-item a {
+      /* line 33, ../sass/components/nodes/_node-araid-controller-display.scss */
+      .node-araid-controller-display .tabpanel .nav-tabs .list-item a,
+      .node-araid-accessory-display .tabpanel .nav-tabs .list-item a {
         padding: .8em 1em;
         display: block;
         border-bottom: 2px solid transparent;
@@ -1141,20 +1162,26 @@ hr {
         -o-transition: all, 0.5s;
         -webkit-transition: all, 0.5s;
         transition: all, 0.5s; }
-        /* line 40, ../sass/components/nodes/_node-araid-controller-display.scss */
-        .node-araid-controller-display .tabpanel .nav-tabs .list-item a:hover, .node-araid-controller-display .tabpanel .nav-tabs .list-item a:focus, .node-araid-controller-display .tabpanel .nav-tabs .list-item a:active {
+        /* line 41, ../sass/components/nodes/_node-araid-controller-display.scss */
+        .node-araid-controller-display .tabpanel .nav-tabs .list-item a:hover, .node-araid-controller-display .tabpanel .nav-tabs .list-item a:focus, .node-araid-controller-display .tabpanel .nav-tabs .list-item a:active,
+        .node-araid-accessory-display .tabpanel .nav-tabs .list-item a:hover,
+        .node-araid-accessory-display .tabpanel .nav-tabs .list-item a:focus,
+        .node-araid-accessory-display .tabpanel .nav-tabs .list-item a:active {
           background-color: #efecec;
           border-bottom-color: #d1c8c8; }
-      /* line 48, ../sass/components/nodes/_node-araid-controller-display.scss */
-      .node-araid-controller-display .tabpanel .nav-tabs .list-item.active a {
+      /* line 49, ../sass/components/nodes/_node-araid-controller-display.scss */
+      .node-araid-controller-display .tabpanel .nav-tabs .list-item.active a,
+      .node-araid-accessory-display .tabpanel .nav-tabs .list-item.active a {
         background-color: #f4f2f2;
         border-bottom-color: #991c1f; }
         @media (min-width: 550px) {
-          /* line 53, ../sass/components/nodes/_node-araid-controller-display.scss */
-          .node-araid-controller-display .tabpanel .nav-tabs .list-item.active a.dropline {
+          /* line 54, ../sass/components/nodes/_node-araid-controller-display.scss */
+          .node-araid-controller-display .tabpanel .nav-tabs .list-item.active a.dropline,
+          .node-araid-accessory-display .tabpanel .nav-tabs .list-item.active a.dropline {
             position: relative; }
-            /* line 56, ../sass/components/nodes/_node-araid-controller-display.scss */
-            .node-araid-controller-display .tabpanel .nav-tabs .list-item.active a.dropline:after {
+            /* line 57, ../sass/components/nodes/_node-araid-controller-display.scss */
+            .node-araid-controller-display .tabpanel .nav-tabs .list-item.active a.dropline:after,
+            .node-araid-accessory-display .tabpanel .nav-tabs .list-item.active a.dropline:after {
               content: "";
               width: 1px;
               position: absolute;
@@ -1163,26 +1190,42 @@ hr {
               background: #991c1f;
               line-height: 0;
               left: 50%; } }
-    /* line 73, ../sass/components/nodes/_node-araid-controller-display.scss */
-    .node-araid-controller-display .tabpanel .nav-tabs i {
+    /* line 74, ../sass/components/nodes/_node-araid-controller-display.scss */
+    .node-araid-controller-display .tabpanel .nav-tabs i,
+    .node-araid-accessory-display .tabpanel .nav-tabs i {
       margin-right: .3em; }
-/* line 79, ../sass/components/nodes/_node-araid-controller-display.scss */
-.node-araid-controller-display .tab-content.l-container, .node-araid-controller-display .tab-content .field--name-field-controller-features-ref .tab-content.taxonomy-term--product-controller-features, .node-araid-controller-display .page-solutions .view-display-id-solutions_pane .tab-content.taxonomy-term--solutions--full, .page-solutions .view-display-id-solutions_pane .node-araid-controller-display .tab-content.taxonomy-term--solutions--full {
+/* line 80, ../sass/components/nodes/_node-araid-controller-display.scss */
+.node-araid-controller-display .tab-content.l-container, .node-araid-controller-display .tab-content .field--name-field-controller-features-ref .tab-content.taxonomy-term--product-controller-features,
+.node-araid-accessory-display .tab-content .field--name-field-controller-features-ref .node-araid-controller-display .tab-content.taxonomy-term--product-controller-features, .node-araid-controller-display .page-solutions .view-display-id-solutions_pane .tab-content.taxonomy-term--solutions--full, .page-solutions .view-display-id-solutions_pane .node-araid-controller-display .tab-content.taxonomy-term--solutions--full,
+.node-araid-accessory-display .tab-content.l-container,
+.node-araid-controller-display .tab-content .field--name-field-controller-features-ref .node-araid-accessory-display .tab-content.taxonomy-term--product-controller-features,
+.node-araid-accessory-display .tab-content .field--name-field-controller-features-ref .tab-content.taxonomy-term--product-controller-features,
+.node-araid-accessory-display .page-solutions .view-display-id-solutions_pane .tab-content.taxonomy-term--solutions--full,
+.page-solutions .view-display-id-solutions_pane .node-araid-accessory-display .tab-content.taxonomy-term--solutions--full {
   padding: 2em; }
   @media (min-width: 550px) {
-    /* line 79, ../sass/components/nodes/_node-araid-controller-display.scss */
-    .node-araid-controller-display .tab-content.l-container, .node-araid-controller-display .tab-content .field--name-field-controller-features-ref .tab-content.taxonomy-term--product-controller-features, .node-araid-controller-display .page-solutions .view-display-id-solutions_pane .tab-content.taxonomy-term--solutions--full, .page-solutions .view-display-id-solutions_pane .node-araid-controller-display .tab-content.taxonomy-term--solutions--full {
+    /* line 80, ../sass/components/nodes/_node-araid-controller-display.scss */
+    .node-araid-controller-display .tab-content.l-container, .node-araid-controller-display .tab-content .field--name-field-controller-features-ref .tab-content.taxonomy-term--product-controller-features,
+    .node-araid-accessory-display .tab-content .field--name-field-controller-features-ref .node-araid-controller-display .tab-content.taxonomy-term--product-controller-features, .node-araid-controller-display .page-solutions .view-display-id-solutions_pane .tab-content.taxonomy-term--solutions--full, .page-solutions .view-display-id-solutions_pane .node-araid-controller-display .tab-content.taxonomy-term--solutions--full,
+    .node-araid-accessory-display .tab-content.l-container,
+    .node-araid-controller-display .tab-content .field--name-field-controller-features-ref .node-araid-accessory-display .tab-content.taxonomy-term--product-controller-features,
+    .node-araid-accessory-display .tab-content .field--name-field-controller-features-ref .tab-content.taxonomy-term--product-controller-features,
+    .node-araid-accessory-display .page-solutions .view-display-id-solutions_pane .tab-content.taxonomy-term--solutions--full,
+    .page-solutions .view-display-id-solutions_pane .node-araid-accessory-display .tab-content.taxonomy-term--solutions--full {
       margin-top: 3em;
       border-top: 1px solid #991c1f; } }
-/* line 90, ../sass/components/nodes/_node-araid-controller-display.scss */
-.node-araid-controller-display .tab-content .field--name-field-controller-features-ref .field__item {
+/* line 91, ../sass/components/nodes/_node-araid-controller-display.scss */
+.node-araid-controller-display .tab-content .field--name-field-controller-features-ref .field__item,
+.node-araid-accessory-display .tab-content .field--name-field-controller-features-ref .field__item {
   padding-top: 3em;
   padding-bottom: 3em; }
-/* line 95, ../sass/components/nodes/_node-araid-controller-display.scss */
-.node-araid-controller-display .tab-content .field--name-field-controller-features-ref .field__item.even {
+/* line 96, ../sass/components/nodes/_node-araid-controller-display.scss */
+.node-araid-controller-display .tab-content .field--name-field-controller-features-ref .field__item.even,
+.node-araid-accessory-display .tab-content .field--name-field-controller-features-ref .field__item.even {
   background: #fff; }
-/* line 104, ../sass/components/nodes/_node-araid-controller-display.scss */
-.node-araid-controller-display .tab-content.active {
+/* line 105, ../sass/components/nodes/_node-araid-controller-display.scss */
+.node-araid-controller-display .tab-content.active,
+.node-araid-accessory-display .tab-content.active {
   -webkit-animation-name: fadeInUp;
   -moz-animation-name: fadeInUp;
   -ms-animation-name: fadeInUp;
@@ -1218,8 +1261,9 @@ hr {
   -ms-backface-visibility: hidden;
   -o-backface-visibility: hidden;
   backface-visibility: hidden; }
-/* line 110, ../sass/components/nodes/_node-araid-controller-display.scss */
-.node-araid-controller-display .field--name-field-controller-photo .field__item {
+/* line 111, ../sass/components/nodes/_node-araid-controller-display.scss */
+.node-araid-controller-display .field--name-field-controller-photo .field__item,
+.node-araid-accessory-display .field--name-field-controller-photo .field__item {
   line-height: 0;
   display: inline-block;
   vertical-align: middle;
@@ -1364,107 +1408,6 @@ hr {
   .node--araid-accessory-display--teaser .node-readmore a:hover, .node--araid-accessory-display--teaser .node-readmore a:focus, .node--araid-accessory-display--teaser .node-readmore a:active {
     background-color: #fff;
     color: #156DF9; }
-
-/* line 1, ../sass/components/view_modes/_node--araid-controller-display--featured-slide.scss */
-.node--araid-controller-display--featured-slide {
-  padding: 3em 0;
-  *zoom: 1; }
-  /* line 38, ../../../../../../../../../Users/ace/.rvm/gems/ruby-1.9.3-p484@omega.accordancesystems/gems/compass-core-1.0.3/stylesheets/compass/utilities/general/_clearfix.scss */
-  .node--araid-controller-display--featured-slide:after {
-    content: "";
-    display: table;
-    clear: both; }
-  /* line 5, ../sass/components/view_modes/_node--araid-controller-display--featured-slide.scss */
-  .node--araid-controller-display--featured-slide .field {
-    -webkit-animation-name: fadeInDown;
-    -moz-animation-name: fadeInDown;
-    -ms-animation-name: fadeInDown;
-    -o-animation-name: fadeInDown;
-    animation-name: fadeInDown;
-    -webkit-animation-iteration-count: 1s;
-    -moz-animation-iteration-count: 1s;
-    -ms-animation-iteration-count: 1s;
-    -o-animation-iteration-count: 1s;
-    animation-iteration-count: 1s;
-    -webkit-animation-duration: 1s;
-    -moz-animation-duration: 1s;
-    -ms-animation-duration: 1s;
-    -o-animation-duration: 1s;
-    animation-duration: 1s;
-    -webkit-animation-delay: 0s;
-    -moz-animation-delay: 0s;
-    -ms-animation-delay: 0s;
-    -o-animation-delay: 0s;
-    animation-delay: 0s;
-    -webkit-animation-timing-function: ease;
-    -moz-animation-timing-function: ease;
-    -ms-animation-timing-function: ease;
-    -o-animation-timing-function: ease;
-    animation-timing-function: ease;
-    -webkit-animation-fill-mode: both;
-    -moz-animation-fill-mode: both;
-    -ms-animation-fill-mode: both;
-    -o-animation-fill-mode: both;
-    animation-fill-mode: both;
-    -webkit-backface-visibility: hidden;
-    -moz-backface-visibility: hidden;
-    -ms-backface-visibility: hidden;
-    -o-backface-visibility: hidden;
-    backface-visibility: hidden; }
-  /* line 10, ../sass/components/view_modes/_node--araid-controller-display--featured-slide.scss */
-  .node--araid-controller-display--featured-slide .field:nth-child(1) {
-    -webkit-animation-delay: 0.3s;
-    animation-delay: 0.3s; }
-  /* line 10, ../sass/components/view_modes/_node--araid-controller-display--featured-slide.scss */
-  .node--araid-controller-display--featured-slide .field:nth-child(2) {
-    -webkit-animation-delay: 0.6s;
-    animation-delay: 0.6s; }
-  /* line 10, ../sass/components/view_modes/_node--araid-controller-display--featured-slide.scss */
-  .node--araid-controller-display--featured-slide .field:nth-child(3) {
-    -webkit-animation-delay: 0.9s;
-    animation-delay: 0.9s; }
-  /* line 10, ../sass/components/view_modes/_node--araid-controller-display--featured-slide.scss */
-  .node--araid-controller-display--featured-slide .field:nth-child(4) {
-    -webkit-animation-delay: 1.2s;
-    animation-delay: 1.2s; }
-  /* line 10, ../sass/components/view_modes/_node--araid-controller-display--featured-slide.scss */
-  .node--araid-controller-display--featured-slide .field:nth-child(5) {
-    -webkit-animation-delay: 1.5s;
-    animation-delay: 1.5s; }
-  /* line 10, ../sass/components/view_modes/_node--araid-controller-display--featured-slide.scss */
-  .node--araid-controller-display--featured-slide .field:nth-child(6) {
-    -webkit-animation-delay: 1.8s;
-    animation-delay: 1.8s; }
-  /* line 10, ../sass/components/view_modes/_node--araid-controller-display--featured-slide.scss */
-  .node--araid-controller-display--featured-slide .field:nth-child(7) {
-    -webkit-animation-delay: 2.1s;
-    animation-delay: 2.1s; }
-  /* line 10, ../sass/components/view_modes/_node--araid-controller-display--featured-slide.scss */
-  .node--araid-controller-display--featured-slide .field:nth-child(8) {
-    -webkit-animation-delay: 2.4s;
-    animation-delay: 2.4s; }
-  /* line 10, ../sass/components/view_modes/_node--araid-controller-display--featured-slide.scss */
-  .node--araid-controller-display--featured-slide .field:nth-child(9) {
-    -webkit-animation-delay: 2.7s;
-    animation-delay: 2.7s; }
-  /* line 10, ../sass/components/view_modes/_node--araid-controller-display--featured-slide.scss */
-  .node--araid-controller-display--featured-slide .field:nth-child(10) {
-    -webkit-animation-delay: 3s;
-    animation-delay: 3s; }
-  /* line 16, ../sass/components/view_modes/_node--araid-controller-display--featured-slide.scss */
-  .node--araid-controller-display--featured-slide .field--name-field-controller-tagline {
-    font-style: italic;
-    font-size: 22px;
-    font-size: 2.2rem; }
-  /* line 21, ../sass/components/view_modes/_node--araid-controller-display--featured-slide.scss */
-  .node--araid-controller-display--featured-slide .node__content {
-    overflow: hidden; }
-  @media (min-width: 800px) {
-    /* line 26, ../sass/components/view_modes/_node--araid-controller-display--featured-slide.scss */
-    .node--araid-controller-display--featured-slide .content-image {
-      max-width: 50%;
-      float: right;
-      padding-left: 4em; } }
 
 /* line 2, ../sass/components/view_modes/_node--araid-controller-display--teaser.scss */
 .node--araid-controller-display--teaser .field--name-field-product,
@@ -1647,6 +1590,125 @@ hr {
     margin: 0 auto;
     max-height: 80px;
     width: auto; }
+
+/* line 1, ../sass/components/view_modes/_node--featured-slide.scss */
+.node--araid-controller-display--featured-slide,
+.node--araid-accessory-display--featured-slide {
+  padding: 3em 0;
+  *zoom: 1; }
+  /* line 38, ../../../../../../../../../Users/ace/.rvm/gems/ruby-1.9.3-p484@omega.accordancesystems/gems/compass-core-1.0.3/stylesheets/compass/utilities/general/_clearfix.scss */
+  .node--araid-controller-display--featured-slide:after,
+  .node--araid-accessory-display--featured-slide:after {
+    content: "";
+    display: table;
+    clear: both; }
+  /* line 6, ../sass/components/view_modes/_node--featured-slide.scss */
+  .node--araid-controller-display--featured-slide .field,
+  .node--araid-accessory-display--featured-slide .field {
+    -webkit-animation-name: fadeInDown;
+    -moz-animation-name: fadeInDown;
+    -ms-animation-name: fadeInDown;
+    -o-animation-name: fadeInDown;
+    animation-name: fadeInDown;
+    -webkit-animation-iteration-count: 1s;
+    -moz-animation-iteration-count: 1s;
+    -ms-animation-iteration-count: 1s;
+    -o-animation-iteration-count: 1s;
+    animation-iteration-count: 1s;
+    -webkit-animation-duration: 1s;
+    -moz-animation-duration: 1s;
+    -ms-animation-duration: 1s;
+    -o-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-delay: 0s;
+    -moz-animation-delay: 0s;
+    -ms-animation-delay: 0s;
+    -o-animation-delay: 0s;
+    animation-delay: 0s;
+    -webkit-animation-timing-function: ease;
+    -moz-animation-timing-function: ease;
+    -ms-animation-timing-function: ease;
+    -o-animation-timing-function: ease;
+    animation-timing-function: ease;
+    -webkit-animation-fill-mode: both;
+    -moz-animation-fill-mode: both;
+    -ms-animation-fill-mode: both;
+    -o-animation-fill-mode: both;
+    animation-fill-mode: both;
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    -ms-backface-visibility: hidden;
+    -o-backface-visibility: hidden;
+    backface-visibility: hidden; }
+  /* line 11, ../sass/components/view_modes/_node--featured-slide.scss */
+  .node--araid-controller-display--featured-slide .field:nth-child(1),
+  .node--araid-accessory-display--featured-slide .field:nth-child(1) {
+    -webkit-animation-delay: 0.3s;
+    animation-delay: 0.3s; }
+  /* line 11, ../sass/components/view_modes/_node--featured-slide.scss */
+  .node--araid-controller-display--featured-slide .field:nth-child(2),
+  .node--araid-accessory-display--featured-slide .field:nth-child(2) {
+    -webkit-animation-delay: 0.6s;
+    animation-delay: 0.6s; }
+  /* line 11, ../sass/components/view_modes/_node--featured-slide.scss */
+  .node--araid-controller-display--featured-slide .field:nth-child(3),
+  .node--araid-accessory-display--featured-slide .field:nth-child(3) {
+    -webkit-animation-delay: 0.9s;
+    animation-delay: 0.9s; }
+  /* line 11, ../sass/components/view_modes/_node--featured-slide.scss */
+  .node--araid-controller-display--featured-slide .field:nth-child(4),
+  .node--araid-accessory-display--featured-slide .field:nth-child(4) {
+    -webkit-animation-delay: 1.2s;
+    animation-delay: 1.2s; }
+  /* line 11, ../sass/components/view_modes/_node--featured-slide.scss */
+  .node--araid-controller-display--featured-slide .field:nth-child(5),
+  .node--araid-accessory-display--featured-slide .field:nth-child(5) {
+    -webkit-animation-delay: 1.5s;
+    animation-delay: 1.5s; }
+  /* line 11, ../sass/components/view_modes/_node--featured-slide.scss */
+  .node--araid-controller-display--featured-slide .field:nth-child(6),
+  .node--araid-accessory-display--featured-slide .field:nth-child(6) {
+    -webkit-animation-delay: 1.8s;
+    animation-delay: 1.8s; }
+  /* line 11, ../sass/components/view_modes/_node--featured-slide.scss */
+  .node--araid-controller-display--featured-slide .field:nth-child(7),
+  .node--araid-accessory-display--featured-slide .field:nth-child(7) {
+    -webkit-animation-delay: 2.1s;
+    animation-delay: 2.1s; }
+  /* line 11, ../sass/components/view_modes/_node--featured-slide.scss */
+  .node--araid-controller-display--featured-slide .field:nth-child(8),
+  .node--araid-accessory-display--featured-slide .field:nth-child(8) {
+    -webkit-animation-delay: 2.4s;
+    animation-delay: 2.4s; }
+  /* line 11, ../sass/components/view_modes/_node--featured-slide.scss */
+  .node--araid-controller-display--featured-slide .field:nth-child(9),
+  .node--araid-accessory-display--featured-slide .field:nth-child(9) {
+    -webkit-animation-delay: 2.7s;
+    animation-delay: 2.7s; }
+  /* line 11, ../sass/components/view_modes/_node--featured-slide.scss */
+  .node--araid-controller-display--featured-slide .field:nth-child(10),
+  .node--araid-accessory-display--featured-slide .field:nth-child(10) {
+    -webkit-animation-delay: 3s;
+    animation-delay: 3s; }
+  /* line 17, ../sass/components/view_modes/_node--featured-slide.scss */
+  .node--araid-controller-display--featured-slide .field--name-field-controller-tagline,
+  .node--araid-controller-display--featured-slide .field--name-field-accessory-tagline,
+  .node--araid-accessory-display--featured-slide .field--name-field-controller-tagline,
+  .node--araid-accessory-display--featured-slide .field--name-field-accessory-tagline {
+    font-style: italic;
+    font-size: 22px;
+    font-size: 2.2rem; }
+  /* line 23, ../sass/components/view_modes/_node--featured-slide.scss */
+  .node--araid-controller-display--featured-slide .node__content,
+  .node--araid-accessory-display--featured-slide .node__content {
+    overflow: hidden; }
+  @media (min-width: 800px) {
+    /* line 28, ../sass/components/view_modes/_node--featured-slide.scss */
+    .node--araid-controller-display--featured-slide .content-image,
+    .node--araid-accessory-display--featured-slide .content-image {
+      max-width: 50%;
+      float: right;
+      padding-left: 4em; } }
 
 /* line 1, ../sass/components/view_modes/_node--frequently-asked-question--collapsible.scss */
 .node--frequently-asked-question--collapsible {
