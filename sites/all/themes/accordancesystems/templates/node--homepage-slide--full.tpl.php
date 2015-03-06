@@ -97,8 +97,10 @@
         print render($content);
       ?>
     </div>
-    <div class="content-image">
-      <?php print render($content['field_slide_featured_image']); ?>
-    </div>
+    <?php if (isset($has_image)): ?>
+      <div class="content-image">
+        <?php print render($content['field_slide_featured_image']); ?>
+      </div>
+    <?php endif; ?>
   </div>
 </article>

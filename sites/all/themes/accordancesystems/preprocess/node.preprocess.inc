@@ -231,6 +231,10 @@ function accordancesystems_preprocess_node(&$variables) {
         $img_path = file_create_url($variables['content']['field_slide_background_image'][0]['#item']['uri']);
         $variables['bg_image'] = $img_path;
       }
+      if (!empty($variables['content']['field_slide_featured_image'])) {
+        $variables['content_attributes_array']['class'][] = 'has-image';
+        $variables['has_image'] = TRUE;
+      }
       break;
 
   }

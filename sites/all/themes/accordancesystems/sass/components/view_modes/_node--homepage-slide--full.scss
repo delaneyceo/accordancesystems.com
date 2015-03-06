@@ -19,6 +19,11 @@
 
   .node__content {
     overflow: hidden;
+    text-align: center;
+
+    &.has-image {
+      text-align: left;
+    }
   }
 
   .field--name-field-slide-call-to-action {
@@ -38,7 +43,7 @@
       @include align-items(center);
     }
     .content-image,
-    .node__content {
+    .node__content.has-image {
       @include flex(0 0 50%);
     }
 
@@ -56,24 +61,24 @@
   // $fillDefault: both;
   // $visibilityDefault: hidden !default;
 .node--homepage-slide--full {
-  h2 {
-    @include fadeInDown($duration: 0.6s, $delay: 0.3s);
-  }
-
-  .field--name-field-slide-tagline {
-    @include fadeInUp($duration: 1s, $delay: 0.3s);
-  }
-
   .content-image {
     @include bounceInRight($duration: 0.8s);
   }
 
+  h2 {
+    @include fadeInDown($duration: 0.8s, $delay: 0.6s);
+  }
+
+  .field--name-field-slide-tagline {
+    @include fadeInUp($duration: 0.8s, $delay: 0.6s);
+  }
+
   .field--name-body {
-    @include fadeInLeft($duration: 0.6s, $delay: 1.2s);
+    @include fadeInLeft($duration: 0.8s, $delay: 1.2s);
   }
 
   .field--name-field-slide-call-to-action .field__item {
-    @include fadeInLeft($duration: 0.6s);
+    @include fadeInLeft($duration: 0.8s);
 
     &:nth-child(1) {
       -webkit-animation-delay: 1.5s;

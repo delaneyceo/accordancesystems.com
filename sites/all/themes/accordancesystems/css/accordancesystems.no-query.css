@@ -1933,8 +1933,12 @@ hr {
     font-size: 2.2rem; }
   /* line 20, ../sass/components/view_modes/_node--homepage-slide--full.scss */
   .node--homepage-slide--full .node__content {
-    overflow: hidden; }
-  /* line 25, ../sass/components/view_modes/_node--homepage-slide--full.scss */
+    overflow: hidden;
+    text-align: center; }
+    /* line 24, ../sass/components/view_modes/_node--homepage-slide--full.scss */
+    .node--homepage-slide--full .node__content.has-image {
+      text-align: left; }
+  /* line 30, ../sass/components/view_modes/_node--homepage-slide--full.scss */
   .node--homepage-slide--full .field--name-field-slide-call-to-action .field__item {
     display: inline-block;
     vertical-align: middle;
@@ -1942,7 +1946,7 @@ hr {
     *zoom: 1;
     *display: inline;
     margin-right: 0.5em; }
-  /* line 30, ../sass/components/view_modes/_node--homepage-slide--full.scss */
+  /* line 35, ../sass/components/view_modes/_node--homepage-slide--full.scss */
   .node--homepage-slide--full .field--name-field-slide-call-to-action a {
     display: inline-block;
     vertical-align: middle;
@@ -1978,81 +1982,7 @@ hr {
       background-color: #fff;
       color: #156DF9; }
 
-/* line 59, ../sass/components/view_modes/_node--homepage-slide--full.scss */
-.node--homepage-slide--full h2 {
-  -webkit-animation-name: fadeInDown;
-  -moz-animation-name: fadeInDown;
-  -ms-animation-name: fadeInDown;
-  -o-animation-name: fadeInDown;
-  animation-name: fadeInDown;
-  -webkit-animation-iteration-count: 1s;
-  -moz-animation-iteration-count: 1s;
-  -ms-animation-iteration-count: 1s;
-  -o-animation-iteration-count: 1s;
-  animation-iteration-count: 1s;
-  -webkit-animation-duration: 0.6s;
-  -moz-animation-duration: 0.6s;
-  -ms-animation-duration: 0.6s;
-  -o-animation-duration: 0.6s;
-  animation-duration: 0.6s;
-  -webkit-animation-delay: 0.3s;
-  -moz-animation-delay: 0.3s;
-  -ms-animation-delay: 0.3s;
-  -o-animation-delay: 0.3s;
-  animation-delay: 0.3s;
-  -webkit-animation-timing-function: ease;
-  -moz-animation-timing-function: ease;
-  -ms-animation-timing-function: ease;
-  -o-animation-timing-function: ease;
-  animation-timing-function: ease;
-  -webkit-animation-fill-mode: both;
-  -moz-animation-fill-mode: both;
-  -ms-animation-fill-mode: both;
-  -o-animation-fill-mode: both;
-  animation-fill-mode: both;
-  -webkit-backface-visibility: hidden;
-  -moz-backface-visibility: hidden;
-  -ms-backface-visibility: hidden;
-  -o-backface-visibility: hidden;
-  backface-visibility: hidden; }
-/* line 63, ../sass/components/view_modes/_node--homepage-slide--full.scss */
-.node--homepage-slide--full .field--name-field-slide-tagline {
-  -webkit-animation-name: fadeInUp;
-  -moz-animation-name: fadeInUp;
-  -ms-animation-name: fadeInUp;
-  -o-animation-name: fadeInUp;
-  animation-name: fadeInUp;
-  -webkit-animation-iteration-count: 1s;
-  -moz-animation-iteration-count: 1s;
-  -ms-animation-iteration-count: 1s;
-  -o-animation-iteration-count: 1s;
-  animation-iteration-count: 1s;
-  -webkit-animation-duration: 1s;
-  -moz-animation-duration: 1s;
-  -ms-animation-duration: 1s;
-  -o-animation-duration: 1s;
-  animation-duration: 1s;
-  -webkit-animation-delay: 0.3s;
-  -moz-animation-delay: 0.3s;
-  -ms-animation-delay: 0.3s;
-  -o-animation-delay: 0.3s;
-  animation-delay: 0.3s;
-  -webkit-animation-timing-function: ease;
-  -moz-animation-timing-function: ease;
-  -ms-animation-timing-function: ease;
-  -o-animation-timing-function: ease;
-  animation-timing-function: ease;
-  -webkit-animation-fill-mode: both;
-  -moz-animation-fill-mode: both;
-  -ms-animation-fill-mode: both;
-  -o-animation-fill-mode: both;
-  animation-fill-mode: both;
-  -webkit-backface-visibility: hidden;
-  -moz-backface-visibility: hidden;
-  -ms-backface-visibility: hidden;
-  -o-backface-visibility: hidden;
-  backface-visibility: hidden; }
-/* line 67, ../sass/components/view_modes/_node--homepage-slide--full.scss */
+/* line 64, ../sass/components/view_modes/_node--homepage-slide--full.scss */
 .node--homepage-slide--full .content-image {
   -webkit-animation-name: bounceInRight;
   -moz-animation-name: bounceInRight;
@@ -2089,7 +2019,81 @@ hr {
   -ms-backface-visibility: hidden;
   -o-backface-visibility: hidden;
   backface-visibility: hidden; }
-/* line 71, ../sass/components/view_modes/_node--homepage-slide--full.scss */
+/* line 68, ../sass/components/view_modes/_node--homepage-slide--full.scss */
+.node--homepage-slide--full h2 {
+  -webkit-animation-name: fadeInDown;
+  -moz-animation-name: fadeInDown;
+  -ms-animation-name: fadeInDown;
+  -o-animation-name: fadeInDown;
+  animation-name: fadeInDown;
+  -webkit-animation-iteration-count: 1s;
+  -moz-animation-iteration-count: 1s;
+  -ms-animation-iteration-count: 1s;
+  -o-animation-iteration-count: 1s;
+  animation-iteration-count: 1s;
+  -webkit-animation-duration: 0.8s;
+  -moz-animation-duration: 0.8s;
+  -ms-animation-duration: 0.8s;
+  -o-animation-duration: 0.8s;
+  animation-duration: 0.8s;
+  -webkit-animation-delay: 0.6s;
+  -moz-animation-delay: 0.6s;
+  -ms-animation-delay: 0.6s;
+  -o-animation-delay: 0.6s;
+  animation-delay: 0.6s;
+  -webkit-animation-timing-function: ease;
+  -moz-animation-timing-function: ease;
+  -ms-animation-timing-function: ease;
+  -o-animation-timing-function: ease;
+  animation-timing-function: ease;
+  -webkit-animation-fill-mode: both;
+  -moz-animation-fill-mode: both;
+  -ms-animation-fill-mode: both;
+  -o-animation-fill-mode: both;
+  animation-fill-mode: both;
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  -ms-backface-visibility: hidden;
+  -o-backface-visibility: hidden;
+  backface-visibility: hidden; }
+/* line 72, ../sass/components/view_modes/_node--homepage-slide--full.scss */
+.node--homepage-slide--full .field--name-field-slide-tagline {
+  -webkit-animation-name: fadeInUp;
+  -moz-animation-name: fadeInUp;
+  -ms-animation-name: fadeInUp;
+  -o-animation-name: fadeInUp;
+  animation-name: fadeInUp;
+  -webkit-animation-iteration-count: 1s;
+  -moz-animation-iteration-count: 1s;
+  -ms-animation-iteration-count: 1s;
+  -o-animation-iteration-count: 1s;
+  animation-iteration-count: 1s;
+  -webkit-animation-duration: 0.8s;
+  -moz-animation-duration: 0.8s;
+  -ms-animation-duration: 0.8s;
+  -o-animation-duration: 0.8s;
+  animation-duration: 0.8s;
+  -webkit-animation-delay: 0.6s;
+  -moz-animation-delay: 0.6s;
+  -ms-animation-delay: 0.6s;
+  -o-animation-delay: 0.6s;
+  animation-delay: 0.6s;
+  -webkit-animation-timing-function: ease;
+  -moz-animation-timing-function: ease;
+  -ms-animation-timing-function: ease;
+  -o-animation-timing-function: ease;
+  animation-timing-function: ease;
+  -webkit-animation-fill-mode: both;
+  -moz-animation-fill-mode: both;
+  -ms-animation-fill-mode: both;
+  -o-animation-fill-mode: both;
+  animation-fill-mode: both;
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  -ms-backface-visibility: hidden;
+  -o-backface-visibility: hidden;
+  backface-visibility: hidden; }
+/* line 76, ../sass/components/view_modes/_node--homepage-slide--full.scss */
 .node--homepage-slide--full .field--name-body {
   -webkit-animation-name: fadeInLeft;
   -moz-animation-name: fadeInLeft;
@@ -2101,11 +2105,11 @@ hr {
   -ms-animation-iteration-count: 1s;
   -o-animation-iteration-count: 1s;
   animation-iteration-count: 1s;
-  -webkit-animation-duration: 0.6s;
-  -moz-animation-duration: 0.6s;
-  -ms-animation-duration: 0.6s;
-  -o-animation-duration: 0.6s;
-  animation-duration: 0.6s;
+  -webkit-animation-duration: 0.8s;
+  -moz-animation-duration: 0.8s;
+  -ms-animation-duration: 0.8s;
+  -o-animation-duration: 0.8s;
+  animation-duration: 0.8s;
   -webkit-animation-delay: 1.2s;
   -moz-animation-delay: 1.2s;
   -ms-animation-delay: 1.2s;
@@ -2126,7 +2130,7 @@ hr {
   -ms-backface-visibility: hidden;
   -o-backface-visibility: hidden;
   backface-visibility: hidden; }
-/* line 75, ../sass/components/view_modes/_node--homepage-slide--full.scss */
+/* line 80, ../sass/components/view_modes/_node--homepage-slide--full.scss */
 .node--homepage-slide--full .field--name-field-slide-call-to-action .field__item {
   -webkit-animation-name: fadeInLeft;
   -moz-animation-name: fadeInLeft;
@@ -2138,11 +2142,11 @@ hr {
   -ms-animation-iteration-count: 1s;
   -o-animation-iteration-count: 1s;
   animation-iteration-count: 1s;
-  -webkit-animation-duration: 0.6s;
-  -moz-animation-duration: 0.6s;
-  -ms-animation-duration: 0.6s;
-  -o-animation-duration: 0.6s;
-  animation-duration: 0.6s;
+  -webkit-animation-duration: 0.8s;
+  -moz-animation-duration: 0.8s;
+  -ms-animation-duration: 0.8s;
+  -o-animation-duration: 0.8s;
+  animation-duration: 0.8s;
   -webkit-animation-delay: 0s;
   -moz-animation-delay: 0s;
   -ms-animation-delay: 0s;
@@ -2163,11 +2167,11 @@ hr {
   -ms-backface-visibility: hidden;
   -o-backface-visibility: hidden;
   backface-visibility: hidden; }
-  /* line 78, ../sass/components/view_modes/_node--homepage-slide--full.scss */
+  /* line 83, ../sass/components/view_modes/_node--homepage-slide--full.scss */
   .node--homepage-slide--full .field--name-field-slide-call-to-action .field__item:nth-child(1) {
     -webkit-animation-delay: 1.5s;
     animation-delay: 1.5s; }
-  /* line 82, ../sass/components/view_modes/_node--homepage-slide--full.scss */
+  /* line 87, ../sass/components/view_modes/_node--homepage-slide--full.scss */
   .node--homepage-slide--full .field--name-field-slide-call-to-action .field__item:nth-child(2) {
     -webkit-animation-delay: 1.8s;
     animation-delay: 1.8s; }
