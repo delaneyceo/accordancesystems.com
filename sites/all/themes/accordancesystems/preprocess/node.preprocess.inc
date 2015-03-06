@@ -17,6 +17,7 @@ function accordancesystems_preprocess_node(&$variables) {
         }
       }
       break;
+
     case 'araid_controller_display':
       if ($variables['elements']['#view_mode'] == 'featured_slide') {
         $variables['print_node_anchor'] = FALSE;
@@ -129,6 +130,7 @@ function accordancesystems_preprocess_node(&$variables) {
         }
       }
       break;
+
     case 'araid_accessory_display':
       if ($variables['elements']['#view_mode'] == 'featured_slide') {
         $variables['print_node_anchor'] = FALSE;
@@ -202,11 +204,13 @@ function accordancesystems_preprocess_node(&$variables) {
         }
       }
       break;
+
     case 'person':
       if ($variables['elements']['#view_mode'] == 'teaser') {
         $variables['print_node_anchor'] = FALSE;
       }
       break;
+
     case 'frequently_asked_question':
       if ($variables['elements']['#view_mode'] == 'collapsible') {
         $variables['content_attributes_array']['class'][] = 'collapse';
@@ -218,9 +222,17 @@ function accordancesystems_preprocess_node(&$variables) {
         $collapsible_trigger_attributes['class'][] = 'collapse-trigger';
         $collapsible_trigger_attributes['class'][] = 'collapsed';
         $variables['collapsible_trigger_attributes_markup'] = drupal_attributes($collapsible_trigger_attributes);
-
       }
       break;
+
+    case 'homepage_slide':
+      if (!empty($variables['content']['field_slide_background_image'])) {
+        // $img_path = image_style_url('thumbnail', $variables['content']['field_slide_background_image'][0]['#item']['uri']);
+        $img_path = file_create_url($variables['content']['field_slide_background_image'][0]['#item']['uri']);
+        $variables['bg_image'] = $img_path;
+      }
+      break;
+
   }
 }
 

@@ -16,10 +16,14 @@
 @import
 // attention-seekers
 // bouncing-entrances
+      "_bouncing-entrances/bounceInDown.scss",
+      "_bouncing-entrances/bounceInRight.scss",
+      "_bouncing-entrances/bounceInUp.scss",
 // bouncing-exits
 // fading-entrances
       "_fading-entrances/fadeIn.scss",
       "_fading-entrances/fadeInUp.scss",
+      "_fading-entrances/fadeInLeft.scss",
       "_fading-entrances/fadeInDown.scss",
 //  fading-exits
 //  flippers
@@ -27,6 +31,7 @@
 //  rotating-entrances
 //  rotating-exits
 //  sliding-entrances
+      "_sliding-entrances/slideInUp.scss",
 //  sliding-exits
 //  specials
 //  zooming-entrances

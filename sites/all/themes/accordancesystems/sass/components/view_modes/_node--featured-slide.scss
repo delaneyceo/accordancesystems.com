@@ -25,9 +25,15 @@
   }
 
   @include breakpoint(800px) {
+    @include display-flex;
+    @include align-items(center);
+
+    .content-image,
+    .node__content {
+      @include flex(0 0 50%);
+    }
+
     .content-image {
-      max-width: 50%;
-      float: right;
       padding-left: 4em;
     }
   }

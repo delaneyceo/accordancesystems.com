@@ -79,19 +79,26 @@
  */
 ?>
 <article<?php print $attributes; ?>>
-  <div<?php print $content_attributes; ?>>
-    <?php print render($title_prefix); ?>
-    <h2><?php print $title; ?></h2>
-    <?php print render($title_suffix); ?>
-    <?php
-      // We hide the comments and links now so that we can render them later.
-      hide($content['comments']);
-      hide($content['links']);
-      hide($content['field_controller_featured_image']);
-      print render($content);
-    ?>
-  </div>
-  <div class="content-image">
-    <?php print render($content['field_controller_featured_image']); ?>
+  <?php if (isset($bg_image)): ?>
+    <div class="bg-image" style="background-image: url('<?php print $bg_image; ?>');"></div>
+  <?php endif; ?>
+
+  <div class="l-container">
+    <div<?php print $content_attributes; ?>>
+      <?php print render($title_prefix); ?>
+      <h2><?php print $title; ?></h2>
+      <?php print render($title_suffix); ?>
+      <?php
+        // We hide the comments and links now so that we can render them later.
+        hide($content['comments']);
+        hide($content['links']);
+        hide($content['field_slide_background_image']);
+        hide($content['field_slide_featured_image']);
+        print render($content);
+      ?>
+    </div>
+    <div class="content-image">
+      <?php print render($content['field_slide_featured_image']); ?>
+    </div>
   </div>
 </article>
