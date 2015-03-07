@@ -54,12 +54,6 @@
 }
 
 // Animations
-  // $countDefault: 1s !default;
-  // $durationDefault: 1s !default;
-  // $delayDefault: 0s !default;
-  // $functionDefault: ease !default;
-  // $fillDefault: both;
-  // $visibilityDefault: hidden !default;
 .node--homepage-slide--full {
   .content-image {
     @include bounceInRight($duration: 0.8s);
