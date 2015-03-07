@@ -554,6 +554,42 @@ fieldset {
 img, media {
   max-width: 100%; }
 
+/* line 2, ../sass/base/_nodes.scss */
+.node-readmore a {
+  display: inline-block;
+  vertical-align: middle;
+  *vertical-align: auto;
+  *zoom: 1;
+  *display: inline;
+  font-weight: 700;
+  padding: .4em .8em .5em;
+  font-size: 15px;
+  font-size: 1.5rem;
+  -moz-transition: all, 0.3s;
+  -o-transition: all, 0.3s;
+  -webkit-transition: all, 0.3s;
+  transition: all, 0.3s;
+  background-color: rgba(21, 109, 249, 0.75);
+  color: #fff;
+  text-shadow: 1px 1px 0px #156DF9;
+  border: 2px solid #156DF9; }
+  /* line 141, ../sass/utilities/_mixins.scss */
+  .node-readmore a:hover, .node-readmore a:focus, .node-readmore a:active {
+    -moz-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+    -moz-box-shadow: 0px 0px 7px rgba(0, 0, 0, 0.1);
+    -webkit-box-shadow: 0px 0px 7px rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 0px 7px rgba(0, 0, 0, 0.1);
+    border: 1px solid #f2f2f2;
+    text-shadow: 0px 0px 0px #fff;
+    text-decoration: none; }
+  /* line 157, ../sass/utilities/_mixins.scss */
+  .node-readmore a:hover, .node-readmore a:focus, .node-readmore a:active {
+    background-color: #fff;
+    color: #156DF9; }
+
 /* line 1, ../sass/base/_page.scss */
 html {
   font-size: 62.5%; }
@@ -1535,6 +1571,21 @@ hr {
   margin-right: .3em;
   border: 1px solid #e8e4e4; }
 
+/* line 2, ../sass/components/nodes/_node-type-article.scss */
+.node-type-article .magnum-region .l-container, .node-type-article .magnum-region .node-araid-controller-display .tab-content .field--name-field-controller-features-ref .taxonomy-term--product-controller-features, .node-araid-controller-display .tab-content .field--name-field-controller-features-ref .node-type-article .magnum-region .taxonomy-term--product-controller-features,
+.node-type-article .magnum-region .node-araid-accessory-display .tab-content .field--name-field-controller-features-ref .taxonomy-term--product-controller-features,
+.node-araid-accessory-display .tab-content .field--name-field-controller-features-ref .node-type-article .magnum-region .taxonomy-term--product-controller-features, .node-type-article .magnum-region .page-solutions .view-display-id-solutions_pane .taxonomy-term--solutions--full, .page-solutions .view-display-id-solutions_pane .node-type-article .magnum-region .taxonomy-term--solutions--full {
+  padding-top: 3em;
+  padding-bottom: 3em; }
+/* line 8, ../sass/components/nodes/_node-type-article.scss */
+.node-type-article .field--name-field-article-controller-ref .field__items {
+  display: -webkit-flex;
+  display: flex; }
+/* line 12, ../sass/components/nodes/_node-type-article.scss */
+.node-type-article .field--name-field-article-controller-ref .field__item {
+  -webkit-flex: 0 1 500px;
+  flex: 0 1 500px; }
+
 /* line 3, ../sass/components/pages/_ page-checkout-review.scss */
 .page-checkout-review .checkout-help {
   margin-bottom: 1em;
@@ -1584,8 +1635,8 @@ hr {
       flex-wrap: wrap; } }
   /* line 18, ../sass/components/pages/_dealers.scss */
   .page-dealers .view-display-id-dealers_pane .grouped-row .views-row {
-    -webkit-flex: 1 1 50%;
-    flex: 1 1 50%;
+    -webkit-flex: 0 1 50%;
+    flex: 0 1 50%;
     padding: 3em;
     border: 1px solid #FBFCFE; }
     /* line 23, ../sass/components/pages/_dealers.scss */

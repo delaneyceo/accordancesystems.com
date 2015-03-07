@@ -1,0 +1,16 @@
+.node-type-article {
+  .magnum-region .l-container {
+    padding-top: $row-padding;
+    padding-bottom: $row-padding;
+  }
+
+  .field--name-field-article-controller-ref {
+    .field__items {
+      @include display-flex;
+    }
+
+    .field__item {
+      @include flex(0 1 500px);
+    }
+  }
+}
