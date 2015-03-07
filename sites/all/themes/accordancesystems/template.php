@@ -42,7 +42,7 @@ function accordancesystems_css_alter(&$css) {
   // Dynamically remove css for temporary splash page.
   if (drupal_is_front_page()) {
     // Remove defaults.css file.
-    unset($css[drupal_get_path('theme', 'accordancesystems') . '/css/accordancesystems.styles.css']);
+    // unset($css[drupal_get_path('theme', 'accordancesystems') . '/css/accordancesystems.styles.css']);
   }
 }
 
