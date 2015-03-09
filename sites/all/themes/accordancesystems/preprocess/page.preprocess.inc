@@ -6,11 +6,6 @@
 function accordancesystems_preprocess_page(&$variables) {
   $base_path = $GLOBALS['base_path'];
 
-  // Dynamically add css for temporary splash page.
-  if ($variables['is_front'] == TRUE) {
-    // drupal_add_css( drupal_get_path('theme','accordancesystems') . '/temp_css/temp_splash.css');
-  }
-
   // Change to logo path to be served from the theme.
   $variables['logo'] = $base_path . drupal_get_path('theme', 'accordancesystems') . '/images/global/as_logo_header.png';
 
@@ -19,7 +14,7 @@ function accordancesystems_preprocess_page(&$variables) {
   // Array with full width layouts.
   $full_width_layouts = array('magnum');
 
-  // Add the base page class into page template.
+  // Add the base page class into page template
   $variables['classes_array'][] = "l-page";
 
   // Check to see if we are a panelized node.
