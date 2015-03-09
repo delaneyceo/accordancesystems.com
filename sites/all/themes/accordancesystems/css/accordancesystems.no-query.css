@@ -1507,6 +1507,13 @@ hr {
   *display: inline;
   margin-right: .3em;
   border: 1px solid #e8e4e4; }
+/* line 128, ../sass/components/nodes/_node-araid-controller-display.scss */
+.node-araid-controller-display .view-display-id-product_accessory_controller_ref_teaser .views-row,
+.node-araid-accessory-display .view-display-id-product_accessory_controller_ref_teaser .views-row {
+  -webkit-flex: 0 1 33.332%;
+  flex: 0 1 33.332%;
+  padding: 1.5em;
+  margin-bottom: 1em; }
 
 /* line 2, ../sass/components/nodes/_node-type-article.scss */
 .node-type-article .magnum-region .l-container, .node-type-article .magnum-region .node-araid-controller-display .tab-content .field--name-field-controller-features-ref .taxonomy-term--product-controller-features, .node-araid-controller-display .tab-content .field--name-field-controller-features-ref .node-type-article .magnum-region .taxonomy-term--product-controller-features,

@@ -77,6 +77,14 @@ function accordancesystems_preprocess_node(&$variables) {
           $variables['product_controller_links'][$i]['tab_content'] = views_embed_view('testimonials', 'testinominals_by_product_nid', $variables['node']->nid);
           $i = $i + 1;
         }
+        $has_accessories = views_get_view_result('accessories', 'product_accessory_controller_ref_teaser', $variables['node']->nid);
+        if (!empty($has_accessories)) {
+          $variables['product_controller_links'][$i]['title'] = '<i class="fa fa-plug"></i> Accessories';
+          $variables['product_controller_links'][$i]['type'] = 'tab';
+          $variables['product_controller_links'][$i]['tab_content_needs_container'] = TRUE;
+          $variables['product_controller_links'][$i]['tab_content'] = views_embed_view('accessories', 'product_accessory_controller_ref_teaser', $variables['node']->nid);
+          $i = $i + 1;
+        }
 
         // Example external link item.
         // $variables['product_controller_links'][$i]['title'] = 'Testimonials';
