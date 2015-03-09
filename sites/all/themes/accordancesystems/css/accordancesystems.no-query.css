@@ -1586,18 +1586,13 @@ hr {
 .page-products .panel-magnum {
   padding-top: 2em;
   padding-bottom: 2em; }
-/* line 16, ../sass/components/pages/_products.scss */
+/* line 17, ../sass/components/pages/_products.scss */
 .page-products .view-display-id-controller_teaser .views-row,
 .page-products .view-display-id-accessory_teaser .views-row {
-  -webkit-flex: 0 1 50%;
-  flex: 0 1 50%;
-  padding: 3em;
-  border: 1px solid #FBFCFE; }
-  /* line 21, ../sass/components/pages/_products.scss */
-  .page-products .view-display-id-controller_teaser .views-row:nth-child(4n), .page-products .view-display-id-controller_teaser .views-row:first-child,
-  .page-products .view-display-id-accessory_teaser .views-row:nth-child(4n),
-  .page-products .view-display-id-accessory_teaser .views-row:first-child {
-    background-color: #FBFCFE; }
+  -webkit-flex: 0 1 33.332%;
+  flex: 0 1 33.332%;
+  padding: 1.5em;
+  margin-bottom: 1em; }
 
 /* line 3, ../sass/components/pages/_solutions.scss */
 .page-solutions .view-display-id-solutions_pane .views-row {
@@ -1612,7 +1607,24 @@ hr {
   padding-top: 2em;
   padding-bottom: 2em; }
 
-/* line 2, ../sass/components/view_modes/_node--araid-accessory-display--teaser.scss */
+/* line 3, ../sass/components/view_modes/_node--araid-accessory-display--teaser.scss */
+.node--araid-accessory-display--teaser .field--name-field-accessory-photo {
+  margin-bottom: 1.5em; }
+  /* line 6, ../sass/components/view_modes/_node--araid-accessory-display--teaser.scss */
+  .node--araid-accessory-display--teaser .field--name-field-accessory-photo a {
+    line-height: 0;
+    display: block;
+    text-align: center; }
+/* line 13, ../sass/components/view_modes/_node--araid-accessory-display--teaser.scss */
+.node--araid-accessory-display--teaser .node__title {
+  font-size: 21px;
+  font-size: 2.1rem;
+  font-weight: 400;
+  margin-bottom: .3em; }
+/* line 19, ../sass/components/view_modes/_node--araid-accessory-display--teaser.scss */
+.node--araid-accessory-display--teaser .field--name-field-accessory-tagline {
+  font-style: italic; }
+/* line 23, ../sass/components/view_modes/_node--araid-accessory-display--teaser.scss */
 .node--araid-accessory-display--teaser .field--name-field-accessory-product,
 .node--araid-accessory-display--teaser .node__links {
   display: inline-block;
@@ -1622,7 +1634,11 @@ hr {
   *display: inline;
   margin: 0;
   margin-right: .7em; }
-/* line 10, ../sass/components/view_modes/_node--araid-accessory-display--teaser.scss */
+/* line 31, ../sass/components/view_modes/_node--araid-accessory-display--teaser.scss */
+.node--araid-accessory-display--teaser .field--name-field-accessory-product,
+.node--araid-accessory-display--teaser .node-readmore {
+  margin-bottom: .5em; }
+/* line 37, ../sass/components/view_modes/_node--araid-accessory-display--teaser.scss */
 .node--araid-accessory-display--teaser .node-readmore a {
   display: inline-block;
   vertical-align: middle;
@@ -1660,6 +1676,23 @@ hr {
     color: #156DF9; }
 
 /* line 2, ../sass/components/view_modes/_node--araid-controller-display--teaser.scss */
+.node--araid-controller-display--teaser .field--name-field-controller-featured-image {
+  margin-bottom: 1.5em; }
+  /* line 5, ../sass/components/view_modes/_node--araid-controller-display--teaser.scss */
+  .node--araid-controller-display--teaser .field--name-field-controller-featured-image a {
+    line-height: 0;
+    display: block;
+    text-align: center; }
+/* line 12, ../sass/components/view_modes/_node--araid-controller-display--teaser.scss */
+.node--araid-controller-display--teaser .node__title {
+  font-size: 21px;
+  font-size: 2.1rem;
+  font-weight: 400;
+  margin-bottom: .3em; }
+/* line 18, ../sass/components/view_modes/_node--araid-controller-display--teaser.scss */
+.node--araid-controller-display--teaser .field--name-field-controller-tagline {
+  font-style: italic; }
+/* line 22, ../sass/components/view_modes/_node--araid-controller-display--teaser.scss */
 .node--araid-controller-display--teaser .field--name-field-product,
 .node--araid-controller-display--teaser .node__links {
   display: inline-block;
@@ -1669,7 +1702,11 @@ hr {
   *display: inline;
   margin: 0;
   margin-right: .7em; }
-/* line 10, ../sass/components/view_modes/_node--araid-controller-display--teaser.scss */
+/* line 29, ../sass/components/view_modes/_node--araid-controller-display--teaser.scss */
+.node--araid-controller-display--teaser .field--name-field-product,
+.node--araid-controller-display--teaser .node-readmore {
+  margin-bottom: .5em; }
+/* line 35, ../sass/components/view_modes/_node--araid-controller-display--teaser.scss */
 .node--araid-controller-display--teaser .node-readmore a {
   display: inline-block;
   vertical-align: middle;

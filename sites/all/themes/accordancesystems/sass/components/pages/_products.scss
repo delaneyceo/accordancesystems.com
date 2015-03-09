@@ -10,18 +10,14 @@
       @include breakpoint($bp-grids-of-two) {
         @include display-flex;
         @include flex-wrap(wrap);
+        @include align-items(flex-end);
       }
     }
 
     .views-row {
-      @include flex(0 1 50%);
-      padding: $row-padding;
-      border: 1px solid $color-offsetwhite;
-
-      &:nth-child(4n),
-      &:first-child {
-        background-color: $color-offsetwhite;
-      }
+      @include flex(0 1 33.332%);
+      padding: 1.5em;
+      margin-bottom: 1em;
     }
   }
 }

@@ -1,9 +1,36 @@
 .node--araid-accessory-display--teaser {
+
+  .field--name-field-accessory-photo {
+    margin-bottom: 1.5em;
+
+    a {
+      line-height: 0;
+      display: block;
+      text-align: center;
+    }
+  }
+
+  .node__title {
+    @include font-size(2.1);
+    font-weight: $fw-regular;
+    margin-bottom: .3em;
+  }
+
+  .field--name-field-accessory-tagline {
+    font-style: italic;
+  }
+
   .field--name-field-accessory-product,
   .node__links {
     @include inline-block;
     margin: 0;
     margin-right: .7em;
+  }
+
+
+  .field--name-field-accessory-product,
+  .node-readmore {
+    margin-bottom: .5em;
   }
 
   .node-readmore {

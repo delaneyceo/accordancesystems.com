@@ -1,9 +1,34 @@
 .node--araid-controller-display--teaser {
+  .field--name-field-controller-featured-image  {
+    margin-bottom: 1.5em;
+
+    a {
+      line-height: 0;
+      display: block;
+      text-align: center;
+    }
+  }
+
+  .node__title {
+    @include font-size(2.1);
+    font-weight: $fw-regular;
+    margin-bottom: .3em;
+  }
+
+  .field--name-field-controller-tagline {
+    font-style: italic;
+  }
+
   .field--name-field-product,
   .node__links {
     @include inline-block;
     margin: 0;
     margin-right: .7em;
+  }
+
+  .field--name-field-product,
+  .node-readmore {
+    margin-bottom: .5em;
   }
 
   .node-readmore {
