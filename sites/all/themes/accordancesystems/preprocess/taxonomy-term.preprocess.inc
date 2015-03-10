@@ -11,5 +11,8 @@ function accordancesystems_preprocess_taxonomy_term(&$variables) {
       $variables['print_term_anchor'] = FALSE;
       break;
 
+    case 'product_controller_features':
+      $variables['print_term_anchor'] = FALSE;
+      break;
   }
 }

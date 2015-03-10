@@ -361,6 +361,19 @@
   padding-bottom: 1.5em;
   border-bottom: 1px solid #e8e4e4; }
 
+/* line 28, ../sass/utilities/_extends.scss */
+.node-araid-controller-display .view-display-id-product_accessory_controller_ref_teaser .views-row,
+.node-araid-accessory-display .view-display-id-product_accessory_controller_ref_teaser .views-row, .page-products .view-display-id-controller_teaser .views-row,
+.page-products .view-display-id-accessory_teaser .views-row,
+.node-araid-controller-display .view-display-id-product_accessory_controller_ref_teaser > .field__item,
+.node-araid-accessory-display .view-display-id-product_accessory_controller_ref_teaser > .field__item,
+.page-products .view-display-id-controller_teaser > .field__item,
+.page-products .view-display-id-accessory_teaser > .field__item {
+  -webkit-flex: 0 1 33.332%;
+  flex: 0 1 33.332%;
+  padding: 1.5em;
+  margin-bottom: 1em; }
+
 /* line 1, ../sass/base/_bootstrap_tabs.scss */
 .tab-pane {
   display: none; }
@@ -1507,13 +1520,6 @@ hr {
   *display: inline;
   margin-right: .3em;
   border: 1px solid #e8e4e4; }
-/* line 128, ../sass/components/nodes/_node-araid-controller-display.scss */
-.node-araid-controller-display .view-display-id-product_accessory_controller_ref_teaser .views-row,
-.node-araid-accessory-display .view-display-id-product_accessory_controller_ref_teaser .views-row {
-  -webkit-flex: 0 1 33.332%;
-  flex: 0 1 33.332%;
-  padding: 1.5em;
-  margin-bottom: 1em; }
 
 /* line 2, ../sass/components/nodes/_node-type-article.scss */
 .node-type-article .magnum-region .l-container, .node-type-article .magnum-region .node-araid-controller-display .tab-content .field--name-field-controller-features-ref .taxonomy-term--product-controller-features, .node-araid-controller-display .tab-content .field--name-field-controller-features-ref .node-type-article .magnum-region .taxonomy-term--product-controller-features,
@@ -1521,14 +1527,6 @@ hr {
 .node-araid-accessory-display .tab-content .field--name-field-controller-features-ref .node-type-article .magnum-region .taxonomy-term--product-controller-features, .node-type-article .magnum-region .page-solutions .view-display-id-solutions_pane .taxonomy-term--solutions--full, .page-solutions .view-display-id-solutions_pane .node-type-article .magnum-region .taxonomy-term--solutions--full {
   padding-top: 3em;
   padding-bottom: 3em; }
-/* line 8, ../sass/components/nodes/_node-type-article.scss */
-.node-type-article .field--name-field-article-controller-ref .field__items {
-  display: -webkit-flex;
-  display: flex; }
-/* line 12, ../sass/components/nodes/_node-type-article.scss */
-.node-type-article .field--name-field-article-controller-ref .field__item {
-  -webkit-flex: 0 1 500px;
-  flex: 0 1 500px; }
 
 /* line 3, ../sass/components/pages/_ page-checkout-review.scss */
 .page-checkout-review .checkout-help {
@@ -1580,7 +1578,8 @@ hr {
   padding-top: 2em;
   padding-bottom: 2em; }
 
-/* line 4, ../sass/components/pages/_front.scss */
+/* line 3, ../sass/components/pages/_front.scss */
+.front .l-guide,
 .section-home .l-guide {
   display: none; }
 
@@ -1593,13 +1592,6 @@ hr {
 .page-products .panel-magnum {
   padding-top: 2em;
   padding-bottom: 2em; }
-/* line 17, ../sass/components/pages/_products.scss */
-.page-products .view-display-id-controller_teaser .views-row,
-.page-products .view-display-id-accessory_teaser .views-row {
-  -webkit-flex: 0 1 33.332%;
-  flex: 0 1 33.332%;
-  padding: 1.5em;
-  margin-bottom: 1em; }
 
 /* line 3, ../sass/components/pages/_solutions.scss */
 .page-solutions .view-display-id-solutions_pane .views-row {

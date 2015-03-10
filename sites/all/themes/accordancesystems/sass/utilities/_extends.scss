@@ -14,3 +14,21 @@
   padding-bottom: 1.5em;
   border-bottom: 1px solid $shade-offsetwhite;
 }
+
+%views-grids-of-three {
+  .content-wrapper-inner,
+  > .field__items {
+    @include breakpoint($bp-grids-of-two) {
+      @include display-flex;
+      @include flex-wrap(wrap);
+      @include align-items(flex-end);
+    }
+  }
+
+  .views-row,
+  > .field__item {
+    @include flex(0 1 33.332%);
+    padding: 1.5em;
+    margin-bottom: 1em;
+  }
+}

@@ -6,18 +6,6 @@
 
   .view-display-id-controller_teaser,
   .view-display-id-accessory_teaser {
-    .content-wrapper-inner {
-      @include breakpoint($bp-grids-of-two) {
-        @include display-flex;
-        @include flex-wrap(wrap);
-        @include align-items(flex-end);
-      }
-    }
-
-    .views-row {
-      @include flex(0 1 33.332%);
-      padding: 1.5em;
-      margin-bottom: 1em;
-    }
+    @extend %views-grids-of-three;
   }
 }
