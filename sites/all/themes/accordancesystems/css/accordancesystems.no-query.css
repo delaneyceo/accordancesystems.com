@@ -567,6 +567,10 @@ fieldset {
 img, media {
   max-width: 100%; }
 
+/* line 2, ../sass/base/_messages.scss */
+.messages a {
+  color: #2476AE; }
+
 /* line 2, ../sass/base/_nodes.scss */
 .node-readmore a {
   display: inline-block;
