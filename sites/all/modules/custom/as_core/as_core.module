@@ -1,0 +1,29 @@
+<?php
+/**
+ * @file
+ * Code for the as_core module.
+ */
+
+/**
+* Implements hook_form_node_form_alter().
+*/
+function as_core_form_node_form_alter(&$form, &$form_state) {
+  $type = $form['type']['#value'];
+
+  // Disable url path access globally and add execeptions for specific nodes
+  if (!user_access('administer url aliases')) {
+    $exceptions = array('page', 'webform');
+    if (!in_array($type, $exceptions)) {
+      $form['#after_build'][] = 'as_core_url_path_access_restriction';
+    }
+  }
+}
+
+// Custom function to set path access.
+function as_core_url_path_access_restriction($form, &$form_state) {
+  $form['path']['#access'] = FALSE;
+  $form_state['values']['path']['pathauto'] = 1;
+
+  return ($form);
+
+}
