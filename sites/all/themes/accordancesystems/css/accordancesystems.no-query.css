@@ -356,7 +356,7 @@
   50% {
     opacity: 1; } }
 /* line 12, ../sass/utilities/_extends.scss */
-.node--testimonial--teaser, .view-display-id-browser_compatibility_by_controller_nid .grouped-row {
+.node--testimonial--teaser, .view-display-id-articles_recent .views-row, .view-display-id-browser_compatibility_by_controller_nid .grouped-row {
   margin-bottom: 1.5em;
   padding-bottom: 1.5em;
   border-bottom: 1px solid #e8e4e4; }
