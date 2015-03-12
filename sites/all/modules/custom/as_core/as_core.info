@@ -1,0 +1,6 @@
+name = Accordance Systems Core
+description = Custom module for Accordance Systems
+core = 7.x
+package = Accordance Systems
+version = 7.x-1.0
+project = as_core
