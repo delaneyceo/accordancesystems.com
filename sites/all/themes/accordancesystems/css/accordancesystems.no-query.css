@@ -861,18 +861,40 @@ hr {
   color: #fff;
   padding-top: 3em;
   padding-bottom: 3em; }
-  /* line 8, ../sass/components/global_regions/_footer.scss */
+  /* line 7, ../sass/components/global_regions/_footer.scss */
   .l-footer a {
-    color: #fff; }
-  /* line 12, ../sass/components/global_regions/_footer.scss */
+    color: #9191ad; }
+    /* line 10, ../sass/components/global_regions/_footer.scss */
+    .l-footer a:hover, .l-footer a:focus, .l-footer a:active {
+      color: #fff; }
+  /* line 17, ../sass/components/global_regions/_footer.scss */
   .l-footer .block__title {
-    color: #fff; }
-  /* line 16, ../sass/components/global_regions/_footer.scss */
+    color: #fff;
+    font-size: 23px;
+    font-size: 2.3rem;
+    font-weight: 600; }
+  /* line 24, ../sass/components/global_regions/_footer.scss */
+  .l-footer .panelizer-view-mode .panel-pane {
+    padding: 0; }
+  /* line 29, ../sass/components/global_regions/_footer.scss */
+  .l-footer .wrapper-region .l-container, .l-footer .wrapper-region .node-araid-controller-display .tab-content .field--name-field-controller-features-ref .taxonomy-term--product-controller-features, .node-araid-controller-display .tab-content .field--name-field-controller-features-ref .l-footer .wrapper-region .taxonomy-term--product-controller-features,
+  .l-footer .wrapper-region .node-araid-accessory-display .tab-content .field--name-field-controller-features-ref .taxonomy-term--product-controller-features,
+  .node-araid-accessory-display .tab-content .field--name-field-controller-features-ref .l-footer .wrapper-region .taxonomy-term--product-controller-features, .l-footer .wrapper-region .page-solutions .view-display-id-solutions_pane .taxonomy-term--solutions--full, .page-solutions .view-display-id-solutions_pane .l-footer .wrapper-region .taxonomy-term--solutions--full {
+    padding: 0; }
+  /* line 33, ../sass/components/global_regions/_footer.scss */
   .l-footer input {
     color: #453D36; }
-  /* line 20, ../sass/components/global_regions/_footer.scss */
+  /* line 37, ../sass/components/global_regions/_footer.scss */
   .l-footer .form-submit {
     color: #fff; }
+  /* line 42, ../sass/components/global_regions/_footer.scss */
+  .l-footer .block--views-footer-block-block .block__title {
+    clip: auto;
+    height: auto;
+    overflow: auto;
+    position: absolute;
+    top: -9999px;
+    left: -9999px; }
 
 /* line 1, ../sass/components/global_regions/_header.scss */
 .l-header {

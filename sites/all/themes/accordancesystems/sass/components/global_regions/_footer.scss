@@ -1,16 +1,33 @@
 .l-footer {
   background-color: $color-darkslategray;
   color: #fff;
-
   padding-top: $row-padding;
   padding-bottom: $row-padding;
 
   a {
-    color: #fff;
+    color: lighten($color-darkslategray, 45%);
+
+    &:hover,
+    &:focus,
+    &:active {
+      color: #fff;
+    }
   }
 
   .block__title {
     color: #fff;
+    @include font-size(2.3);
+    font-weight: $fw-semibold;
+  }
+
+  .panelizer-view-mode {
+    .panel-pane {
+      padding: 0;
+    }
+  }
+
+  .wrapper-region .l-container {
+    padding: 0;
   }
 
   input {
@@ -20,4 +37,11 @@
   .form-submit {
     color: #fff;
   }
+
+  .block--views-footer-block-block {
+    .block__title {
+      @include element-invisible;
+    }
+  }
+
 }
