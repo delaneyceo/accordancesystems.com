@@ -4,6 +4,9 @@
     margin-bottom: 1em;
     font-weight: $fw-bold;
     @include font-size(2);
+    background-color: $color-message-info;
+    padding: 1em;
+    border: 1px solid darken($color-message-info, 10);
   }
 
   table {
