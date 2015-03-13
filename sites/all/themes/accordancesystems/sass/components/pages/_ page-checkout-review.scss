@@ -24,4 +24,21 @@
   .checkout_review {
     margin-bottom: $row-padding;
   }
+
+  .commerce_payment {
+    margin-bottom: 0;
+  }
+
+  .extra_pane__node__44 {
+    border-top: none;
+
+    legend {
+      @include element-invisible;
+    }
+
+    .fieldset-wrapper {
+      background: $color-message-warning;
+      border: 1px solid darken($color-message-warning, 10);
+    }
+  }
 }

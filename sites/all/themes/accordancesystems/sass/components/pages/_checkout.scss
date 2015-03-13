@@ -1,0 +1,14 @@
+.page-checkout {
+  .extra_pane__node__43 {
+    border-top: none;
+
+    legend {
+      @include element-invisible;
+    }
+
+    .fieldset-wrapper {
+      background: $color-message-warning;
+      border: 1px solid darken($color-message-warning, 10);
+    }
+  }
+}

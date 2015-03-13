@@ -9,13 +9,20 @@ $color-offsetwhite: #FBFCFE;
 $shade-offsetwhite: darken(#EFECEC, 3);
 
 $color-kakhi: #FCFCF7;
-
-
 $color-darkslategray: #262633;
 $tint-darkslategray: lighten($color-darkslategray, 10%);
-
 $color-bloodred: #991c1f;
-
 $color-skyblue: #156DF9;
-
 $color-light-skyblue: #b6c9e1;
+
+$color-message-warning: #fcf8e3;
+$shade-message-warning: #8a6d3b;
+
+$color-message-success: #dff0d8;
+$shade-message-success: #3c763d;
+
+$color-message-info: #d9edf7;
+$shade-message-info: #31708f;
+
+$color-message-danger: #f2dede;
+$shade-message-danger: #a94442;
