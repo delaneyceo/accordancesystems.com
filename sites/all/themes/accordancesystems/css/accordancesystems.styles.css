@@ -1647,6 +1647,11 @@ hr {
       padding: 1.5em;
       margin-bottom: 1em; } }
 
+/* line 2, ../sass/components/nodes/_node-type-page.scss */
+.node-type-page .l-panel-region {
+  padding-top: 3em;
+  padding-bottom: 3em; }
+
 /* line 3, ../sass/components/pages/_ page-checkout-review.scss */
 .page-checkout-review .checkout-help {
   margin-bottom: 1em;
@@ -1667,15 +1672,18 @@ hr {
 .page-checkout-review .checkout_review {
   margin-bottom: 3em; }
 
-/* line 3, ../sass/components/pages/_company.scss */
+/* line 2, ../sass/components/pages/_company.scss */
+.page-node-5 .magnum-region--first {
+  padding: 0; }
+/* line 6, ../sass/components/pages/_company.scss */
 .page-node-5 .pane-node-body {
-  padding-top: 3em;
-  padding-bottom: 3em; }
-/* line 8, ../sass/components/pages/_company.scss */
+  padding: 3em 0; }
+/* line 9, ../sass/components/pages/_company.scss */
 .page-node-5 .pane-people-people-mgmt-eq {
-  background: #FBFCFE; }
+  background: #FBFCFE;
+  padding-top: 3em; }
 @media (min-width: 900px) {
-  /* line 13, ../sass/components/pages/_company.scss */
+  /* line 15, ../sass/components/pages/_company.scss */
   .page-node-5 .view-display-id-people_mgmt_eq .content-wrapper-inner {
     display: -webkit-flex;
     display: flex; } }

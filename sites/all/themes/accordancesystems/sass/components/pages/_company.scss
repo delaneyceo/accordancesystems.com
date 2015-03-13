@@ -1,12 +1,14 @@
 .page-node-5 {
-
-  .pane-node-body {
-    padding-top: $row-padding;
-    padding-bottom: $row-padding;
+  .magnum-region--first {
+    padding: 0;
   }
 
+  .pane-node-body {
+    padding: $row-padding 0;
+  }
   .pane-people-people-mgmt-eq {
     background: $color-offsetwhite;
+    padding-top: $row-padding;
   }
 
   .view-display-id-people_mgmt_eq {
