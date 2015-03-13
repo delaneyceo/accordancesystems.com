@@ -8,6 +8,10 @@ function accordancesystems_preprocess_node(&$variables) {
   $variables['print_node_anchor'] = TRUE;
 
   switch ($variables['type']) {
+    case 'article':
+      $variables['date'] = format_date($variables['created'], "long_month_day_year");
+      break;
+
     case 'dealer':
       if ($variables['elements']['#view_mode'] == 'dealer_listing') {
         $variables['print_node_anchor'] = FALSE;
