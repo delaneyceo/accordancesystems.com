@@ -17,6 +17,11 @@ function as_core_form_node_form_alter(&$form, &$form_state) {
       $form['#after_build'][] = 'as_core_url_path_access_restriction';
     }
   }
+
+  // Prevent the Footer Contact Block basic page node from deletion.
+  if ($form['nid']['#value'] == '51') {
+    unset($form['actions']['delete']);
+  }
 }
 
 // Custom function to set path access.
