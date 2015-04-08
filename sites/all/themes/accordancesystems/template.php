@@ -34,3 +34,13 @@ function accordancesystems_breadcrumb(&$variables) {
     return $output;
   }
 }
+
+/**
+ * Implements hook_html_head_alter().
+ */
+function accordancesystems_html_head_alter(&$head_elements) {
+  // Add initial-scale to viewport meta tag.
+  if (isset($head_elements['omega-viewport'])) {
+    $head_elements['omega-viewport']['#attributes']['content'] .= ', initial-scale=1.0';
+  }
+}
