@@ -1649,11 +1649,6 @@ hr {
   padding-top: 2em;
   padding-bottom: 2em; }
 
-/* line 3, ../sass/components/pages/_front.scss */
-.front .l-guide,
-.section-home .l-guide {
-  display: none; }
-
 /* line 2, ../sass/components/pages/_news.scss */
 .page-news .panel-magnum {
   padding-top: 2em;
