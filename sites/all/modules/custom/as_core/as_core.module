@@ -32,3 +32,15 @@ function as_core_url_path_access_restriction($form, &$form_state) {
   return ($form);
 
 }
+
+/**
+* Implements hook_commerce_cybersource_sawm_transaction_data_alter().
+* This will allow us to pass shipping information into Cybersource.
+*/
+function as_core_commerce_cybersource_sawm_transaction_data_alter(&$form, $order) {
+  $order_wrapper = entity_metadata_wrapper('commerce_order', $order);
+
+  // Prepare the shipping address for use in the request.
+  $shipping_address = $order_wrapper->commerce_customer_shipping->commerce_customer_address->value();
+  // dpm($shipping_address);
+}
