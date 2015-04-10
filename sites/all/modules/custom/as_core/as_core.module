@@ -42,5 +42,77 @@ function as_core_commerce_cybersource_sawm_transaction_data_alter(&$form, $order
 
   // Prepare the shipping address for use in the request.
   $shipping_address = $order_wrapper->commerce_customer_shipping->commerce_customer_address->value();
-  // dpm($shipping_address);
+
+  if (!empty($shipping_address) && is_array($shipping_address)) {
+    // If there is no first_name field, break apart the name_line field.
+    if (empty($shipping_address['first_name'])) {
+      $name_parts = explode(' ', $shipping_address['name_line']);
+      $shipping_address['first_name'] = array_shift($name_parts);
+      $shipping_address['last_name'] = implode(' ', $name_parts);
+    }
+
+    // Optional. First name.
+    if (!empty($shipping_address['first_name'])) {
+      $form['ship_to_forename'] = array(
+        '#type' => 'hidden',
+        '#value' => $shipping_address['first_name'],
+      );
+    }
+    // Optional. Last name.
+    if (!empty($shipping_address['last_name'])) {
+      $form['ship_to_surname'] = array(
+        '#type' => 'hidden',
+        '#value' => $shipping_address['last_name'],
+      );
+    }
+    // Optional. Company name.
+    if (!empty($shipping_address['organisation_name'])) {
+      $form['ship_to_company_name'] = array(
+        '#type' => 'hidden',
+        '#value' => $shipping_address['organisation_name'],
+      );
+    }
+    // Optional. Address line 1.
+    if (!empty($shipping_address['thoroughfare'])) {
+      $form['ship_to_address_line1'] = array(
+        '#type' => 'hidden',
+        '#value' => $shipping_address['thoroughfare'],
+      );
+    }
+    // Optional. Address line 2.
+    if (!empty($shipping_address['premise'])) {
+      $form['ship_to_address_line2'] = array(
+        '#type' => 'hidden',
+        '#value' => $shipping_address['premise'],
+      );
+    }
+    // Optional.
+    if (!empty($shipping_address['locality'])) {
+      $form['ship_to_address_city'] = array(
+        '#type' => 'hidden',
+        '#value' => $shipping_address['locality'],
+      );
+    }
+    // Optional. @link https://drupal.org/node/2112947 UK optional state @endlink
+    if (!empty($shipping_address['administrative_area'])) {
+      $form['ship_to_address_state'] = array(
+        '#type' => 'hidden',
+        '#value' => $shipping_address['administrative_area'],
+      );
+    }
+    // Optional.
+    if (!empty($shipping_address['country'])) {
+      $form['ship_to_address_country'] = array(
+        '#type' => 'hidden',
+        '#value' => $shipping_address['country'],
+      );
+    }
+    // Optional.
+    if (!empty($shipping_address['postal_code'])) {
+      $form['ship_to_address_postal_code'] = array(
+        '#type' => 'hidden',
+        '#value' => $shipping_address['postal_code'],
+      );
+    }
+  }
 }
