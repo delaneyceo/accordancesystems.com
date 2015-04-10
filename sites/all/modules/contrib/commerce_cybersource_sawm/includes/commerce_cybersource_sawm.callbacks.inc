@@ -535,7 +535,7 @@ function commerce_cybersource_sawm_redirect_form($form, &$form_state, $order, $p
   $form['#action'] = $url;
 
   // Allow other modules an opportunity to add to or alter the transaction data.
-  drupal_alter('commerce_cybersource_sawm_transaction_data', $form);
+  drupal_alter('commerce_cybersource_sawm_transaction_data', $form, $order);
 
   $form['submit'] = array(
     '#type' => 'submit',
