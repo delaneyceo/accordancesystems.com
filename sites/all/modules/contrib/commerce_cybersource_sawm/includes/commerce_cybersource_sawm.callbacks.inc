@@ -505,6 +505,9 @@ function commerce_cybersource_sawm_redirect_form($form, &$form_state, $order, $p
     }
   }
 
+  // Allow other modules an opportunity to add to or alter the transaction data.
+  drupal_alter('commerce_cybersource_sawm_transaction_data', $form, $order);
+
   /*
   All fields should be added to $form by now so they can be signed.
   The signed_field_names is a required field and should list itself.
@@ -533,9 +536,6 @@ function commerce_cybersource_sawm_redirect_form($form, &$form_state, $order, $p
   }
 
   $form['#action'] = $url;
-
-  // Allow other modules an opportunity to add to or alter the transaction data.
-  drupal_alter('commerce_cybersource_sawm_transaction_data', $form, $order);
 
   $form['submit'] = array(
     '#type' => 'submit',
