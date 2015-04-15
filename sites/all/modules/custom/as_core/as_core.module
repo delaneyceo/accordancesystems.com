@@ -5,6 +5,19 @@
  */
 
 /**
+* Implements hook_form_alter().
+*/
+function as_core_form_alter(&$form, &$form_state, $form_id) {
+  // Add captcha to all webforms.
+  if (strstr($form_id, 'webform_client_form')) {
+    $form['custom_captcha'] = array(
+      '#type' => 'captcha',
+      '#captcha_type' => 'hidden_captcha/Hidden CAPTCHA',
+    );
+  }
+}
+
+/**
 * Implements hook_form_node_form_alter().
 */
 function as_core_form_node_form_alter(&$form, &$form_state) {
