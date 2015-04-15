@@ -709,6 +709,10 @@ a {
   a:hover, a:focus, a:active {
     color: #666666; }
 
+/* line 50, ../sass/base/_typography.scss */
+hr {
+  background: #eee; }
+
 /* line 1, ../sass/components/blocks/_block--commerce-checkout-progress-indication.scss */
 .block--commerce-checkout-progress-indication {
   margin-bottom: 4em; }
@@ -1006,6 +1010,9 @@ hr {
     .l-header .l-guide .messages {
       clear: both;
       margin-top: 2em; }
+      /* line 104, ../sass/components/global_regions/_header.scss */
+      .l-header .l-guide .messages a {
+        color: #2476AE; }
 
 /* line 1, ../sass/components/global_regions/_main.scss */
 .l-main {
