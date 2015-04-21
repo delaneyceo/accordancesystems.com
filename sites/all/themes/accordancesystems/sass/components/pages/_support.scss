@@ -1,10 +1,26 @@
 .page-support {
+
+  .panel-pane {
+    margin-bottom: 1em;
+  }
+
   .panel-magnum {
     padding-top: 2em;
     padding-bottom: 2em;
   }
 
-  .webform-client-form-29 {
+  .pane-firmware-firmware-pane {
+    table {
+      width: 100%;
+    }
 
+    ul {
+      margin: 0;
+      padding: 0;
+
+      li {
+        list-style: none;
+      }
+    }
   }
 }

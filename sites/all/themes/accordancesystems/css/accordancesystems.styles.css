@@ -1779,10 +1779,23 @@ hr {
 .page-solutions .view-display-id-solutions_pane .views-row-odd {
   background: #FBFCFE; }
 
-/* line 2, ../sass/components/pages/_support.scss */
+/* line 3, ../sass/components/pages/_support.scss */
+.page-support .panel-pane {
+  margin-bottom: 1em; }
+/* line 7, ../sass/components/pages/_support.scss */
 .page-support .panel-magnum {
   padding-top: 2em;
   padding-bottom: 2em; }
+/* line 13, ../sass/components/pages/_support.scss */
+.page-support .pane-firmware-firmware-pane table {
+  width: 100%; }
+/* line 17, ../sass/components/pages/_support.scss */
+.page-support .pane-firmware-firmware-pane ul {
+  margin: 0;
+  padding: 0; }
+  /* line 21, ../sass/components/pages/_support.scss */
+  .page-support .pane-firmware-firmware-pane ul li {
+    list-style: none; }
 
 /* line 3, ../sass/components/view_modes/_node--araid-accessory-display--teaser.scss */
 .node--araid-accessory-display--teaser .field--name-field-accessory-photo {
