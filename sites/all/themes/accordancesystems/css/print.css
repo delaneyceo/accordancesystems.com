@@ -1,0 +1,17 @@
+/* line 4, ../sass/print.scss */
+.l-guide,
+.l-region--navigation,
+.block--commerce-checkout-progress {
+  display: none; }
+
+/* line 10, ../sass/print.scss */
+h2 {
+  font-size: 20px;
+  font-weight: bold; }
+
+/* line 15, ../sass/print.scss */
+hr {
+  background: #333;
+  margin: 10px 0; }
+
+/*# sourceMappingURL=print.css.map */

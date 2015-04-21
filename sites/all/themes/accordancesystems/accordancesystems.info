@@ -13,6 +13,7 @@ stylesheets[all][] = css/accordancesystems.hacks.css
 stylesheets[all][] = css/libraries/fontawesome/font-awesome.css
 stylesheets[all][] = css/accordancesystems.styles.css
 stylesheets[all][] = css/accordancesystems.no-query.css
+stylesheets[print][] = "css/print.css"
 
 ; ========================================
 ; Scripts

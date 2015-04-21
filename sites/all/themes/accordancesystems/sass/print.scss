@@ -1,0 +1,18 @@
+// Import external libraries.
+@import "compass";
+
+.l-guide,
+.l-region--navigation,
+.block--commerce-checkout-progress {
+  display: none;
+}
+
+h2 {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+hr {
+  background: #333;
+  margin: 10px 0;
+}
