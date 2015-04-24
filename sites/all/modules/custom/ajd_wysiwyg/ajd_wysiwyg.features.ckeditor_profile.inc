@@ -58,6 +58,12 @@ function ajd_wysiwyg_ckeditor_profile_defaults() {
         'theme_config_js' => 'f',
         'js_conf' => 'config.extraPlugins = \'codemirror\';',
         'loadPlugins' => array(
+          'ckeditor_link' => array(
+            'name' => 'drupal_path',
+            'desc' => 'CKEditor Link - A plugin to easily create links to Drupal internal paths',
+            'path' => '%base_path%sites/all/modules/contrib/ckeditor_link/plugins/link/',
+            'default' => 't',
+          ),
           'counter' => array(
             'name' => 'counter',
             'desc' => 'Plugin to count symbols, symbols without blanks and words',
