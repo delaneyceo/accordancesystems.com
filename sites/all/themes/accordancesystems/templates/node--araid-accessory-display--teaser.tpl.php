@@ -81,7 +81,7 @@
 <article<?php print $attributes; ?>>
   <?php if (!empty($title_prefix) || !empty($title_suffix) || !$page): ?>
     <header>
-      <?php print render($content['field_accessory_photo']); ?>
+      <?php print render($content['field_accessory_featured_image']); ?>
       <?php print render($title_prefix); ?>
       <?php if (!$page): ?>
         <h2<?php print $title_attributes; ?>>
