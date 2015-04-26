@@ -137,4 +137,6 @@ function as_core_commerce_cybersource_sawm_transaction_data_alter(&$form, $order
 function as_core_form_commerce_checkout_form_checkout_alter(&$form, &$form_state) {
   $form['customer_profile_billing']['commerce_customer_address'][LANGUAGE_NONE][0]['organisation_block']['organisation_name']['#required'] = true;
   $form['customer_profile_shipping']['commerce_customer_address'][LANGUAGE_NONE][0]['organisation_block']['organisation_name']['#required'] = true;
+  $form['customer_profile_billing']['commerce_customer_address'][LANGUAGE_NONE][0]['organisation_block']['organisation_name']['#description'] = 'Enter your company name. If this is a personal order please enter your name again.';
+  $form['customer_profile_shipping']['commerce_customer_address'][LANGUAGE_NONE][0]['organisation_block']['organisation_name']['#description'] = 'Enter your company name. If this is a personal order please enter your name again.';
 }
