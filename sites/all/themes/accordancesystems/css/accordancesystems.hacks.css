@@ -1,10 +1,14 @@
 @media all and (max-width: 800px) {
+  /* line 3, ../sass/accordancesystems.hacks.scss */
   #toolbar, #admin-menu {
-    display: none;
-  }
+    display: none; }
 
+  /* line 8, ../sass/accordancesystems.hacks.scss */
   html body.toolbar, html body.admin-menu {
     padding-top: 0 !important;
-    margin-top: 0 !important;
-  }
-}
+    margin-top: 0 !important; } }
+/* line 16, ../sass/accordancesystems.hacks.scss */
+.commerce-add-to-cart {
+  display: none; }
+
+/*# sourceMappingURL=accordancesystems.hacks.css.map */
