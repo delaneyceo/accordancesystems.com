@@ -140,3 +140,46 @@ function as_core_form_commerce_checkout_form_checkout_alter(&$form, &$form_state
   $form['customer_profile_billing']['commerce_customer_address'][LANGUAGE_NONE][0]['organisation_block']['organisation_name']['#description'] = 'Enter your company name. If this is a personal order please enter your name again.';
   $form['customer_profile_shipping']['commerce_customer_address'][LANGUAGE_NONE][0]['organisation_block']['organisation_name']['#description'] = 'Enter your company name. If this is a personal order please enter your name again.';
 }
+
+function as_core_commerce_shipping_calculate_rate($line_item) {
+  $order = commerce_order_load($line_item->order_id);
+  // dpm($order);
+  $line_item_ids = array();
+  foreach ($order->commerce_line_items[LANGUAGE_NONE] as $line_item_id) {
+    $line_item_ids[] = $line_item_id;
+  }
+  $line_items = commerce_line_item_load_multiple($line_item_ids);
+  // dpm($line_items);
+  $product_ids = array();
+  $total_quantity = '0';
+  foreach ($line_items as $line_item_id => $item) {
+    $product_ids[] = $item->commerce_product[LANGUAGE_NONE][0]['product_id'];
+    $total_quantity = ($item->quantity + $total_quantity);
+  }
+  $products = commerce_product_load_multiple($product_ids);
+
+
+  // dpm($products);
+  $ground_prices = array();
+  $two_day_prices = array();
+  $one_day_prices = array();
+  foreach ($products as $product_id => $item) {
+    $ground_prices[] = $item->field_ground['und'][0]['value'];
+    $two_day_prices[] = $item->field_second_day_air['und'][0]['value'];
+    $one_day_prices[] = $item->field_next_day_air['und'][0]['value'];
+  }
+  //dpm($prices);
+  $highest_ground = max($ground_prices);
+  $highest_two_day = max($two_day_prices);
+  $highest_next_day = max($one_day_prices);
+  dpm($highest_ground);
+  dpm($highest_two_day);
+  dpm($highest_next_day);
+
+  //dpm($total_quantity);
+
+  if ($line_item->commerce_shipping_service['und'][0]['value'] == 'standard_shipping') {
+    $line_item->commerce_unit_price['und'][0]['amount'] = $highest_ground * 100;
+    dpm($line_item);
+  }
+}
