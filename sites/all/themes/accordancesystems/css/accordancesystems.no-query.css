@@ -369,8 +369,8 @@
 .node-araid-accessory-display .view-display-id-product_accessory_controller_ref_teaser > .field__item,
 .page-products .view-display-id-controller_teaser > .field__item,
 .page-products .view-display-id-accessory_teaser > .field__item {
-  -webkit-flex: 0 1 33.332%;
-  flex: 0 1 33.332%;
+  -webkit-flex: 0 1 50%;
+  flex: 0 1 50%;
   padding: 1.5em;
   margin-bottom: 1em; }
 
@@ -2074,6 +2074,15 @@ hr {
   .node--araid-controller-display--featured-slide .node__content,
   .node--araid-accessory-display--featured-slide .node__content {
     overflow: hidden; }
+  /* line 41, ../sass/components/view_modes/_node--featured-slide.scss */
+  .node--araid-controller-display--featured-slide .field--name-field-product,
+  .node--araid-accessory-display--featured-slide .field--name-field-product {
+    margin-top: 1em; }
+  /* line 45, ../sass/components/view_modes/_node--featured-slide.scss */
+  .node--araid-controller-display--featured-slide select,
+  .node--araid-accessory-display--featured-slide select {
+    width: 100%;
+    padding: .5em; }
 
 /* line 1, ../sass/components/view_modes/_node--frequently-asked-question--collapsible.scss */
 .node--frequently-asked-question--collapsible {
@@ -2442,6 +2451,14 @@ hr {
     *vertical-align: auto;
     *zoom: 1;
     *display: inline; }
+
+/* line 2, ../sass/components/views_displays/_view-display-id-controller_teaser.scss */
+.view-display-id-controller_teaser .title-wrapper {
+  padding: 1em;
+  background: #eee; }
+  /* line 6, ../sass/components/views_displays/_view-display-id-controller_teaser.scss */
+  .view-display-id-controller_teaser .title-wrapper h3 {
+    margin-bottom: 0; }
 
 /* line 3, ../sass/components/views_displays/_view-id-commerce_cart_block.scss */
 .block--commerce-cart-cart .block__title {

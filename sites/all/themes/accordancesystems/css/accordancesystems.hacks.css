@@ -7,8 +7,5 @@
   html body.toolbar, html body.admin-menu {
     padding-top: 0 !important;
     margin-top: 0 !important; } }
-/* line 16, ../sass/accordancesystems.hacks.scss */
-.commerce-add-to-cart {
-  display: none; }
 
 /*# sourceMappingURL=accordancesystems.hacks.css.map */

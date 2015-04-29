@@ -15,7 +15,7 @@
   border-bottom: 1px solid $shade-offsetwhite;
 }
 
-%views-grids-of-three {
+%views-grids-of-two {
   .content-wrapper-inner,
   > .field__items {
     @include breakpoint($bp-grids-of-two) {
@@ -27,7 +27,7 @@
 
   .views-row,
   > .field__item {
-    @include flex(0 1 33.332%);
+    @include flex(0 1 50%);
     padding: 1.5em;
     margin-bottom: 1em;
   }
