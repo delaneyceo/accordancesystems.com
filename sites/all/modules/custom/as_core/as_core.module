@@ -142,44 +142,126 @@ function as_core_form_commerce_checkout_form_checkout_alter(&$form, &$form_state
 }
 
 function as_core_commerce_shipping_calculate_rate($line_item) {
+  // Load the order.
   $order = commerce_order_load($line_item->order_id);
-  // dpm($order);
+
+  // Get the line item ids so we can load each line item.
   $line_item_ids = array();
   foreach ($order->commerce_line_items[LANGUAGE_NONE] as $line_item_id) {
     $line_item_ids[] = $line_item_id;
   }
+
+  // Load each line item.
   $line_items = commerce_line_item_load_multiple($line_item_ids);
-  // dpm($line_items);
+
+  // Declaring variables.
   $product_ids = array();
+  $line_item_quantity = array();
+  // Not using this variable anymore.
   $total_quantity = '0';
+
   foreach ($line_items as $line_item_id => $item) {
+    // Get the product ids so we can load the products.
     $product_ids[] = $item->commerce_product[LANGUAGE_NONE][0]['product_id'];
+
+    // Create array of quantities so we can grab the quantity for the highest priced
+    // line item. We will need to subtract this value later since that will be our base price
+    // and not an additional price.
+    $line_item_quantity[] = $item->quantity;
+
+    // Get the total quantity of items ordered.
+    // It appears I am not using this anymore.
     $total_quantity = ($item->quantity + $total_quantity);
   }
+  // Load the products.
   $products = commerce_product_load_multiple($product_ids);
 
-
-  // dpm($products);
+  // Declaring variables.
   $ground_prices = array();
   $two_day_prices = array();
   $one_day_prices = array();
+  // Only need one variable for additional unit price since the price is the same for each shipping method.
+  $additional_unit_price = array();
+  // Loop through each product and get the prices for each shipping method.
   foreach ($products as $product_id => $item) {
-    $ground_prices[] = $item->field_ground['und'][0]['value'];
-    $two_day_prices[] = $item->field_second_day_air['und'][0]['value'];
-    $one_day_prices[] = $item->field_next_day_air['und'][0]['value'];
+    $ground_prices[] = $item->field_ground[LANGUAGE_NONE][0]['value'];
+    $two_day_prices[] = $item->field_second_day_air[LANGUAGE_NONE][0]['value'];
+    $one_day_prices[] = $item->field_next_day_air[LANGUAGE_NONE][0]['value'];
+
+    // Create an array of additional prices for each product.
+    $additional_unit_price[] = $item->field_additional_unit[LANGUAGE_NONE][0]['value'];
   }
-  //dpm($prices);
+
+  // Get key of highest price for each shipping method so we can get additional
+  // value for that line item and subtract it from our base price.
+  $highest_ground_key = array_keys($ground_prices, max($ground_prices));
+  $highest_two_day_key = array_keys($two_day_prices, max($two_day_prices));
+  $highest_next_day_key = array_keys($one_day_prices, max($one_day_prices));
+
+  // Grap the highest price for each shipping method to use as our base price.
   $highest_ground = max($ground_prices);
   $highest_two_day = max($two_day_prices);
   $highest_next_day = max($one_day_prices);
-  dpm($highest_ground);
-  dpm($highest_two_day);
-  dpm($highest_next_day);
 
-  //dpm($total_quantity);
+  // Get additional unit price for the highest line item price.
+  $ground_price_to_subtract = $additional_unit_price[$highest_ground_key[0]];
+  $two_day_price_to_subtract = $additional_unit_price[$highest_two_day_key[0]];
+  $next_day_price_to_subtract = $additional_unit_price[$highest_next_day_key[0]];
 
-  if ($line_item->commerce_shipping_service['und'][0]['value'] == 'standard_shipping') {
-    $line_item->commerce_unit_price['und'][0]['amount'] = $highest_ground * 100;
-    dpm($line_item);
+  // Multiply each additional price by the quantity of each line item.
+  $total_additional_price = array();
+  foreach ($additional_unit_price as $key=>$price) {
+    $total_additional_price[] = $price * $line_item_quantity[$key];
+  }
+
+  // Set Amount and price component for Standard Shipping.
+  if ($line_item->commerce_shipping_service[LANGUAGE_NONE][0]['value'] == 'standard_shipping') {
+    // Set amount to highest price for this shipping method minus that line
+    // items additional cost since we are using that line item for the base price.
+    // Add the sum of the additional prices and multiply it by 100.
+    $line_item->commerce_unit_price[LANGUAGE_NONE][0]['amount'] = (($highest_ground - $ground_price_to_subtract) + array_sum($total_additional_price)) * 100;
+
+    // Create a price component to represent the change in the unit price's data array.
+    $line_item->commerce_unit_price['und'][0]['data'] = commerce_price_component_add(
+      $line_item->commerce_unit_price[LANGUAGE_NONE][0]['data'],
+      'flat_rate_standard_shipping',
+      $line_item->commerce_unit_price[LANGUAGE_NONE][0],
+      TRUE,
+      FALSE
+    );
+  }
+
+  // Set Amount and price component for 2nd Day Air Shipping.
+  if ($line_item->commerce_shipping_service['und'][0]['value'] == 'ups_2nd_day_air') {
+    // Set amount to highest price for this shipping method minus that line
+    // items additional cost since we are using that line item for the base price.
+    // Add the sum of the additional prices and multiply it by 100.
+    $line_item->commerce_unit_price['und'][0]['amount'] = (($highest_two_day - $two_day_price_to_subtract) + array_sum($total_additional_price)) * 100;
+
+    // Create a price component to represent the change in the unit price's data array.
+    $line_item->commerce_unit_price['und'][0]['data'] = commerce_price_component_add(
+      $line_item->commerce_unit_price[LANGUAGE_NONE][0]['data'],
+      'flat_rate_ups_2nd_day_air',
+      $line_item->commerce_unit_price[LANGUAGE_NONE][0],
+      TRUE,
+      FALSE
+    );
+  }
+
+  // Set Amount and price component for Next Day Air Shipping.
+  if ($line_item->commerce_shipping_service['und'][0]['value'] == 'ups_next_day_air') {
+    // Set amount to highest price for this shipping method minus that line
+    // items additional cost since we are using that line item for the base price.
+    // Add the sum of the additional prices and multiply it by 100.
+    $line_item->commerce_unit_price['und'][0]['amount'] = (($highest_next_day - $next_day_price_to_subtract) + array_sum($total_additional_price)) * 100;
+
+    // Create a price component to represent the change in the unit price's data array.
+    $line_item->commerce_unit_price['und'][0]['data'] = commerce_price_component_add(
+      $line_item->commerce_unit_price[LANGUAGE_NONE][0]['data'],
+      'flat_rate_ups_next_day_air',
+      $line_item->commerce_unit_price[LANGUAGE_NONE][0],
+      TRUE,
+      FALSE
+    );
   }
 }
