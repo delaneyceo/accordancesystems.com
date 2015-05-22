@@ -45,6 +45,7 @@
     .content-image,
     .node__content.has-image {
       @include flex(0 0 50%);
+      overflow: hidden;
     }
 
     .content-image {

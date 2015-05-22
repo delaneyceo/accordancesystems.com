@@ -31,6 +31,7 @@
     .content-image,
     .node__content {
       @include flex(0 0 50%);
+      overflow: hidden;
     }
 
     .content-image {

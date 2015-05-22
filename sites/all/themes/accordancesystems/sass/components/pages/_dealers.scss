@@ -17,6 +17,7 @@
 
       .views-row {
         @include flex(0 1 50%);
+        overflow: hidden;
         padding: $row-padding;
         border: 1px solid $color-offsetwhite;
 
