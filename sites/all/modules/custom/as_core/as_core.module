@@ -192,12 +192,13 @@ function _as_core_compute_shipping_prices($line_item, $line_items, $product_ship
 
     // If the base price for this line_item is the largest, set the base_shipping_price and it's additional cost value.
     if ($product->{$product_shipping_field}[LANGUAGE_NONE][0]['value'] > $base_shipping_price) {
-      $base_shipping_price = $product->{$product_shipping_field}[LANGUAGE_NONE][0]['value'];
-      $base_shipping_price_exclude = $product->field_additional_unit[LANGUAGE_NONE][0]['value'];
+      $base_shipping_price += $product->{$product_shipping_field}[LANGUAGE_NONE][0]['value'];
+      $base_shipping_price_exclude += $product->field_additional_unit[LANGUAGE_NONE][0]['value'];
     }
   }
   // Calculate the total shipping cost: base_shipping_price + additional_shipping_price - base_shipping_price_exclude.
   $total_shipping_cost = $base_shipping_price + $additional_shipping_price - $base_shipping_price_exclude;
+
   // Set the line_item price.
   $line_item->commerce_unit_price[LANGUAGE_NONE][0]['amount'] = $total_shipping_cost * 100;
 
