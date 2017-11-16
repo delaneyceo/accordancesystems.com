@@ -11,3 +11,6 @@ sites/*/private
 
 # Ignore error_log
 error_log
+
+# Ignore DevDesktop shortcut
+*.dd
