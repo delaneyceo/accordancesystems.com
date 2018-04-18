@@ -1,0 +1,4 @@
+name: accordancesystems
+recipe: drupal7
+config:
+  webroot: .
