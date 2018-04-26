@@ -9,10 +9,10 @@ class EntityReference_SelectionHandler_Views implements EntityReference_Selectio
    * Implements EntityReferenceHandler::getInstance().
    */
   public static function getInstance($field, $instance = NULL, $entity_type = NULL, $entity = NULL) {
-    return new EntityReference_SelectionHandler_Views($field, $instance, $entity_type, $entity);
+    return new EntityReference_SelectionHandler_Views($field, $instance, $entity);
   }
 
-  protected function __construct($field, $instance, $entity_type, $entity) {
+  protected function __construct($field, $instance, $entity) {
     $this->field = $field;
     $this->instance = $instance;
     $this->entity = $entity;
@@ -104,6 +104,7 @@ class EntityReference_SelectionHandler_Views implements EntityReference_Selectio
       return FALSE;
     }
     $this->view->set_display($display_name);
+    $this->view->pre_execute();
 
     // Make sure the query is not cached.
     $this->view->is_cacheable = FALSE;
@@ -158,7 +159,9 @@ class EntityReference_SelectionHandler_Views implements EntityReference_Selectio
     if ($this->initializeView(NULL, 'CONTAINS', 0, $ids)) {
       // Get the results.
       $entities = $this->view->execute_display($display_name, $args);
-      $result = array_keys($entities);
+      if (!empty($entities)) {
+        $result = array_keys($entities);
+      }
     }
     return $result;
   }
@@ -196,6 +199,10 @@ class EntityReference_SelectionHandler_Views implements EntityReference_Selectio
    *   The arguments to be send to the View.
    */
   protected function handleArgs($args) {
+    if (!module_exists('token')) {
+      return $args;
+    }
+
     // Parameters for token_replace().
     $data = array();
     $options = array('clear' => TRUE);
